@@ -1,0 +1,3491 @@
+{
+  "scope": "All remaining listening, vocabulary and preview speech; reuse existing Part 3",
+  "existingPart3Provenance": "heygen-part3-provenance.json",
+  "tracks": {
+    "female-01": {
+      "voice": {
+        "id": "44c2584dd48f46b7bce9b66c8bf086e0",
+        "name": "Faye"
+      },
+      "language": "en",
+      "requestedModel": "server-default",
+      "returnedModel": null,
+      "submittedText": "A. The woman is watering a plant. B. The woman is working at a laptop. C. The woman is closing a window. D. The woman is carrying a chair.\n\nA. The people are sitting around a table. B. A man is cleaning the floor. C. One person is pointing toward a board. D. Both people are using laptops.\n\nA. A plant is standing beside the desk. B. Some chairs are stacked on the desk. C. The laptop is on the floor. D. The woman is moving a table.\n\nA. The board is blank. B. Both people are seated. C. The window is being opened. D. A chart is displayed on the board.\n\nWhere will the staff training take place?\n\nWould you like a receipt?\n\nWhy has the delivery been delayed?\n\nWho is responsible for booking the conference room?\n\nWhen is the application deadline?\n\nShall we review the proposal after lunch?\n\nAttention passengers. The ten forty service to Brookfield will now depart from platform seven instead of platform three. The departure time is unchanged. Please follow the signs to platform seven and have your tickets ready for inspection.\n\nGood morning, everyone. This is a reminder that our office will be closed for electrical maintenance on Saturday. If you need to collect personal items, please do so by Friday evening. Normal access will resume on Monday at eight. Contact facilities if you have any questions.\n\nThank you for calling Maple Dental Clinic. Our opening hours are nine to six, Monday through Friday. To make or change an appointment, please press one. To request a copy of your invoice, press two. For all other inquiries, stay on the line.\n\nA. A worker is painting a wall. B. Boxes are being loaded onto a truck. C. A worker is holding a clipboard beside some shelves. D. The shelves are completely empty.\n\nCould you make ten copies of this document?\n\nHow often do we order office supplies?\n\nHas the meeting agenda been sent out?\n\nHello, this is Aisha from reception. A courier has left a parcel for Mr. Tan. It is too large for the reception cabinet, so we have placed it in the storage room next to the elevators. Please collect it before five today. Bring your staff card so that we can confirm your identity.\n\nA. Some luggage is standing beside a bench. B. A traveler is opening a suitcase. C. People are sitting beneath a clock. D. A bench is being carried outside.\n\nWhich platform does the airport train leave from?\n\nWould you prefer a window seat or an aisle seat?\n\nDo I need to print the boarding pass?\n\nWelcome aboard the Lakeside Express. Our next stop is Fairhaven, where passengers can connect to services for the coast. Due to construction, the usual exit at Fairhaven is closed. Please use the footbridge at the rear of the platform. Staff in yellow jackets will be available to assist passengers with heavy luggage.\n\nA. Customers are trying on clothes. B. Bags are hanging from a tree. C. A counter is being removed. D. An assistant is standing behind a counter with shopping bags on it.\n\nCan I exchange this jacket for a smaller size?\n\nHow would you like to pay for your order?\n\nWhy was my online order canceled?\n\nThank you for shopping with North Street Market. Starting this weekend, customers can collect online orders from our new service desk beside the main entrance. Orders placed before noon will be ready after four p.m. the same day. Please bring your order confirmation, either printed or on your phone. This collection service is free for orders over thirty dollars.",
+      "duration": 201.78766666666667,
+      "originalFile": "female-01-original.pcm",
+      "sha256": "252ba70e34ef34eba32148bf03ca350183b58fdad31e2d2477625f9e62f7c1cf",
+      "format": {
+        "encoding": "pcm_s16le",
+        "sampleRate": 24000,
+        "channels": 1
+      },
+      "timing": "HeyGen original_characters rounded to nearest 24000 Hz sample"
+    },
+    "female-02": {
+      "voice": {
+        "id": "44c2584dd48f46b7bce9b66c8bf086e0",
+        "name": "Faye"
+      },
+      "language": "en",
+      "requestedModel": "server-default",
+      "returnedModel": null,
+      "submittedText": "A. Some chairs are arranged in front of a screen. B. A speaker is writing on the screen. C. The chairs have been stacked in a corner. D. People are taking their seats.\n\nWhere can I pick up my conference badge?\n\nIs there still room in the afternoon workshop?\n\nShould we send the invitations today or wait until Monday?\n\nGood afternoon, delegates. The product-design panel scheduled for two p.m. has been moved from Hall A to Hall C because the sound system in Hall A requires repair. The starting time has not changed. Printed programs still show the old location, so please follow the signs near the elevators. Volunteers will direct you if you need help.\n\nA. Two people are carrying a table. B. Two people are standing beside a table with a document on it. C. A woman is closing a door. D. Some documents are scattered on the floor.\n\nWho should I contact about the training budget?\n\nHave you finished reviewing the applications?\n\nWhen will the successful applicants be notified?\n\nWelcome to your first day at Redwood Consulting. This morning you will meet your team leaders and collect your security passes. After lunch, please return to this room for a software-training session. Bring the laptop issued to you at reception. If you have not received one, tell me during the break so we can arrange it before training begins.\n\nA. A van is driving across a bridge. B. Boxes are falling off a shelf. C. A handcart is loaded with boxes near a van. D. A worker is washing a vehicle.\n\nHow many cartons are still in the warehouse?\n\nCould the shipment arrive a day earlier?\n\nWhere should these fragile boxes go?\n\nThis is a reminder for all warehouse staff. The loading area at the east entrance will be resurfaced tomorrow. Deliveries must use the west entrance between seven a.m. and four p.m. A temporary sign will direct drivers to the correct gate. Please keep the west access road clear of parked vehicles throughout this period.\n\nA. A calculator is being repaired. B. A man is writing a check. C. The desk is covered with coins. D. A calculator lies beside a sheet showing a chart.\n\nWhen is the payment due?\n\nWho authorized this equipment purchase?\n\nCan you explain the extra fee on this invoice?\n\nBefore we finish, I would like to explain the new expense-claim procedure. Beginning next month, attach a digital receipt to each individual item in the online form. Do not combine several receipts into one file. Claims submitted by the tenth will be paid on the twentieth. If the tenth falls on a weekend, submit your claim on the preceding Friday.\n\nA. A technician is disconnecting a monitor. B. Two monitors are standing on a desk. C. A keyboard is hanging on a wall. D. Some computers are packed in cartons.\n\nMy account is locked. Who can reset it?\n\nHave you installed the latest update?\n\nWhy can I not connect to the guest network?\n\nA notice from IT Services. The customer portal will be unavailable from nine to eleven p.m. on Saturday while we upgrade the database. Work saved before the outage will not be affected. However, please sign out before nine to avoid losing unsaved changes. If you need to check an order during the outage, our telephone support line will remain open.\n\nA. A worker is watering a plant near an entrance. B. Someone is installing a glass door. C. A worker is sweeping leaves into a pile. D. Plants are being removed from their pots.\n\nCould you report the broken light in the stairwell?\n\nHow long will the elevator be out of service?",
+      "duration": 206.16104166666668,
+      "originalFile": "female-02-original.pcm",
+      "sha256": "0cc11507853063dc0efdd9a90c0bf5fdec05e6590f5072e1eeebc410d68d45e4",
+      "format": {
+        "encoding": "pcm_s16le",
+        "sampleRate": 24000,
+        "channels": 1
+      },
+      "timing": "HeyGen original_characters rounded to nearest 24000 Hz sample"
+    },
+    "female-03": {
+      "voice": {
+        "id": "44c2584dd48f46b7bce9b66c8bf086e0",
+        "name": "Faye"
+      },
+      "language": "en",
+      "requestedModel": "server-default",
+      "returnedModel": null,
+      "submittedText": "Is parking included in the room rental?\n\nAttention building occupants. A routine fire-alarm test will take place at three this afternoon. The alarm will sound for approximately thirty seconds. You do not need to leave the building during this scheduled test. If the alarm continues for more than one minute, however, follow the normal evacuation procedure and use the stairs, not the elevators.\n\nA. A customer is carrying a shopping basket. B. Bottles are being placed into a box. C. A person is pointing toward a poster on an easel. D. A poster is lying flat on the floor.\n\nWhich design did the client choose?\n\nShould we launch the campaign before the holiday?\n\nHow did customers hear about our new product?\n\nThank you for joining the launch briefing. Our new refillable bottle will go on sale online next Monday. Store sales will begin two weeks later, once display stands arrive. During the first week of online sales, customers will receive a free cleaning brush with each bottle. Please make sure your promotional posts explain that this offer applies only to online purchases.\n\nagenda. Please review the agenda before the meeting.\n\ndeadline. The application deadline is Friday.\n\ninvoice. Please send the invoice to our finance team.\n\npostpone. We need to postpone the workshop until Monday.\n\nvenue. The venue is a short walk from the station.\n\nreimburse. The company will reimburse your travel expenses.\n\nitinerary. Your itinerary includes two nights in Singapore.\n\nvacancy. The hotel has no vacancies this weekend.\n\nprocurement. Contact procurement to order new equipment.\n\neligible. All full-time employees are eligible for the benefit.\n\ncomplimentary. Complimentary breakfast is included in your stay.\n\nimplement. We will implement the new policy next month.\n\nretain. Please retain your receipt for your records.\n\ninventory. The store checks its inventory every month.\n\ntentative. We have set a tentative date for the launch.\n\naccommodate. The hall can accommodate fifty guests.\n\noverdue. Payment for the invoice is now overdue.\n\nrenovate. The branch will close temporarily while we renovate.\n\napplicant. Each applicant should provide two references.\n\ndiscrepancy. We found a discrepancy between the invoice and the order.\n\npromptly. Please respond promptly to customer inquiries.\n\nquarterly. The quarterly sales report is ready.\n\nfeasible. We need to find a feasible solution.\n\ncommute. My daily commute takes forty minutes.\n\nHello. I will read the female speaker’s lines in your practice conversations.",
+      "duration": 150.15033333333332,
+      "originalFile": "female-03-original.pcm",
+      "sha256": "0f0008e9dc8c29bd9ae88a30550d3e297346385ddf0307561a22fa8496fefb20",
+      "format": {
+        "encoding": "pcm_s16le",
+        "sampleRate": 24000,
+        "channels": 1
+      },
+      "timing": "HeyGen original_characters rounded to nearest 24000 Hz sample"
+    },
+    "male-01": {
+      "voice": {
+        "id": "6d140b3078404b9893f3279d53f13f74",
+        "name": "Dmitri"
+      },
+      "language": "en",
+      "requestedModel": "server-default",
+      "returnedModel": null,
+      "submittedText": "A. At nine thirty. B. On the second floor. C. For new employees.\n\nA. It was received yesterday. B. About twenty dollars. C. Yes, please email it to me.\n\nA. Because of heavy traffic. B. By the loading dock. C. Yes, two packages.\n\nA. It is quite spacious. B. Let me check with reception. C. At the conference last year.\n\nA. The online application. B. I applied for the position. C. This Friday afternoon.\n\nA. Could we do it tomorrow instead? B. A sandwich and some soup. C. It received a good review.\n\nA. Certainly. Do you need them in color? B. There are ten floors. C. I read it last night.\n\nA. In the supply cabinet. B. Usually once a month. C. The order was correct.\n\nA. The meeting room is upstairs. B. About an hour long. C. Not yet. I am still adding one item.\n\nA. Every twenty minutes. B. Platform four, I believe. C. A return ticket, please.\n\nA. I prefer traveling in June. B. The window is closed. C. An aisle seat, if one is available.\n\nA. The mobile version is fine. B. It was a comfortable flight. C. At the departure gate.\n\nA. Yes, if you have your receipt. B. The price is on the label. C. It is made of cotton.\n\nA. It arrived this morning. B. By credit card, please. C. I would like the blue one.\n\nA. You can order on our website. B. The cancellation was free. C. Unfortunately, that item was out of stock.\n\nA. It lasts two days. B. At the registration desk in the lobby. C. I enjoyed the keynote speech.\n\nA. The room has large windows. B. It starts at two o’clock. C. I can check the registration list for you.\n\nA. Let us send them today. B. About fifty people attended. C. The invitation was very attractive.\n\nA. It is an interesting course. B. The budget increased last year. C. Ms. Evans in human resources.\n\nA. I still have three left. B. The position is permanent. C. At the front desk.\n\nA. By email. B. Early next week. C. There were twenty applicants.\n\nA. The warehouse opens at eight. B. Twenty-four, according to the stock report. C. They arrived safely.\n\nA. It weighs twelve kilograms. B. The shipping address is correct. C. I will ask the courier about express service.\n\nA. On the top shelf, please. B. Handle them carefully. C. They were packed yesterday.\n\nA. It was paid by card. B. At the bank across the street. C. On the last day of this month.\n\nA. Our department manager did. B. The equipment is brand new. C. About eight hundred dollars.\n\nA. I have an extra copy. B. It is for the express delivery you requested. C. The invoice arrived by email.\n\nA. The support desk can help. B. I locked the door. C. It was a busy month.\n\nA. The installation guide is short. B. Yes, I restarted my computer afterward. C. The new desk arrives today.\n\nA. It is a very good connection. B. A guest from our London office. C. You may need the new password.\n\nA. The stairs are on the left. B. It was a bright morning. C. I have already sent a maintenance request.\n\nA. Until tomorrow afternoon. B. On the sixth floor. C. It can carry twelve people.\n\nA. The park is nearby. B. Only for the first two hours. C. We rented it last year.\n\nA. She preferred the one with the green background. B. The designer works upstairs. C. We have three clients.\n\nA. The holiday was relaxing. B. The campaign has a large budget. C. Let us wait until the new stock arrives.\n\nA. It will be available soon. B. Most saw our social media posts. C. The product comes in two sizes.\n\nHello. I will read the male speaker’s lines in your practice conversations.",
+      "duration": 254.63283333333334,
+      "originalFile": "male-01-original.pcm",
+      "sha256": "aedf8a212646c2e701cce7d5c578c7f5efcc832f8e61e73e981685c5b79b4463",
+      "format": {
+        "encoding": "pcm_s16le",
+        "sampleRate": 24000,
+        "channels": 1
+      },
+      "timing": "HeyGen original_characters rounded to nearest 24000 Hz sample"
+    }
+  },
+  "recordings": [
+    {
+      "id": 1,
+      "text": "A. The woman is watering a plant. B. The woman is working at a laptop. C. The woman is closing a window. D. The woman is carrying a chair.",
+      "kind": "part-1",
+      "questionIds": [
+        1
+      ],
+      "src": "assets/audio/heygen-extra/part-1-b438642792efc95e.wav",
+      "duration": 9.371,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 9.371
+        }
+      ],
+      "scriptSha256": "b438642792efc95ef8b307883ed8db44e2a8a7175e526a99dd93b6012c221636",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "A. The woman is watering a plant. B. The woman is working at a laptop. C. The woman is closing a window. D. The woman is carrying a chair.",
+          "start": 0.0,
+          "end": 9.371,
+          "batch": "female-01",
+          "sourceStartFrame": 3672,
+          "sourceEndFrame": 228576,
+          "sourceCharacterStart": 0,
+          "sourceCharacterEnd": 138
+        }
+      ],
+      "sha256": "a7d975580b98441ffbba66a302e56d35514c9994fecc0eebcc8c8367cda516da"
+    },
+    {
+      "id": 2,
+      "text": "A. The people are sitting around a table. B. A man is cleaning the floor. C. One person is pointing toward a board. D. Both people are using laptops.",
+      "kind": "part-1",
+      "questionIds": [
+        2
+      ],
+      "src": "assets/audio/heygen-extra/part-1-84d3b6aa3c9740f8.wav",
+      "duration": 10.123,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 10.123
+        }
+      ],
+      "scriptSha256": "84d3b6aa3c9740f85c14e3270c33a126dcf1fd10f402695bd111c6a423a97ab0",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "A. The people are sitting around a table. B. A man is cleaning the floor. C. One person is pointing toward a board. D. Both people are using laptops.",
+          "start": 0.0,
+          "end": 10.123,
+          "batch": "female-01",
+          "sourceStartFrame": 232032,
+          "sourceEndFrame": 474984,
+          "sourceCharacterStart": 140,
+          "sourceCharacterEnd": 289
+        }
+      ],
+      "sha256": "db83494f529efd8c6cb0ae06473fcc7b0d9247d17fba8eb2468bc4dda2e18529"
+    },
+    {
+      "id": 3,
+      "text": "A. A plant is standing beside the desk. B. Some chairs are stacked on the desk. C. The laptop is on the floor. D. The woman is moving a table.",
+      "kind": "part-1",
+      "questionIds": [
+        3
+      ],
+      "src": "assets/audio/heygen-extra/part-1-f071cd160d9ed310.wav",
+      "duration": 9.74,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 9.74
+        }
+      ],
+      "scriptSha256": "f071cd160d9ed310bf0d27dae484ee8b5c4ad6df47be60c7d97685bcb8f04d25",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "A. A plant is standing beside the desk. B. Some chairs are stacked on the desk. C. The laptop is on the floor. D. The woman is moving a table.",
+          "start": 0.0,
+          "end": 9.74,
+          "batch": "female-01",
+          "sourceStartFrame": 479808,
+          "sourceEndFrame": 713568,
+          "sourceCharacterStart": 291,
+          "sourceCharacterEnd": 433
+        }
+      ],
+      "sha256": "b7744032b714497b13a2758b156e0b9ba884c13e6b61192a2de9176bc0aa7a1e"
+    },
+    {
+      "id": 4,
+      "text": "A. The board is blank. B. Both people are seated. C. The window is being opened. D. A chart is displayed on the board.",
+      "kind": "part-1",
+      "questionIds": [
+        4
+      ],
+      "src": "assets/audio/heygen-extra/part-1-e90ec05024b44eb4.wav",
+      "duration": 8.869,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 8.869
+        }
+      ],
+      "scriptSha256": "e90ec05024b44eb4e519275bbaacb3b7f2125d70aaac2f1b13025f911de18336",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "A. The board is blank. B. Both people are seated. C. The window is being opened. D. A chart is displayed on the board.",
+          "start": 0.0,
+          "end": 8.869,
+          "batch": "female-01",
+          "sourceStartFrame": 718416,
+          "sourceEndFrame": 931272,
+          "sourceCharacterStart": 435,
+          "sourceCharacterEnd": 553
+        }
+      ],
+      "sha256": "4c0c960fdf54371e245890734628a3b322ce56a8e22cab053c50dc34e840c02c"
+    },
+    {
+      "id": 5,
+      "text": "Where will the staff training take place? A. At nine thirty. B. On the second floor. C. For new employees.",
+      "kind": "part-2",
+      "questionIds": [
+        5
+      ],
+      "src": "assets/audio/heygen-extra/part-2-f6a8565ffa422a99.wav",
+      "duration": 7.315,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 1.775
+        },
+        {
+          "role": "male",
+          "start": 1.955,
+          "end": 7.315
+        }
+      ],
+      "scriptSha256": "f6a8565ffa422a998f43fcc908876091d68aaa7fc4cd7e39ec92acb44535dd0e",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "Where will the staff training take place?",
+          "start": 0.0,
+          "end": 1.775,
+          "batch": "female-01",
+          "sourceStartFrame": 936792,
+          "sourceEndFrame": 979392,
+          "sourceCharacterStart": 555,
+          "sourceCharacterEnd": 596
+        },
+        {
+          "role": "male",
+          "text": "A. At nine thirty. B. On the second floor. C. For new employees.",
+          "start": 1.955,
+          "end": 7.315,
+          "batch": "male-01",
+          "sourceStartFrame": 4704,
+          "sourceEndFrame": 133344,
+          "sourceCharacterStart": 0,
+          "sourceCharacterEnd": 64
+        }
+      ],
+      "sha256": "d87a678ec3b20f05342812042df0dad8a7ffdfaf25224c59c1a25c005dc40f4c"
+    },
+    {
+      "id": 6,
+      "text": "Would you like a receipt? A. It was received yesterday. B. About twenty dollars. C. Yes, please email it to me.",
+      "kind": "part-2",
+      "questionIds": [
+        6
+      ],
+      "src": "assets/audio/heygen-extra/part-2-18a45b26357967ca.wav",
+      "duration": 7.755,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 1.092
+        },
+        {
+          "role": "male",
+          "start": 1.272,
+          "end": 7.755
+        }
+      ],
+      "scriptSha256": "18a45b26357967caeed39529050a81fb4c42f601726724b5ed2eeaadc696e0e5",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "Would you like a receipt?",
+          "start": 0.0,
+          "end": 1.092,
+          "batch": "female-01",
+          "sourceStartFrame": 982872,
+          "sourceEndFrame": 1009080,
+          "sourceCharacterStart": 598,
+          "sourceCharacterEnd": 623
+        },
+        {
+          "role": "male",
+          "text": "A. It was received yesterday. B. About twenty dollars. C. Yes, please email it to me.",
+          "start": 1.272,
+          "end": 7.755,
+          "batch": "male-01",
+          "sourceStartFrame": 136800,
+          "sourceEndFrame": 292392,
+          "sourceCharacterStart": 66,
+          "sourceCharacterEnd": 151
+        }
+      ],
+      "sha256": "f35d82cf540ae75a03207bac72e0fb39edcd7cfe1778d55e02600f30be1d52a5"
+    },
+    {
+      "id": 7,
+      "text": "Why has the delivery been delayed? A. Because of heavy traffic. B. By the loading dock. C. Yes, two packages.",
+      "kind": "part-2",
+      "questionIds": [
+        7
+      ],
+      "src": "assets/audio/heygen-extra/part-2-4854d78be48c6c04.wav",
+      "duration": 7.847,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 1.624
+        },
+        {
+          "role": "male",
+          "start": 1.804,
+          "end": 7.847
+        }
+      ],
+      "scriptSha256": "4854d78be48c6c04d2523f1b199955220c3375c8889ca54ade35eae723edba7c",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "Why has the delivery been delayed?",
+          "start": 0.0,
+          "end": 1.624,
+          "batch": "female-01",
+          "sourceStartFrame": 1014600,
+          "sourceEndFrame": 1053576,
+          "sourceCharacterStart": 625,
+          "sourceCharacterEnd": 659
+        },
+        {
+          "role": "male",
+          "text": "A. Because of heavy traffic. B. By the loading dock. C. Yes, two packages.",
+          "start": 1.804,
+          "end": 7.847,
+          "batch": "male-01",
+          "sourceStartFrame": 292440,
+          "sourceEndFrame": 437472,
+          "sourceCharacterStart": 153,
+          "sourceCharacterEnd": 227
+        }
+      ],
+      "sha256": "f6541b5b5d93df0811a8690b014c40c8de84ed627636f7fc5542a5862546b1d3"
+    },
+    {
+      "id": 8,
+      "text": "Who is responsible for booking the conference room? A. It is quite spacious. B. Let me check with reception. C. At the conference last year.",
+      "kind": "part-2",
+      "questionIds": [
+        8
+      ],
+      "src": "assets/audio/heygen-extra/part-2-070265a022fc841a.wav",
+      "duration": 8.575,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 2.543
+        },
+        {
+          "role": "male",
+          "start": 2.723,
+          "end": 8.575
+        }
+      ],
+      "scriptSha256": "070265a022fc841ae363ce6752f98cca2d45f40fe15e734b1960dd7b341f48ec",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "Who is responsible for booking the conference room?",
+          "start": 0.0,
+          "end": 2.543,
+          "batch": "female-01",
+          "sourceStartFrame": 1059984,
+          "sourceEndFrame": 1121016,
+          "sourceCharacterStart": 661,
+          "sourceCharacterEnd": 712
+        },
+        {
+          "role": "male",
+          "text": "A. It is quite spacious. B. Let me check with reception. C. At the conference last year.",
+          "start": 2.723,
+          "end": 8.575,
+          "batch": "male-01",
+          "sourceStartFrame": 440928,
+          "sourceEndFrame": 581376,
+          "sourceCharacterStart": 229,
+          "sourceCharacterEnd": 317
+        }
+      ],
+      "sha256": "627933c47763a40421e0721acd1c8aa8a96ce421ee3b4588c2c737e6a97305ca"
+    },
+    {
+      "id": 9,
+      "text": "When is the application deadline? A. The online application. B. I applied for the position. C. This Friday afternoon.",
+      "kind": "part-2",
+      "questionIds": [
+        9
+      ],
+      "src": "assets/audio/heygen-extra/part-2-b5985c7948f2e264.wav",
+      "duration": 8.141,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 1.719
+        },
+        {
+          "role": "male",
+          "start": 1.899,
+          "end": 8.141
+        }
+      ],
+      "scriptSha256": "b5985c7948f2e264cf52f6298e86e11eb0c3458b93568d78571174b08f0f16c7",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "When is the application deadline?",
+          "start": 0.0,
+          "end": 1.719,
+          "batch": "female-01",
+          "sourceStartFrame": 1126536,
+          "sourceEndFrame": 1167792,
+          "sourceCharacterStart": 714,
+          "sourceCharacterEnd": 747
+        },
+        {
+          "role": "male",
+          "text": "A. The online application. B. I applied for the position. C. This Friday afternoon.",
+          "start": 1.899,
+          "end": 8.141,
+          "batch": "male-01",
+          "sourceStartFrame": 588936,
+          "sourceEndFrame": 738744,
+          "sourceCharacterStart": 319,
+          "sourceCharacterEnd": 402
+        }
+      ],
+      "sha256": "8a33d342de03f32a523939bdb7e48df9ddb81c9ff8072a1d675ae224c49103db"
+    },
+    {
+      "id": 10,
+      "text": "Shall we review the proposal after lunch? A. Could we do it tomorrow instead? B. A sandwich and some soup. C. It received a good review.",
+      "kind": "part-2",
+      "questionIds": [
+        10
+      ],
+      "src": "assets/audio/heygen-extra/part-2-21aaef545e758136.wav",
+      "duration": 8.774,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 1.889
+        },
+        {
+          "role": "male",
+          "start": 2.069,
+          "end": 8.774
+        }
+      ],
+      "scriptSha256": "21aaef545e7581362d52975bedb4d115250657a17c6ba1b9865f070368063633",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "Shall we review the proposal after lunch?",
+          "start": 0.0,
+          "end": 1.889,
+          "batch": "female-01",
+          "sourceStartFrame": 1174680,
+          "sourceEndFrame": 1220016,
+          "sourceCharacterStart": 749,
+          "sourceCharacterEnd": 790
+        },
+        {
+          "role": "male",
+          "text": "A. Could we do it tomorrow instead? B. A sandwich and some soup. C. It received a good review.",
+          "start": 2.069,
+          "end": 8.774,
+          "batch": "male-01",
+          "sourceStartFrame": 745608,
+          "sourceEndFrame": 906528,
+          "sourceCharacterStart": 404,
+          "sourceCharacterEnd": 498
+        }
+      ],
+      "sha256": "b57aa6868a6c69d0e57eba76cf94fe109d6ae964773e5bad3e46050190a34cb0"
+    },
+    {
+      "id": 11,
+      "text": "Attention passengers. The ten forty service to Brookfield will now depart from platform seven instead of platform three. The departure time is unchanged. Please follow the signs to platform seven and have your tickets ready for inspection.",
+      "kind": "part-4",
+      "questionIds": [
+        17,
+        18
+      ],
+      "src": "assets/audio/heygen-extra/part-4-adc339952803e678.wav",
+      "duration": 13.313,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 13.313
+        }
+      ],
+      "scriptSha256": "adc339952803e67839419e1f2f261955fc18dfca2f30fd0934533b21756e0df5",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "Attention passengers. The ten forty service to Brookfield will now depart from platform seven instead of platform three. The departure time is unchanged. Please follow the signs to platform seven and have your tickets ready for inspection.",
+          "start": 0.0,
+          "end": 13.313,
+          "batch": "female-01",
+          "sourceStartFrame": 1224840,
+          "sourceEndFrame": 1544352,
+          "sourceCharacterStart": 792,
+          "sourceCharacterEnd": 1031
+        }
+      ],
+      "sha256": "e6945c9b7088a153eaef4269a1d79a065091b5a183cc4db2b19e1d9df3aab8ab"
+    },
+    {
+      "id": 12,
+      "text": "Good morning, everyone. This is a reminder that our office will be closed for electrical maintenance on Saturday. If you need to collect personal items, please do so by Friday evening. Normal access will resume on Monday at eight. Contact facilities if you have any questions.",
+      "kind": "part-4",
+      "questionIds": [
+        19,
+        20
+      ],
+      "src": "assets/audio/heygen-extra/part-4-b5e8a83f7d4723e6.wav",
+      "duration": 14.921,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 14.921
+        }
+      ],
+      "scriptSha256": "b5e8a83f7d4723e64cb95bfecd1ee47407d021d18100470e6e2f9a8ab9f236c7",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "Good morning, everyone. This is a reminder that our office will be closed for electrical maintenance on Saturday. If you need to collect personal items, please do so by Friday evening. Normal access will resume on Monday at eight. Contact facilities if you have any questions.",
+          "start": 0.0,
+          "end": 14.921,
+          "batch": "female-01",
+          "sourceStartFrame": 1553784,
+          "sourceEndFrame": 1911888,
+          "sourceCharacterStart": 1033,
+          "sourceCharacterEnd": 1309
+        }
+      ],
+      "sha256": "9471020c650279e95b3aac25135bf3eaa800d4fec8174d6bb3778464114c3425"
+    },
+    {
+      "id": 13,
+      "text": "Thank you for calling Maple Dental Clinic. Our opening hours are nine to six, Monday through Friday. To make or change an appointment, please press one. To request a copy of your invoice, press two. For all other inquiries, stay on the line.",
+      "kind": "part-4",
+      "questionIds": [
+        21,
+        22
+      ],
+      "src": "assets/audio/heygen-extra/part-4-d45864aa22069ce9.wav",
+      "duration": 13.673,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 13.673
+        }
+      ],
+      "scriptSha256": "d45864aa22069ce9036d8e8482904768fb89c0cc2c488da9f2926927d1ff89b6",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "Thank you for calling Maple Dental Clinic. Our opening hours are nine to six, Monday through Friday. To make or change an appointment, please press one. To request a copy of your invoice, press two. For all other inquiries, stay on the line.",
+          "start": 0.0,
+          "end": 13.673,
+          "batch": "female-01",
+          "sourceStartFrame": 1922880,
+          "sourceEndFrame": 2251032,
+          "sourceCharacterStart": 1311,
+          "sourceCharacterEnd": 1552
+        }
+      ],
+      "sha256": "ea34869ea8f1e685fa47b688c79e2045f9d871a3ee83325192768859fa880341"
+    },
+    {
+      "id": 14,
+      "text": "A. A worker is painting a wall. B. Boxes are being loaded onto a truck. C. A worker is holding a clipboard beside some shelves. D. The shelves are completely empty.",
+      "kind": "part-1",
+      "questionIds": [
+        47
+      ],
+      "src": "assets/audio/heygen-extra/part-1-416904eba6be2629.wav",
+      "duration": 11.283,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 11.283
+        }
+      ],
+      "scriptSha256": "416904eba6be26299ff4547ee3e0219ec4f8ec086ba4870a73a37a58afa5cc27",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "A. A worker is painting a wall. B. Boxes are being loaded onto a truck. C. A worker is holding a clipboard beside some shelves. D. The shelves are completely empty.",
+          "start": 0.0,
+          "end": 11.283,
+          "batch": "female-01",
+          "sourceStartFrame": 2255184,
+          "sourceEndFrame": 2525976,
+          "sourceCharacterStart": 1554,
+          "sourceCharacterEnd": 1718
+        }
+      ],
+      "sha256": "7606dd0bb8576db8814bafd5611aa3f2d5a6189179b02b22c5e016bdaacb61fd"
+    },
+    {
+      "id": 15,
+      "text": "Could you make ten copies of this document? A. Certainly. Do you need them in color? B. There are ten floors. C. I read it last night.",
+      "kind": "part-2",
+      "questionIds": [
+        48
+      ],
+      "src": "assets/audio/heygen-extra/part-2-baec88a4fff1960a.wav",
+      "duration": 8.41,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 2.117
+        },
+        {
+          "role": "male",
+          "start": 2.297,
+          "end": 8.41
+        }
+      ],
+      "scriptSha256": "baec88a4fff1960a3a6efb4ccb1583cda54be4416fa796c065384ca9d1eb7412",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "Could you make ten copies of this document?",
+          "start": 0.0,
+          "end": 2.117,
+          "batch": "female-01",
+          "sourceStartFrame": 2532840,
+          "sourceEndFrame": 2583648,
+          "sourceCharacterStart": 1720,
+          "sourceCharacterEnd": 1763
+        },
+        {
+          "role": "male",
+          "text": "A. Certainly. Do you need them in color? B. There are ten floors. C. I read it last night.",
+          "start": 2.297,
+          "end": 8.41,
+          "batch": "male-01",
+          "sourceStartFrame": 910008,
+          "sourceEndFrame": 1056720,
+          "sourceCharacterStart": 500,
+          "sourceCharacterEnd": 590
+        }
+      ],
+      "sha256": "109d8304bf17962ded274cba8ca92b3d60f5313b8745746b0eae315f892d5a4b"
+    },
+    {
+      "id": 16,
+      "text": "How often do we order office supplies? A. In the supply cabinet. B. Usually once a month. C. The order was correct.",
+      "kind": "part-2",
+      "questionIds": [
+        49
+      ],
+      "src": "assets/audio/heygen-extra/part-2-bee6624a5ccac37c.wav",
+      "duration": 8.04,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 1.974
+        },
+        {
+          "role": "male",
+          "start": 2.154,
+          "end": 8.04
+        }
+      ],
+      "scriptSha256": "bee6624a5ccac37ce217fd833bb36b97f68e224552b563aeef185265829bd2ce",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "How often do we order office supplies?",
+          "start": 0.0,
+          "end": 1.974,
+          "batch": "female-01",
+          "sourceStartFrame": 2589168,
+          "sourceEndFrame": 2636544,
+          "sourceCharacterStart": 1765,
+          "sourceCharacterEnd": 1803
+        },
+        {
+          "role": "male",
+          "text": "A. In the supply cabinet. B. Usually once a month. C. The order was correct.",
+          "start": 2.154,
+          "end": 8.04,
+          "batch": "male-01",
+          "sourceStartFrame": 1059504,
+          "sourceEndFrame": 1200768,
+          "sourceCharacterStart": 592,
+          "sourceCharacterEnd": 668
+        }
+      ],
+      "sha256": "fc076dc6441ca1456580b37b56cc7cb297390db09f098ab5157b8e939a8e3c32"
+    },
+    {
+      "id": 17,
+      "text": "Has the meeting agenda been sent out? A. The meeting room is upstairs. B. About an hour long. C. Not yet. I am still adding one item.",
+      "kind": "part-2",
+      "questionIds": [
+        50
+      ],
+      "src": "assets/audio/heygen-extra/part-2-c3abeb15f8054b75.wav",
+      "duration": 9.061,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 1.719
+        },
+        {
+          "role": "male",
+          "start": 1.899,
+          "end": 9.061
+        }
+      ],
+      "scriptSha256": "c3abeb15f8054b75db7ffd9b4d3ca8a3e858f411e402696f0f0871e2f5c8efc5",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "Has the meeting agenda been sent out?",
+          "start": 0.0,
+          "end": 1.719,
+          "batch": "female-01",
+          "sourceStartFrame": 2641392,
+          "sourceEndFrame": 2682648,
+          "sourceCharacterStart": 1805,
+          "sourceCharacterEnd": 1842
+        },
+        {
+          "role": "male",
+          "text": "A. The meeting room is upstairs. B. About an hour long. C. Not yet. I am still adding one item.",
+          "start": 1.899,
+          "end": 9.061,
+          "batch": "male-01",
+          "sourceStartFrame": 1202856,
+          "sourceEndFrame": 1374744,
+          "sourceCharacterStart": 670,
+          "sourceCharacterEnd": 765
+        }
+      ],
+      "sha256": "beb32f567f581bae0d7ab9fe7202038657e97196c1334f999555e287d879baa5"
+    },
+    {
+      "id": 18,
+      "text": "Hello, this is Aisha from reception. A courier has left a parcel for Mr. Tan. It is too large for the reception cabinet, so we have placed it in the storage room next to the elevators. Please collect it before five today. Bring your staff card so that we can confirm your identity.",
+      "kind": "part-4",
+      "questionIds": [
+        54,
+        55,
+        56
+      ],
+      "src": "assets/audio/heygen-extra/part-4-4598f48455a99004.wav",
+      "duration": 15.289,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 15.289
+        }
+      ],
+      "scriptSha256": "4598f48455a990040f58665ed017d7b243c493a704496136fcc24b8e400602d0",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "Hello, this is Aisha from reception. A courier has left a parcel for Mr. Tan. It is too large for the reception cabinet, so we have placed it in the storage room next to the elevators. Please collect it before five today. Bring your staff card so that we can confirm your identity.",
+          "start": 0.0,
+          "end": 15.289,
+          "batch": "female-01",
+          "sourceStartFrame": 2685432,
+          "sourceEndFrame": 3052368,
+          "sourceCharacterStart": 1844,
+          "sourceCharacterEnd": 2125
+        }
+      ],
+      "sha256": "72d69dad6961f8dbb33d031f994707248be39771bc89faa9bd4823d7569068b1"
+    },
+    {
+      "id": 19,
+      "text": "A. Some luggage is standing beside a bench. B. A traveler is opening a suitcase. C. People are sitting beneath a clock. D. A bench is being carried outside.",
+      "kind": "part-1",
+      "questionIds": [
+        67
+      ],
+      "src": "assets/audio/heygen-extra/part-1-b28155d2a5851b85.wav",
+      "duration": 10.838,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 10.838
+        }
+      ],
+      "scriptSha256": "b28155d2a5851b8566821b7b223c48aecb9d3f26d144072c3aae40d996c0801b",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "A. Some luggage is standing beside a bench. B. A traveler is opening a suitcase. C. People are sitting beneath a clock. D. A bench is being carried outside.",
+          "start": 0.0,
+          "end": 10.838,
+          "batch": "female-01",
+          "sourceStartFrame": 3056520,
+          "sourceEndFrame": 3316632,
+          "sourceCharacterStart": 2127,
+          "sourceCharacterEnd": 2283
+        }
+      ],
+      "sha256": "88a3925457a496dff9da77ddb241d1a58cd9c62d85464128cb888bd288d1054f"
+    },
+    {
+      "id": 20,
+      "text": "Which platform does the airport train leave from? A. Every twenty minutes. B. Platform four, I believe. C. A return ticket, please.",
+      "kind": "part-2",
+      "questionIds": [
+        68
+      ],
+      "src": "assets/audio/heygen-extra/part-2-a348d4ead42547d7.wav",
+      "duration": 8.958,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 2.494
+        },
+        {
+          "role": "male",
+          "start": 2.674,
+          "end": 8.958
+        }
+      ],
+      "scriptSha256": "a348d4ead42547d79db5fd072291dbd1bc4a5e7c4cd9f81a09a9e40afa0f13fc",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "Which platform does the airport train leave from?",
+          "start": 0.0,
+          "end": 2.494,
+          "batch": "female-01",
+          "sourceStartFrame": 3325560,
+          "sourceEndFrame": 3385416,
+          "sourceCharacterStart": 2285,
+          "sourceCharacterEnd": 2334
+        },
+        {
+          "role": "male",
+          "text": "A. Every twenty minutes. B. Platform four, I believe. C. A return ticket, please.",
+          "start": 2.674,
+          "end": 8.958,
+          "batch": "male-01",
+          "sourceStartFrame": 1376160,
+          "sourceEndFrame": 1526976,
+          "sourceCharacterStart": 767,
+          "sourceCharacterEnd": 848
+        }
+      ],
+      "sha256": "37c08d28c4c4f50d40467cb097549ff063e2d14d5f1e20d0f356ea26c93ad447"
+    },
+    {
+      "id": 21,
+      "text": "Would you prefer a window seat or an aisle seat? A. I prefer traveling in June. B. The window is closed. C. An aisle seat, if one is available.",
+      "kind": "part-2",
+      "questionIds": [
+        69
+      ],
+      "src": "assets/audio/heygen-extra/part-2-cf9076f784424607.wav",
+      "duration": 9.166,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 2.53
+        },
+        {
+          "role": "male",
+          "start": 2.71,
+          "end": 9.166
+        }
+      ],
+      "scriptSha256": "cf9076f784424607e29e05dd728f86c66063e5ebc82dda5d2d0d416afeab5c6e",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "Would you prefer a window seat or an aisle seat?",
+          "start": 0.0,
+          "end": 2.53,
+          "batch": "female-01",
+          "sourceStartFrame": 3390576,
+          "sourceEndFrame": 3451296,
+          "sourceCharacterStart": 2336,
+          "sourceCharacterEnd": 2384
+        },
+        {
+          "role": "male",
+          "text": "A. I prefer traveling in June. B. The window is closed. C. An aisle seat, if one is available.",
+          "start": 2.71,
+          "end": 9.166,
+          "batch": "male-01",
+          "sourceStartFrame": 1529760,
+          "sourceEndFrame": 1684704,
+          "sourceCharacterStart": 850,
+          "sourceCharacterEnd": 944
+        }
+      ],
+      "sha256": "a5fe000bcd14e81e9f759d01b06bef59707e23407e24044b1aee4821ab2fbec6"
+    },
+    {
+      "id": 22,
+      "text": "Do I need to print the boarding pass? A. The mobile version is fine. B. It was a comfortable flight. C. At the departure gate.",
+      "kind": "part-2",
+      "questionIds": [
+        70
+      ],
+      "src": "assets/audio/heygen-extra/part-2-b9ceda93bda5e99b.wav",
+      "duration": 8.325,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 1.633
+        },
+        {
+          "role": "male",
+          "start": 1.813,
+          "end": 8.325
+        }
+      ],
+      "scriptSha256": "b9ceda93bda5e99b73d5ec539c26bbcc46a2bc1dbf6032b243fdcb3fecc0d577",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "Do I need to print the boarding pass?",
+          "start": 0.0,
+          "end": 1.633,
+          "batch": "female-01",
+          "sourceStartFrame": 3454080,
+          "sourceEndFrame": 3493272,
+          "sourceCharacterStart": 2386,
+          "sourceCharacterEnd": 2423
+        },
+        {
+          "role": "male",
+          "text": "A. The mobile version is fine. B. It was a comfortable flight. C. At the departure gate.",
+          "start": 1.813,
+          "end": 8.325,
+          "batch": "male-01",
+          "sourceStartFrame": 1691568,
+          "sourceEndFrame": 1847856,
+          "sourceCharacterStart": 946,
+          "sourceCharacterEnd": 1034
+        }
+      ],
+      "sha256": "88c7d75578dd62989776289f740dd09899d472203ed7c917617cdf747ce63b9f"
+    },
+    {
+      "id": 23,
+      "text": "Welcome aboard the Lakeside Express. Our next stop is Fairhaven, where passengers can connect to services for the coast. Due to construction, the usual exit at Fairhaven is closed. Please use the footbridge at the rear of the platform. Staff in yellow jackets will be available to assist passengers with heavy luggage.",
+      "kind": "part-4",
+      "questionIds": [
+        74,
+        75,
+        76
+      ],
+      "src": "assets/audio/heygen-extra/part-4-19434eb32da5032f.wav",
+      "duration": 17.651,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 17.651
+        }
+      ],
+      "scriptSha256": "19434eb32da5032f931d56132c41b73b149a28701cdae8981210e49eb679adad",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "Welcome aboard the Lakeside Express. Our next stop is Fairhaven, where passengers can connect to services for the coast. Due to construction, the usual exit at Fairhaven is closed. Please use the footbridge at the rear of the platform. Staff in yellow jackets will be available to assist passengers with heavy luggage.",
+          "start": 0.0,
+          "end": 17.651,
+          "batch": "female-01",
+          "sourceStartFrame": 3500160,
+          "sourceEndFrame": 3923784,
+          "sourceCharacterStart": 2425,
+          "sourceCharacterEnd": 2743
+        }
+      ],
+      "sha256": "dc862db7a0ac47f7fb74cc54da42e6c57799ab10303637e9b85ba66fa4f01adc"
+    },
+    {
+      "id": 24,
+      "text": "A. Customers are trying on clothes. B. Bags are hanging from a tree. C. A counter is being removed. D. An assistant is standing behind a counter with shopping bags on it.",
+      "kind": "part-1",
+      "questionIds": [
+        87
+      ],
+      "src": "assets/audio/heygen-extra/part-1-7dee784660fb3fbd.wav",
+      "duration": 11.478,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 11.478
+        }
+      ],
+      "scriptSha256": "7dee784660fb3fbd01b4e682960b13b6a4edfe1a94e0eb9362b0723ce1e344d5",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "A. Customers are trying on clothes. B. Bags are hanging from a tree. C. A counter is being removed. D. An assistant is standing behind a counter with shopping bags on it.",
+          "start": 0.0,
+          "end": 11.478,
+          "batch": "female-01",
+          "sourceStartFrame": 3928608,
+          "sourceEndFrame": 4204080,
+          "sourceCharacterStart": 2745,
+          "sourceCharacterEnd": 2915
+        }
+      ],
+      "sha256": "95d140d094d1cee0bf515c9e7a5ceab3b4d184f10ef8ce32e0b213712c56c868"
+    },
+    {
+      "id": 25,
+      "text": "Can I exchange this jacket for a smaller size? A. Yes, if you have your receipt. B. The price is on the label. C. It is made of cotton.",
+      "kind": "part-2",
+      "questionIds": [
+        88
+      ],
+      "src": "assets/audio/heygen-extra/part-2-f550689d157daaf6.wav",
+      "duration": 9.122,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 2.359
+        },
+        {
+          "role": "male",
+          "start": 2.539,
+          "end": 9.122
+        }
+      ],
+      "scriptSha256": "f550689d157daaf687900db41891978a28f641ee603fef4d4a1dabe96603330a",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "Can I exchange this jacket for a smaller size?",
+          "start": 0.0,
+          "end": 2.359,
+          "batch": "female-01",
+          "sourceStartFrame": 4207536,
+          "sourceEndFrame": 4264152,
+          "sourceCharacterStart": 2917,
+          "sourceCharacterEnd": 2963
+        },
+        {
+          "role": "male",
+          "text": "A. Yes, if you have your receipt. B. The price is on the label. C. It is made of cotton.",
+          "start": 2.539,
+          "end": 9.122,
+          "batch": "male-01",
+          "sourceStartFrame": 1851312,
+          "sourceEndFrame": 2009304,
+          "sourceCharacterStart": 1036,
+          "sourceCharacterEnd": 1124
+        }
+      ],
+      "sha256": "d3c4214c6538adf495a01703485c6be45df286e25cd1c8d3968826dbc3e7eef3"
+    },
+    {
+      "id": 26,
+      "text": "How would you like to pay for your order? A. It arrived this morning. B. By credit card, please. C. I would like the blue one.",
+      "kind": "part-2",
+      "questionIds": [
+        89
+      ],
+      "src": "assets/audio/heygen-extra/part-2-089c4d9773c48001.wav",
+      "duration": 7.606,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 1.509
+        },
+        {
+          "role": "male",
+          "start": 1.689,
+          "end": 7.606
+        }
+      ],
+      "scriptSha256": "089c4d9773c4800129077ab26e9b1a76ae2d1f12c3beb99c2d1c933635cf83d5",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "How would you like to pay for your order?",
+          "start": 0.0,
+          "end": 1.509,
+          "batch": "female-01",
+          "sourceStartFrame": 4266936,
+          "sourceEndFrame": 4303152,
+          "sourceCharacterStart": 2965,
+          "sourceCharacterEnd": 3006
+        },
+        {
+          "role": "male",
+          "text": "A. It arrived this morning. B. By credit card, please. C. I would like the blue one.",
+          "start": 1.689,
+          "end": 7.606,
+          "batch": "male-01",
+          "sourceStartFrame": 2016168,
+          "sourceEndFrame": 2158176,
+          "sourceCharacterStart": 1126,
+          "sourceCharacterEnd": 1210
+        }
+      ],
+      "sha256": "ecc97c7948e9e2b51cdcd1a7d3541f205aedbef9408a150a860e40950f7c3b4d"
+    },
+    {
+      "id": 27,
+      "text": "Why was my online order canceled? A. You can order on our website. B. The cancellation was free. C. Unfortunately, that item was out of stock.",
+      "kind": "part-2",
+      "questionIds": [
+        90
+      ],
+      "src": "assets/audio/heygen-extra/part-2-18ab69c6602d3445.wav",
+      "duration": 9.405,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 2.088
+        },
+        {
+          "role": "male",
+          "start": 2.268,
+          "end": 9.405
+        }
+      ],
+      "scriptSha256": "18ab69c6602d3445c2eb8de6665112822af6cec6ea24b8f23d54cabade9182ee",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "Why was my online order canceled?",
+          "start": 0.0,
+          "end": 2.088,
+          "batch": "female-01",
+          "sourceStartFrame": 4308144,
+          "sourceEndFrame": 4358256,
+          "sourceCharacterStart": 3008,
+          "sourceCharacterEnd": 3041
+        },
+        {
+          "role": "male",
+          "text": "A. You can order on our website. B. The cancellation was free. C. Unfortunately, that item was out of stock.",
+          "start": 2.268,
+          "end": 9.405,
+          "batch": "male-01",
+          "sourceStartFrame": 2160960,
+          "sourceEndFrame": 2332248,
+          "sourceCharacterStart": 1212,
+          "sourceCharacterEnd": 1320
+        }
+      ],
+      "sha256": "52a2382d716056be775fe662b3adba85be6f8c819d05f9a957ba08e87badf88f"
+    },
+    {
+      "id": 28,
+      "text": "Thank you for shopping with North Street Market. Starting this weekend, customers can collect online orders from our new service desk beside the main entrance. Orders placed before noon will be ready after four p.m. the same day. Please bring your order confirmation, either printed or on your phone. This collection service is free for orders over thirty dollars.",
+      "kind": "part-4",
+      "questionIds": [
+        94,
+        95,
+        96
+      ],
+      "src": "assets/audio/heygen-extra/part-4-78c73e4fb69bfdd4.wav",
+      "duration": 19.900625,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 19.900625
+        }
+      ],
+      "scriptSha256": "78c73e4fb69bfdd42d78d1f18d78fbbde20de667cc4ab3476109362611b67cde",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "Thank you for shopping with North Street Market. Starting this weekend, customers can collect online orders from our new service desk beside the main entrance. Orders placed before noon will be ready after four p.m. the same day. Please bring your order confirmation, either printed or on your phone. This collection service is free for orders over thirty dollars.",
+          "start": 0.0,
+          "end": 19.900625,
+          "batch": "female-01",
+          "sourceStartFrame": 4362408,
+          "sourceEndFrame": 4840023,
+          "sourceCharacterStart": 3043,
+          "sourceCharacterEnd": 3407
+        }
+      ],
+      "sha256": "4c06e7db684c3759e2d0ecfbae553d77cb35be9d65ebf045591f76fe108fc9be"
+    },
+    {
+      "id": 29,
+      "text": "A. Some chairs are arranged in front of a screen. B. A speaker is writing on the screen. C. The chairs have been stacked in a corner. D. People are taking their seats.",
+      "kind": "part-1",
+      "questionIds": [
+        107
+      ],
+      "src": "assets/audio/heygen-extra/part-1-7dfa4b1043f3d30a.wav",
+      "duration": 10.636,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 10.636
+        }
+      ],
+      "scriptSha256": "7dfa4b1043f3d30a4f37ddb1622bc53327e19d23195be47de851eeb1d9770585",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "A. Some chairs are arranged in front of a screen. B. A speaker is writing on the screen. C. The chairs have been stacked in a corner. D. People are taking their seats.",
+          "start": 0.0,
+          "end": 10.636,
+          "batch": "female-02",
+          "sourceStartFrame": 4704,
+          "sourceEndFrame": 259968,
+          "sourceCharacterStart": 0,
+          "sourceCharacterEnd": 167
+        }
+      ],
+      "sha256": "6bd9ef52c827186534dbea485c7e07fee6a5a3e1f9d4fceb5a600346f7d661e3"
+    },
+    {
+      "id": 30,
+      "text": "Where can I pick up my conference badge? A. It lasts two days. B. At the registration desk in the lobby. C. I enjoyed the keynote speech.",
+      "kind": "part-2",
+      "questionIds": [
+        108
+      ],
+      "src": "assets/audio/heygen-extra/part-2-36e735f74028542f.wav",
+      "duration": 9.368,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 1.829
+        },
+        {
+          "role": "male",
+          "start": 2.009,
+          "end": 9.368
+        }
+      ],
+      "scriptSha256": "36e735f74028542f1a4197e80c2ee7dced787df1e0d6b02cf6fed3d0ecb33fa0",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "Where can I pick up my conference badge?",
+          "start": 0.0,
+          "end": 1.829,
+          "batch": "female-02",
+          "sourceStartFrame": 264792,
+          "sourceEndFrame": 308688,
+          "sourceCharacterStart": 169,
+          "sourceCharacterEnd": 209
+        },
+        {
+          "role": "male",
+          "text": "A. It lasts two days. B. At the registration desk in the lobby. C. I enjoyed the keynote speech.",
+          "start": 2.009,
+          "end": 9.368,
+          "batch": "male-01",
+          "sourceStartFrame": 2332992,
+          "sourceEndFrame": 2509608,
+          "sourceCharacterStart": 1322,
+          "sourceCharacterEnd": 1418
+        }
+      ],
+      "sha256": "4edc94c8dce7d0a3d2a53be74b70c02efa9b343914e4d7ed3974a5b5a8c21c93"
+    },
+    {
+      "id": 31,
+      "text": "Is there still room in the afternoon workshop? A. The room has large windows. B. It starts at two o’clock. C. I can check the registration list for you.",
+      "kind": "part-2",
+      "questionIds": [
+        109
+      ],
+      "src": "assets/audio/heygen-extra/part-2-9dc000fcbdfb55ea.wav",
+      "duration": 9.918,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 2.316
+        },
+        {
+          "role": "male",
+          "start": 2.496,
+          "end": 9.918
+        }
+      ],
+      "scriptSha256": "9dc000fcbdfb55eaab731df3450732f7aba4b863c45d2a3441fbffe702d1eb6e",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "Is there still room in the afternoon workshop?",
+          "start": 0.0,
+          "end": 2.316,
+          "batch": "female-02",
+          "sourceStartFrame": 310608,
+          "sourceEndFrame": 366192,
+          "sourceCharacterStart": 211,
+          "sourceCharacterEnd": 257
+        },
+        {
+          "role": "male",
+          "text": "A. The room has large windows. B. It starts at two o’clock. C. I can check the registration list for you.",
+          "start": 2.496,
+          "end": 9.918,
+          "batch": "male-01",
+          "sourceStartFrame": 2514432,
+          "sourceEndFrame": 2692560,
+          "sourceCharacterStart": 1420,
+          "sourceCharacterEnd": 1525
+        }
+      ],
+      "sha256": "2f2a11f578e777101cbc9d8dd11eb6c781ecd623dcb4ea0e0950b71a75a9e01a"
+    },
+    {
+      "id": 32,
+      "text": "Should we send the invitations today or wait until Monday? A. Let us send them today. B. About fifty people attended. C. The invitation was very attractive.",
+      "kind": "part-2",
+      "questionIds": [
+        110
+      ],
+      "src": "assets/audio/heygen-extra/part-2-112aa6168b6c455b.wav",
+      "duration": 10.671,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 3.056
+        },
+        {
+          "role": "male",
+          "start": 3.236,
+          "end": 10.671
+        }
+      ],
+      "scriptSha256": "112aa6168b6c455b726513d33d8ba4ffb9903db0206f2b7787aa6ec9b87e2ece",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "Should we send the invitations today or wait until Monday?",
+          "start": 0.0,
+          "end": 3.056,
+          "batch": "female-02",
+          "sourceStartFrame": 373080,
+          "sourceEndFrame": 446424,
+          "sourceCharacterStart": 259,
+          "sourceCharacterEnd": 317
+        },
+        {
+          "role": "male",
+          "text": "A. Let us send them today. B. About fifty people attended. C. The invitation was very attractive.",
+          "start": 3.236,
+          "end": 10.671,
+          "batch": "male-01",
+          "sourceStartFrame": 2696712,
+          "sourceEndFrame": 2875152,
+          "sourceCharacterStart": 1527,
+          "sourceCharacterEnd": 1624
+        }
+      ],
+      "sha256": "9058228611bb62c9105f835f61da54ed6c712c13d59350853281cb2249d7e61c"
+    },
+    {
+      "id": 33,
+      "text": "Good afternoon, delegates. The product-design panel scheduled for two p.m. has been moved from Hall A to Hall C because the sound system in Hall A requires repair. The starting time has not changed. Printed programs still show the old location, so please follow the signs near the elevators. Volunteers will direct you if you need help.",
+      "kind": "part-4",
+      "questionIds": [
+        114,
+        115,
+        116
+      ],
+      "src": "assets/audio/heygen-extra/part-4-bed42064f22be6a9.wav",
+      "duration": 19.385,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 19.385
+        }
+      ],
+      "scriptSha256": "bed42064f22be6a9f136e9c34580e43e9f987cdaa98279ed0e2afe9d474bb64b",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "Good afternoon, delegates. The product-design panel scheduled for two p.m. has been moved from Hall A to Hall C because the sound system in Hall A requires repair. The starting time has not changed. Printed programs still show the old location, so please follow the signs near the elevators. Volunteers will direct you if you need help.",
+          "start": 0.0,
+          "end": 19.385,
+          "batch": "female-02",
+          "sourceStartFrame": 453984,
+          "sourceEndFrame": 919224,
+          "sourceCharacterStart": 319,
+          "sourceCharacterEnd": 655
+        }
+      ],
+      "sha256": "a723d898c82eb1083ddf741b4d57edd04d63c4d16dc5b5abc88749b6faff3a58"
+    },
+    {
+      "id": 34,
+      "text": "A. Two people are carrying a table. B. Two people are standing beside a table with a document on it. C. A woman is closing a door. D. Some documents are scattered on the floor.",
+      "kind": "part-1",
+      "questionIds": [
+        127
+      ],
+      "src": "assets/audio/heygen-extra/part-1-589c17b486ef67d7.wav",
+      "duration": 12.006,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 12.006
+        }
+      ],
+      "scriptSha256": "589c17b486ef67d7a97c34cdebb1cdf3aba21480d7f1ec823c59089dbf6be35e",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "A. Two people are carrying a table. B. Two people are standing beside a table with a document on it. C. A woman is closing a door. D. Some documents are scattered on the floor.",
+          "start": 0.0,
+          "end": 12.006,
+          "batch": "female-02",
+          "sourceStartFrame": 924744,
+          "sourceEndFrame": 1212888,
+          "sourceCharacterStart": 657,
+          "sourceCharacterEnd": 833
+        }
+      ],
+      "sha256": "bb9be63acc1d208d826578fcf359e9ceff1ac8d5ef8fd4700c9cf0e5d8c85e13"
+    },
+    {
+      "id": 35,
+      "text": "Who should I contact about the training budget? A. It is an interesting course. B. The budget increased last year. C. Ms. Evans in human resources.",
+      "kind": "part-2",
+      "questionIds": [
+        128
+      ],
+      "src": "assets/audio/heygen-extra/part-2-22a2e2f53f1ad0d5.wav",
+      "duration": 9.86,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 2.316
+        },
+        {
+          "role": "male",
+          "start": 2.496,
+          "end": 9.86
+        }
+      ],
+      "scriptSha256": "22a2e2f53f1ad0d5282a5442e41cbf862489b158602238e04aa7de2773e8bcdf",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "Who should I contact about the training budget?",
+          "start": 0.0,
+          "end": 2.316,
+          "batch": "female-02",
+          "sourceStartFrame": 1215912,
+          "sourceEndFrame": 1271496,
+          "sourceCharacterStart": 835,
+          "sourceCharacterEnd": 882
+        },
+        {
+          "role": "male",
+          "text": "A. It is an interesting course. B. The budget increased last year. C. Ms. Evans in human resources.",
+          "start": 2.496,
+          "end": 9.86,
+          "batch": "male-01",
+          "sourceStartFrame": 2881368,
+          "sourceEndFrame": 3058104,
+          "sourceCharacterStart": 1626,
+          "sourceCharacterEnd": 1725
+        }
+      ],
+      "sha256": "0ab658d02e109528ac2ece225d9e94770d7de92ad4b944af69c5c74e9511ec85"
+    },
+    {
+      "id": 36,
+      "text": "Have you finished reviewing the applications? A. I still have three left. B. The position is permanent. C. At the front desk.",
+      "kind": "part-2",
+      "questionIds": [
+        129
+      ],
+      "src": "assets/audio/heygen-extra/part-2-97fbf17526a1df3a.wav",
+      "duration": 8.201,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 1.861
+        },
+        {
+          "role": "male",
+          "start": 2.041,
+          "end": 8.201
+        }
+      ],
+      "scriptSha256": "97fbf17526a1df3a9c26c3a9f74a61cb2d02f3a6ae684b1a973276f0483747f8",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "Have you finished reviewing the applications?",
+          "start": 0.0,
+          "end": 1.861,
+          "batch": "female-02",
+          "sourceStartFrame": 1276320,
+          "sourceEndFrame": 1320984,
+          "sourceCharacterStart": 884,
+          "sourceCharacterEnd": 929
+        },
+        {
+          "role": "male",
+          "text": "A. I still have three left. B. The position is permanent. C. At the front desk.",
+          "start": 2.041,
+          "end": 8.201,
+          "batch": "male-01",
+          "sourceStartFrame": 3063624,
+          "sourceEndFrame": 3211464,
+          "sourceCharacterStart": 1727,
+          "sourceCharacterEnd": 1806
+        }
+      ],
+      "sha256": "7dcd66af1c31c3213c5615a1059f294ae21ce91ecd144e1376f0daa3d9dc0515"
+    },
+    {
+      "id": 37,
+      "text": "When will the successful applicants be notified? A. By email. B. Early next week. C. There were twenty applicants.",
+      "kind": "part-2",
+      "questionIds": [
+        130
+      ],
+      "src": "assets/audio/heygen-extra/part-2-dacd4831bbfaa477.wav",
+      "duration": 7.842,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 2.302
+        },
+        {
+          "role": "male",
+          "start": 2.482,
+          "end": 7.842
+        }
+      ],
+      "scriptSha256": "dacd4831bbfaa477ca157b8091439e6578e6cfbdf1b7c67493dad231b130bc59",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "When will the successful applicants be notified?",
+          "start": 0.0,
+          "end": 2.302,
+          "batch": "female-02",
+          "sourceStartFrame": 1328544,
+          "sourceEndFrame": 1383792,
+          "sourceCharacterStart": 931,
+          "sourceCharacterEnd": 979
+        },
+        {
+          "role": "male",
+          "text": "A. By email. B. Early next week. C. There were twenty applicants.",
+          "start": 2.482,
+          "end": 7.842,
+          "batch": "male-01",
+          "sourceStartFrame": 3214248,
+          "sourceEndFrame": 3342888,
+          "sourceCharacterStart": 1808,
+          "sourceCharacterEnd": 1873
+        }
+      ],
+      "sha256": "a47faca0f0c81563a945005bbabaa6cc8ede8d7b4a434790285f08dc376ba1c1"
+    },
+    {
+      "id": 38,
+      "text": "Welcome to your first day at Redwood Consulting. This morning you will meet your team leaders and collect your security passes. After lunch, please return to this room for a software-training session. Bring the laptop issued to you at reception. If you have not received one, tell me during the break so we can arrange it before training begins.",
+      "kind": "part-4",
+      "questionIds": [
+        134,
+        135,
+        136
+      ],
+      "src": "assets/audio/heygen-extra/part-4-c8dfb26f3c0648e6.wav",
+      "duration": 18.026,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 18.026
+        }
+      ],
+      "scriptSha256": "c8dfb26f3c0648e61def8408943babab0eb953da94fb012f8dc23aa55186055b",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "Welcome to your first day at Redwood Consulting. This morning you will meet your team leaders and collect your security passes. After lunch, please return to this room for a software-training session. Bring the laptop issued to you at reception. If you have not received one, tell me during the break so we can arrange it before training begins.",
+          "start": 0.0,
+          "end": 18.026,
+          "batch": "female-02",
+          "sourceStartFrame": 1392048,
+          "sourceEndFrame": 1824672,
+          "sourceCharacterStart": 981,
+          "sourceCharacterEnd": 1326
+        }
+      ],
+      "sha256": "abb495d80e1922cf81c9a9db05b5e2092a4abdcd43a6ecf88a0c3fdfc22c5c0b"
+    },
+    {
+      "id": 39,
+      "text": "A. A van is driving across a bridge. B. Boxes are falling off a shelf. C. A handcart is loaded with boxes near a van. D. A worker is washing a vehicle.",
+      "kind": "part-1",
+      "questionIds": [
+        147
+      ],
+      "src": "assets/audio/heygen-extra/part-1-5b65bcb4ea31d19e.wav",
+      "duration": 10.913,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 10.913
+        }
+      ],
+      "scriptSha256": "5b65bcb4ea31d19e09ccce917a49de498cbb9d15b6df100c3ae78408b6516667",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "A. A van is driving across a bridge. B. Boxes are falling off a shelf. C. A handcart is loaded with boxes near a van. D. A worker is washing a vehicle.",
+          "start": 0.0,
+          "end": 10.913,
+          "batch": "female-02",
+          "sourceStartFrame": 1830192,
+          "sourceEndFrame": 2092104,
+          "sourceCharacterStart": 1328,
+          "sourceCharacterEnd": 1479
+        }
+      ],
+      "sha256": "5d03239e39145df96f3568468ae65cfde9a32dc3ac961a4ac9f333b1355de45b"
+    },
+    {
+      "id": 40,
+      "text": "How many cartons are still in the warehouse? A. The warehouse opens at eight. B. Twenty-four, according to the stock report. C. They arrived safely.",
+      "kind": "part-2",
+      "questionIds": [
+        148
+      ],
+      "src": "assets/audio/heygen-extra/part-2-e0857b8c2dce342a.wav",
+      "duration": 9.235,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 1.988
+        },
+        {
+          "role": "male",
+          "start": 2.168,
+          "end": 9.235
+        }
+      ],
+      "scriptSha256": "e0857b8c2dce342ac65334e4232d9533a9d158807092066a0a88aa246dc9f8f9",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "How many cartons are still in the warehouse?",
+          "start": 0.0,
+          "end": 1.988,
+          "batch": "female-02",
+          "sourceStartFrame": 2096952,
+          "sourceEndFrame": 2144664,
+          "sourceCharacterStart": 1481,
+          "sourceCharacterEnd": 1525
+        },
+        {
+          "role": "male",
+          "text": "A. The warehouse opens at eight. B. Twenty-four, according to the stock report. C. They arrived safely.",
+          "start": 2.168,
+          "end": 9.235,
+          "batch": "male-01",
+          "sourceStartFrame": 3346344,
+          "sourceEndFrame": 3515952,
+          "sourceCharacterStart": 1875,
+          "sourceCharacterEnd": 1978
+        }
+      ],
+      "sha256": "d73b859a9277b9a627c6ccae4c9058f2b938213a99454ecbadf571de7495d3c2"
+    },
+    {
+      "id": 41,
+      "text": "Could the shipment arrive a day earlier? A. It weighs twelve kilograms. B. The shipping address is correct. C. I will ask the courier about express service.",
+      "kind": "part-2",
+      "questionIds": [
+        149
+      ],
+      "src": "assets/audio/heygen-extra/part-2-f3084b35abf886a9.wav",
+      "duration": 10.24,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 1.776
+        },
+        {
+          "role": "male",
+          "start": 1.956,
+          "end": 10.24
+        }
+      ],
+      "scriptSha256": "f3084b35abf886a91d61434983e2cd5c55f492df270cb211c9b845733141b2f6",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "Could the shipment arrive a day earlier?",
+          "start": 0.0,
+          "end": 1.776,
+          "batch": "female-02",
+          "sourceStartFrame": 2150184,
+          "sourceEndFrame": 2192808,
+          "sourceCharacterStart": 1527,
+          "sourceCharacterEnd": 1567
+        },
+        {
+          "role": "male",
+          "text": "A. It weighs twelve kilograms. B. The shipping address is correct. C. I will ask the courier about express service.",
+          "start": 1.956,
+          "end": 10.24,
+          "batch": "male-01",
+          "sourceStartFrame": 3519408,
+          "sourceEndFrame": 3718224,
+          "sourceCharacterStart": 1980,
+          "sourceCharacterEnd": 2095
+        }
+      ],
+      "sha256": "8ba1995d6a33ce2384560609b4e474409f8fb1b1603b72bd79e60f0f409769a7"
+    },
+    {
+      "id": 42,
+      "text": "Where should these fragile boxes go? A. On the top shelf, please. B. Handle them carefully. C. They were packed yesterday.",
+      "kind": "part-2",
+      "questionIds": [
+        150
+      ],
+      "src": "assets/audio/heygen-extra/part-2-888fbc91a0a950bf.wav",
+      "duration": 8.88,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 1.861
+        },
+        {
+          "role": "male",
+          "start": 2.041,
+          "end": 8.88
+        }
+      ],
+      "scriptSha256": "888fbc91a0a950bff9d66f248f594a9867150013cc9a8ac301b2b70ea5432ad9",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "Where should these fragile boxes go?",
+          "start": 0.0,
+          "end": 1.861,
+          "batch": "female-02",
+          "sourceStartFrame": 2200368,
+          "sourceEndFrame": 2245032,
+          "sourceCharacterStart": 1569,
+          "sourceCharacterEnd": 1605
+        },
+        {
+          "role": "male",
+          "text": "A. On the top shelf, please. B. Handle them carefully. C. They were packed yesterday.",
+          "start": 2.041,
+          "end": 8.88,
+          "batch": "male-01",
+          "sourceStartFrame": 3724416,
+          "sourceEndFrame": 3888552,
+          "sourceCharacterStart": 2097,
+          "sourceCharacterEnd": 2182
+        }
+      ],
+      "sha256": "965776793f0da03207effc4ac42ccf808a261b057bdb92fd526f6e6d4b9969f9"
+    },
+    {
+      "id": 43,
+      "text": "This is a reminder for all warehouse staff. The loading area at the east entrance will be resurfaced tomorrow. Deliveries must use the west entrance between seven a.m. and four p.m. A temporary sign will direct drivers to the correct gate. Please keep the west access road clear of parked vehicles throughout this period.",
+      "kind": "part-4",
+      "questionIds": [
+        154,
+        155,
+        156
+      ],
+      "src": "assets/audio/heygen-extra/part-4-1fd981359f467490.wav",
+      "duration": 18.1,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 18.1
+        }
+      ],
+      "scriptSha256": "1fd981359f467490fbcb96ccfd30fea1ace4f8ed5e4de467d3a969dc9bc2cb77",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "This is a reminder for all warehouse staff. The loading area at the east entrance will be resurfaced tomorrow. Deliveries must use the west entrance between seven a.m. and four p.m. A temporary sign will direct drivers to the correct gate. Please keep the west access road clear of parked vehicles throughout this period.",
+          "start": 0.0,
+          "end": 18.1,
+          "batch": "female-02",
+          "sourceStartFrame": 2250552,
+          "sourceEndFrame": 2684952,
+          "sourceCharacterStart": 1607,
+          "sourceCharacterEnd": 1928
+        }
+      ],
+      "sha256": "a49c0bd67490c6c501470575372ec13b78700483d359a2008205fdb8bb997148"
+    },
+    {
+      "id": 44,
+      "text": "A. A calculator is being repaired. B. A man is writing a check. C. The desk is covered with coins. D. A calculator lies beside a sheet showing a chart.",
+      "kind": "part-1",
+      "questionIds": [
+        167
+      ],
+      "src": "assets/audio/heygen-extra/part-1-4cb1a23b7043f783.wav",
+      "duration": 10.824,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 10.824
+        }
+      ],
+      "scriptSha256": "4cb1a23b7043f783696720fb9d432663ff0f76b925a1ada142597dcf378d2c2c",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "A. A calculator is being repaired. B. A man is writing a check. C. The desk is covered with coins. D. A calculator lies beside a sheet showing a chart.",
+          "start": 0.0,
+          "end": 10.824,
+          "batch": "female-02",
+          "sourceStartFrame": 2693184,
+          "sourceEndFrame": 2952960,
+          "sourceCharacterStart": 1930,
+          "sourceCharacterEnd": 2081
+        }
+      ],
+      "sha256": "ced00bb869a2c63a284152b8510be7d825e76e651bc204ce7e72b0b21b5521fd"
+    },
+    {
+      "id": 45,
+      "text": "When is the payment due? A. It was paid by card. B. At the bank across the street. C. On the last day of this month.",
+      "kind": "part-2",
+      "questionIds": [
+        168
+      ],
+      "src": "assets/audio/heygen-extra/part-2-bf5152f2d64746ba.wav",
+      "duration": 8.088,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 1.349
+        },
+        {
+          "role": "male",
+          "start": 1.529,
+          "end": 8.088
+        }
+      ],
+      "scriptSha256": "bf5152f2d64746ba363f9dc697969e20200680f390f07406873d5ae033d16ce4",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "When is the payment due?",
+          "start": 0.0,
+          "end": 1.349,
+          "batch": "female-02",
+          "sourceStartFrame": 2958624,
+          "sourceEndFrame": 2991000,
+          "sourceCharacterStart": 2083,
+          "sourceCharacterEnd": 2107
+        },
+        {
+          "role": "male",
+          "text": "A. It was paid by card. B. At the bank across the street. C. On the last day of this month.",
+          "start": 1.529,
+          "end": 8.088,
+          "batch": "male-01",
+          "sourceStartFrame": 3893376,
+          "sourceEndFrame": 4050792,
+          "sourceCharacterStart": 2184,
+          "sourceCharacterEnd": 2275
+        }
+      ],
+      "sha256": "02747afb33a0c9fd654edf65a1a1f6cdcb54c3584761d6e59671138ffd5310d8"
+    },
+    {
+      "id": 46,
+      "text": "Who authorized this equipment purchase? A. Our department manager did. B. The equipment is brand new. C. About eight hundred dollars.",
+      "kind": "part-2",
+      "questionIds": [
+        169
+      ],
+      "src": "assets/audio/heygen-extra/part-2-9cc2dd46af3e6c29.wav",
+      "duration": 9.307,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 2.117
+        },
+        {
+          "role": "male",
+          "start": 2.297,
+          "end": 9.307
+        }
+      ],
+      "scriptSha256": "9cc2dd46af3e6c297bcceb91b49653cabe8a5317840f50c7b2ccb025d5f9c464",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "Who authorized this equipment purchase?",
+          "start": 0.0,
+          "end": 2.117,
+          "batch": "female-02",
+          "sourceStartFrame": 2994456,
+          "sourceEndFrame": 3045264,
+          "sourceCharacterStart": 2109,
+          "sourceCharacterEnd": 2148
+        },
+        {
+          "role": "male",
+          "text": "A. Our department manager did. B. The equipment is brand new. C. About eight hundred dollars.",
+          "start": 2.297,
+          "end": 9.307,
+          "batch": "male-01",
+          "sourceStartFrame": 4056288,
+          "sourceEndFrame": 4224528,
+          "sourceCharacterStart": 2277,
+          "sourceCharacterEnd": 2370
+        }
+      ],
+      "sha256": "e679c27ed49fbace4692267034061e7576f9038e5c02174ab1badf81df1918b2"
+    },
+    {
+      "id": 47,
+      "text": "Can you explain the extra fee on this invoice? A. I have an extra copy. B. It is for the express delivery you requested. C. The invoice arrived by email.",
+      "kind": "part-2",
+      "questionIds": [
+        170
+      ],
+      "src": "assets/audio/heygen-extra/part-2-fd9e46648936d8ba.wav",
+      "duration": 10.203,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 2.345
+        },
+        {
+          "role": "male",
+          "start": 2.525,
+          "end": 10.203
+        }
+      ],
+      "scriptSha256": "fd9e46648936d8baafd81c399e5f41ea592af82b0311e130cf5c989eb1b619f1",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "Can you explain the extra fee on this invoice?",
+          "start": 0.0,
+          "end": 2.345,
+          "batch": "female-02",
+          "sourceStartFrame": 3052824,
+          "sourceEndFrame": 3109104,
+          "sourceCharacterStart": 2150,
+          "sourceCharacterEnd": 2196
+        },
+        {
+          "role": "male",
+          "text": "A. I have an extra copy. B. It is for the express delivery you requested. C. The invoice arrived by email.",
+          "start": 2.525,
+          "end": 10.203,
+          "batch": "male-01",
+          "sourceStartFrame": 4233456,
+          "sourceEndFrame": 4417728,
+          "sourceCharacterStart": 2372,
+          "sourceCharacterEnd": 2478
+        }
+      ],
+      "sha256": "9e52b340ad393d7646007fb739421d415b9e13abd57d19100d1400cf9ef77254"
+    },
+    {
+      "id": 48,
+      "text": "Before we finish, I would like to explain the new expense-claim procedure. Beginning next month, attach a digital receipt to each individual item in the online form. Do not combine several receipts into one file. Claims submitted by the tenth will be paid on the twentieth. If the tenth falls on a weekend, submit your claim on the preceding Friday.",
+      "kind": "part-4",
+      "questionIds": [
+        174,
+        175,
+        176
+      ],
+      "src": "assets/audio/heygen-extra/part-4-75d394c3ccc72c60.wav",
+      "duration": 20.201,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 20.201
+        }
+      ],
+      "scriptSha256": "75d394c3ccc72c60e43c530e798fa12a2031509ed9303b9f5c4bf4898ce5815b",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "Before we finish, I would like to explain the new expense-claim procedure. Beginning next month, attach a digital receipt to each individual item in the online form. Do not combine several receipts into one file. Claims submitted by the tenth will be paid on the twentieth. If the tenth falls on a weekend, submit your claim on the preceding Friday.",
+          "start": 0.0,
+          "end": 20.201,
+          "batch": "female-02",
+          "sourceStartFrame": 3117336,
+          "sourceEndFrame": 3602160,
+          "sourceCharacterStart": 2198,
+          "sourceCharacterEnd": 2547
+        }
+      ],
+      "sha256": "e9b0cad243c17d170ef14cb86e66b64c645ff1ddadaf43179574462cd2e96077"
+    },
+    {
+      "id": 49,
+      "text": "A. A technician is disconnecting a monitor. B. Two monitors are standing on a desk. C. A keyboard is hanging on a wall. D. Some computers are packed in cartons.",
+      "kind": "part-1",
+      "questionIds": [
+        187
+      ],
+      "src": "assets/audio/heygen-extra/part-1-0f98f67b2a1d7a57.wav",
+      "duration": 11.22,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 11.22
+        }
+      ],
+      "scriptSha256": "0f98f67b2a1d7a57fd794ed225f99824f42026ea0e87834987d0f400ccfd5822",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "A. A technician is disconnecting a monitor. B. Two monitors are standing on a desk. C. A keyboard is hanging on a wall. D. Some computers are packed in cartons.",
+          "start": 0.0,
+          "end": 11.22,
+          "batch": "female-02",
+          "sourceStartFrame": 3607680,
+          "sourceEndFrame": 3876960,
+          "sourceCharacterStart": 2549,
+          "sourceCharacterEnd": 2709
+        }
+      ],
+      "sha256": "e6186fc29eb94f1a91fa3b5f939636fcb649053154df1f317f31485c59bb807f"
+    },
+    {
+      "id": 50,
+      "text": "My account is locked. Who can reset it? A. The support desk can help. B. I locked the door. C. It was a busy month.",
+      "kind": "part-2",
+      "questionIds": [
+        188
+      ],
+      "src": "assets/audio/heygen-extra/part-2-563b1a059aff3645.wav",
+      "duration": 8.324,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 2.429
+        },
+        {
+          "role": "male",
+          "start": 2.609,
+          "end": 8.324
+        }
+      ],
+      "scriptSha256": "563b1a059aff364545a0d648910107a9fdb01403b0b6975717a4ac7883600142",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "My account is locked. Who can reset it?",
+          "start": 0.0,
+          "end": 2.429,
+          "batch": "female-02",
+          "sourceStartFrame": 3881808,
+          "sourceEndFrame": 3940104,
+          "sourceCharacterStart": 2711,
+          "sourceCharacterEnd": 2750
+        },
+        {
+          "role": "male",
+          "text": "A. The support desk can help. B. I locked the door. C. It was a busy month.",
+          "start": 2.609,
+          "end": 8.324,
+          "batch": "male-01",
+          "sourceStartFrame": 4423944,
+          "sourceEndFrame": 4561104,
+          "sourceCharacterStart": 2480,
+          "sourceCharacterEnd": 2555
+        }
+      ],
+      "sha256": "056feb80be0376d9e347fe3e00f500d00ff8ef628abf438cd8caad1ba66927d3"
+    },
+    {
+      "id": 51,
+      "text": "Have you installed the latest update? A. The installation guide is short. B. Yes, I restarted my computer afterward. C. The new desk arrives today.",
+      "kind": "part-2",
+      "questionIds": [
+        189
+      ],
+      "src": "assets/audio/heygen-extra/part-2-569e8162d333e728.wav",
+      "duration": 10.003,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 1.747
+        },
+        {
+          "role": "male",
+          "start": 1.927,
+          "end": 10.003
+        }
+      ],
+      "scriptSha256": "569e8162d333e72827b46cbeddd20c4aebb873b5175d73c988209f21b3fda7f9",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "Have you installed the latest update?",
+          "start": 0.0,
+          "end": 1.747,
+          "batch": "female-02",
+          "sourceStartFrame": 3942216,
+          "sourceEndFrame": 3984144,
+          "sourceCharacterStart": 2752,
+          "sourceCharacterEnd": 2789
+        },
+        {
+          "role": "male",
+          "text": "A. The installation guide is short. B. Yes, I restarted my computer afterward. C. The new desk arrives today.",
+          "start": 1.927,
+          "end": 10.003,
+          "batch": "male-01",
+          "sourceStartFrame": 4565256,
+          "sourceEndFrame": 4759080,
+          "sourceCharacterStart": 2557,
+          "sourceCharacterEnd": 2666
+        }
+      ],
+      "sha256": "f7d511c3898e32fd4b9a7e99bb5d5a460dd98dc3ea10f871cd73b79f36223514"
+    },
+    {
+      "id": 52,
+      "text": "Why can I not connect to the guest network? A. It is a very good connection. B. A guest from our London office. C. You may need the new password.",
+      "kind": "part-2",
+      "questionIds": [
+        190
+      ],
+      "src": "assets/audio/heygen-extra/part-2-02ce78c9f6397ed7.wav",
+      "duration": 9.397,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 1.946
+        },
+        {
+          "role": "male",
+          "start": 2.126,
+          "end": 9.397
+        }
+      ],
+      "scriptSha256": "02ce78c9f6397ed7a4bd89ed2852c17983f257ac929b03c1eb363aeaa7d9685d",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "Why can I not connect to the guest network?",
+          "start": 0.0,
+          "end": 1.946,
+          "batch": "female-02",
+          "sourceStartFrame": 3988296,
+          "sourceEndFrame": 4035000,
+          "sourceCharacterStart": 2791,
+          "sourceCharacterEnd": 2834
+        },
+        {
+          "role": "male",
+          "text": "A. It is a very good connection. B. A guest from our London office. C. You may need the new password.",
+          "start": 2.126,
+          "end": 9.397,
+          "batch": "male-01",
+          "sourceStartFrame": 4761864,
+          "sourceEndFrame": 4936368,
+          "sourceCharacterStart": 2668,
+          "sourceCharacterEnd": 2769
+        }
+      ],
+      "sha256": "aa1404b4573aded2519b7247a5e682d6047521116dbe1164679b9c2c0b0bb328"
+    },
+    {
+      "id": 53,
+      "text": "A notice from IT Services. The customer portal will be unavailable from nine to eleven p.m. on Saturday while we upgrade the database. Work saved before the outage will not be affected. However, please sign out before nine to avoid losing unsaved changes. If you need to check an order during the outage, our telephone support line will remain open.",
+      "kind": "part-4",
+      "questionIds": [
+        194,
+        195,
+        196
+      ],
+      "src": "assets/audio/heygen-extra/part-4-76b9dc0787f407ea.wav",
+      "duration": 20.329,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 20.329
+        }
+      ],
+      "scriptSha256": "76b9dc0787f407ea9e58a1cfbeaa9644eb3c19ef72182fdac4f946e17328e6f2",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "A notice from IT Services. The customer portal will be unavailable from nine to eleven p.m. on Saturday while we upgrade the database. Work saved before the outage will not be affected. However, please sign out before nine to avoid losing unsaved changes. If you need to check an order during the outage, our telephone support line will remain open.",
+          "start": 0.0,
+          "end": 20.329,
+          "batch": "female-02",
+          "sourceStartFrame": 4038456,
+          "sourceEndFrame": 4526352,
+          "sourceCharacterStart": 2836,
+          "sourceCharacterEnd": 3185
+        }
+      ],
+      "sha256": "8283697884dcd5b2ec40257452bc5122bd5e29830d67e9379dd9a39b7b757d92"
+    },
+    {
+      "id": 54,
+      "text": "A. A worker is watering a plant near an entrance. B. Someone is installing a glass door. C. A worker is sweeping leaves into a pile. D. Plants are being removed from their pots.",
+      "kind": "part-1",
+      "questionIds": [
+        207
+      ],
+      "src": "assets/audio/heygen-extra/part-1-48235537d8a1ade5.wav",
+      "duration": 12.053,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 12.053
+        }
+      ],
+      "scriptSha256": "48235537d8a1ade561b343674111da59383fb98e1bd247ed0f1856e42d846ee2",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "A. A worker is watering a plant near an entrance. B. Someone is installing a glass door. C. A worker is sweeping leaves into a pile. D. Plants are being removed from their pots.",
+          "start": 0.0,
+          "end": 12.053,
+          "batch": "female-02",
+          "sourceStartFrame": 4533936,
+          "sourceEndFrame": 4823208,
+          "sourceCharacterStart": 3187,
+          "sourceCharacterEnd": 3364
+        }
+      ],
+      "sha256": "1795441ca2738f5898182a47eb3d9e97a797511fa65b81f2cbcf39891af8c629"
+    },
+    {
+      "id": 55,
+      "text": "Could you report the broken light in the stairwell? A. The stairs are on the left. B. It was a bright morning. C. I have already sent a maintenance request.",
+      "kind": "part-2",
+      "questionIds": [
+        208
+      ],
+      "src": "assets/audio/heygen-extra/part-2-d0716a24db367094.wav",
+      "duration": 9.25,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 2.245
+        },
+        {
+          "role": "male",
+          "start": 2.425,
+          "end": 9.25
+        }
+      ],
+      "scriptSha256": "d0716a24db367094406e8849bda3bf8b755c6bfb22bbacac7847a835c4041fb7",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "Could you report the broken light in the stairwell?",
+          "start": 0.0,
+          "end": 2.245,
+          "batch": "female-02",
+          "sourceStartFrame": 4832136,
+          "sourceEndFrame": 4886016,
+          "sourceCharacterStart": 3366,
+          "sourceCharacterEnd": 3417
+        },
+        {
+          "role": "male",
+          "text": "A. The stairs are on the left. B. It was a bright morning. C. I have already sent a maintenance request.",
+          "start": 2.425,
+          "end": 9.25,
+          "batch": "male-01",
+          "sourceStartFrame": 4939152,
+          "sourceEndFrame": 5102952,
+          "sourceCharacterStart": 2771,
+          "sourceCharacterEnd": 2875
+        }
+      ],
+      "sha256": "54b232f44c9595cf37318b429bb4eb56ea264ada1d444f7da31616c3590347d2"
+    },
+    {
+      "id": 56,
+      "text": "How long will the elevator be out of service? A. Until tomorrow afternoon. B. On the sixth floor. C. It can carry twelve people.",
+      "kind": "part-2",
+      "questionIds": [
+        209
+      ],
+      "src": "assets/audio/heygen-extra/part-2-d7a2ee06c85be335.wav",
+      "duration": 8.869,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 2.227
+        },
+        {
+          "role": "male",
+          "start": 2.407,
+          "end": 8.869
+        }
+      ],
+      "scriptSha256": "d7a2ee06c85be335a0d9de26ee7a4766c70686ed6ede3c3f158cad55bbd99cac",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "How long will the elevator be out of service?",
+          "start": 0.0,
+          "end": 2.227,
+          "batch": "female-02",
+          "sourceStartFrame": 4891536,
+          "sourceEndFrame": 4944984,
+          "sourceCharacterStart": 3419,
+          "sourceCharacterEnd": 3464
+        },
+        {
+          "role": "male",
+          "text": "A. Until tomorrow afternoon. B. On the sixth floor. C. It can carry twelve people.",
+          "start": 2.407,
+          "end": 8.869,
+          "batch": "male-01",
+          "sourceStartFrame": 5107104,
+          "sourceEndFrame": 5262192,
+          "sourceCharacterStart": 2877,
+          "sourceCharacterEnd": 2959
+        }
+      ],
+      "sha256": "cdd1ce563c2e6e12da4afd2a2d87e77f0d8c2f9f77556b5c8846d701e9192069"
+    },
+    {
+      "id": 57,
+      "text": "Is parking included in the room rental? A. The park is nearby. B. Only for the first two hours. C. We rented it last year.",
+      "kind": "part-2",
+      "questionIds": [
+        210
+      ],
+      "src": "assets/audio/heygen-extra/part-2-e7f7a08e9fbba336.wav",
+      "duration": 8.581,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 1.96
+        },
+        {
+          "role": "male",
+          "start": 2.14,
+          "end": 8.581
+        }
+      ],
+      "scriptSha256": "e7f7a08e9fbba3368fab0a3475fc3bafc1efd09f55ff5bd728c5cf3b7183060d",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "Is parking included in the room rental?",
+          "start": 0.0,
+          "end": 1.96,
+          "batch": "female-03",
+          "sourceStartFrame": 4704,
+          "sourceEndFrame": 51744,
+          "sourceCharacterStart": 0,
+          "sourceCharacterEnd": 39
+        },
+        {
+          "role": "male",
+          "text": "A. The park is nearby. B. Only for the first two hours. C. We rented it last year.",
+          "start": 2.14,
+          "end": 8.581,
+          "batch": "male-01",
+          "sourceStartFrame": 5267016,
+          "sourceEndFrame": 5421600,
+          "sourceCharacterStart": 2961,
+          "sourceCharacterEnd": 3043
+        }
+      ],
+      "sha256": "96df4753a0de5e9d67e10a44f709d5eb9097b61cc6e548d699a11a8a23483dba"
+    },
+    {
+      "id": 58,
+      "text": "Attention building occupants. A routine fire-alarm test will take place at three this afternoon. The alarm will sound for approximately thirty seconds. You do not need to leave the building during this scheduled test. If the alarm continues for more than one minute, however, follow the normal evacuation procedure and use the stairs, not the elevators.",
+      "kind": "part-4",
+      "questionIds": [
+        214,
+        215,
+        216
+      ],
+      "src": "assets/audio/heygen-extra/part-4-5e2ca8f19d946f8c.wav",
+      "duration": 19.369,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 19.369
+        }
+      ],
+      "scriptSha256": "5e2ca8f19d946f8c700827790e27300862f6b8ef0bfcc0b8791a131187f70c7a",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "Attention building occupants. A routine fire-alarm test will take place at three this afternoon. The alarm will sound for approximately thirty seconds. You do not need to leave the building during this scheduled test. If the alarm continues for more than one minute, however, follow the normal evacuation procedure and use the stairs, not the elevators.",
+          "start": 0.0,
+          "end": 19.369,
+          "batch": "female-03",
+          "sourceStartFrame": 55896,
+          "sourceEndFrame": 520752,
+          "sourceCharacterStart": 41,
+          "sourceCharacterEnd": 394
+        }
+      ],
+      "sha256": "d017c7dd392a2c9db1cabd784be8028264982526085c9a9ede6993cf2b947608"
+    },
+    {
+      "id": 59,
+      "text": "A. A customer is carrying a shopping basket. B. Bottles are being placed into a box. C. A person is pointing toward a poster on an easel. D. A poster is lying flat on the floor.",
+      "kind": "part-1",
+      "questionIds": [
+        227
+      ],
+      "src": "assets/audio/heygen-extra/part-1-b6f01c92738e2354.wav",
+      "duration": 12.062,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 12.062
+        }
+      ],
+      "scriptSha256": "b6f01c92738e23544f95a329fc04b308ff668be3dabef6d6d50720140e3dfb65",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "A. A customer is carrying a shopping basket. B. Bottles are being placed into a box. C. A person is pointing toward a poster on an easel. D. A poster is lying flat on the floor.",
+          "start": 0.0,
+          "end": 12.062,
+          "batch": "female-03",
+          "sourceStartFrame": 529680,
+          "sourceEndFrame": 819168,
+          "sourceCharacterStart": 396,
+          "sourceCharacterEnd": 573
+        }
+      ],
+      "sha256": "ad75f0793b441d0c16aa9f2949c17f984701c3abb6a61a1118d2e2c53c8b4300"
+    },
+    {
+      "id": 60,
+      "text": "Which design did the client choose? A. She preferred the one with the green background. B. The designer works upstairs. C. We have three clients.",
+      "kind": "part-2",
+      "questionIds": [
+        228
+      ],
+      "src": "assets/audio/heygen-extra/part-2-216c37508d71bed9.wav",
+      "duration": 9.369,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 1.724
+        },
+        {
+          "role": "male",
+          "start": 1.904,
+          "end": 9.369
+        }
+      ],
+      "scriptSha256": "216c37508d71bed9d8043acc25f794086e13e4efc0b5ef027e80a13140bd9426",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "Which design did the client choose?",
+          "start": 0.0,
+          "end": 1.724,
+          "batch": "female-03",
+          "sourceStartFrame": 823320,
+          "sourceEndFrame": 864696,
+          "sourceCharacterStart": 575,
+          "sourceCharacterEnd": 610
+        },
+        {
+          "role": "male",
+          "text": "A. She preferred the one with the green background. B. The designer works upstairs. C. We have three clients.",
+          "start": 1.904,
+          "end": 9.369,
+          "batch": "male-01",
+          "sourceStartFrame": 5423688,
+          "sourceEndFrame": 5602848,
+          "sourceCharacterStart": 3045,
+          "sourceCharacterEnd": 3154
+        }
+      ],
+      "sha256": "100236c4c955e1a1fc57dcbf956409116c9fbd845e4f09dde6f2b90f5eaeea4d"
+    },
+    {
+      "id": 61,
+      "text": "Should we launch the campaign before the holiday? A. The holiday was relaxing. B. The campaign has a large budget. C. Let us wait until the new stock arrives.",
+      "kind": "part-2",
+      "questionIds": [
+        229
+      ],
+      "src": "assets/audio/heygen-extra/part-2-00a88a26c2caaa82.wav",
+      "duration": 10.105,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 2.245
+        },
+        {
+          "role": "male",
+          "start": 2.425,
+          "end": 10.105
+        }
+      ],
+      "scriptSha256": "00a88a26c2caaa82c7cf8afef5704506d00bc994d1f642372ca7a447850cf0d6",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "Should we launch the campaign before the holiday?",
+          "start": 0.0,
+          "end": 2.245,
+          "batch": "female-03",
+          "sourceStartFrame": 871848,
+          "sourceEndFrame": 925728,
+          "sourceCharacterStart": 612,
+          "sourceCharacterEnd": 661
+        },
+        {
+          "role": "male",
+          "text": "A. The holiday was relaxing. B. The campaign has a large budget. C. Let us wait until the new stock arrives.",
+          "start": 2.425,
+          "end": 10.105,
+          "batch": "male-01",
+          "sourceStartFrame": 5611080,
+          "sourceEndFrame": 5795400,
+          "sourceCharacterStart": 3156,
+          "sourceCharacterEnd": 3264
+        }
+      ],
+      "sha256": "81d31bb6620dcba7cd610f2d79397fe4e081d0e7c51b4eb05dac7c50cf64a024"
+    },
+    {
+      "id": 62,
+      "text": "How did customers hear about our new product? A. It will be available soon. B. Most saw our social media posts. C. The product comes in two sizes.",
+      "kind": "part-2",
+      "questionIds": [
+        230
+      ],
+      "src": "assets/audio/heygen-extra/part-2-4380143c70d06e38.wav",
+      "duration": 10.215,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 2.102
+        },
+        {
+          "role": "male",
+          "start": 2.282,
+          "end": 10.215
+        }
+      ],
+      "scriptSha256": "4380143c70d06e38237de4cdb5eb5890ded0ece14444c3c8531fec416daea280",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "How did customers hear about our new product?",
+          "start": 0.0,
+          "end": 2.102,
+          "batch": "female-03",
+          "sourceStartFrame": 931248,
+          "sourceEndFrame": 981696,
+          "sourceCharacterStart": 663,
+          "sourceCharacterEnd": 708
+        },
+        {
+          "role": "male",
+          "text": "A. It will be available soon. B. Most saw our social media posts. C. The product comes in two sizes.",
+          "start": 2.282,
+          "end": 10.215,
+          "batch": "male-01",
+          "sourceStartFrame": 5799552,
+          "sourceEndFrame": 5989944,
+          "sourceCharacterStart": 3266,
+          "sourceCharacterEnd": 3366
+        }
+      ],
+      "sha256": "3ec1dab875ede6a4edb6be699fb09f920eaabb4f164198b4cc684928f279bab0"
+    },
+    {
+      "id": 63,
+      "text": "Thank you for joining the launch briefing. Our new refillable bottle will go on sale online next Monday. Store sales will begin two weeks later, once display stands arrive. During the first week of online sales, customers will receive a free cleaning brush with each bottle. Please make sure your promotional posts explain that this offer applies only to online purchases.",
+      "kind": "part-4",
+      "questionIds": [
+        234,
+        235,
+        236
+      ],
+      "src": "assets/audio/heygen-extra/part-4-f7533c0ae58e933f.wav",
+      "duration": 20.203,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 20.203
+        }
+      ],
+      "scriptSha256": "f7533c0ae58e933f677519c13e18c9e8f7d82ab49d7c3f01fae197e9d6a08470",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "Thank you for joining the launch briefing. Our new refillable bottle will go on sale online next Monday. Store sales will begin two weeks later, once display stands arrive. During the first week of online sales, customers will receive a free cleaning brush with each bottle. Please make sure your promotional posts explain that this offer applies only to online purchases.",
+          "start": 0.0,
+          "end": 20.203,
+          "batch": "female-03",
+          "sourceStartFrame": 990624,
+          "sourceEndFrame": 1475496,
+          "sourceCharacterStart": 710,
+          "sourceCharacterEnd": 1082
+        }
+      ],
+      "sha256": "d28c5bf69b6308a6611982cbabdd1edecad9ce81a93a90d09955ffedce66efcb"
+    },
+    {
+      "id": 64,
+      "text": "agenda. Please review the agenda before the meeting.",
+      "kind": "vocabulary",
+      "questionIds": [],
+      "src": "assets/audio/heygen-extra/vocabulary-ce0846fb27cf0380.wav",
+      "duration": 3.084,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 3.084
+        }
+      ],
+      "scriptSha256": "ce0846fb27cf03803e4fcf667d6dc125f417e1ef4f57e3d8c7ab2d4a0011b129",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "agenda. Please review the agenda before the meeting.",
+          "start": 0.0,
+          "end": 3.084,
+          "batch": "female-03",
+          "sourceStartFrame": 1481016,
+          "sourceEndFrame": 1555032,
+          "sourceCharacterStart": 1084,
+          "sourceCharacterEnd": 1136
+        }
+      ],
+      "sha256": "5d183ef0fab92eeadb1315eb352a4970c16140d3e4018ad690277bcd631b47d8"
+    },
+    {
+      "id": 65,
+      "text": "deadline. The application deadline is Friday.",
+      "kind": "vocabulary",
+      "questionIds": [],
+      "src": "assets/audio/heygen-extra/vocabulary-5318cfd859027716.wav",
+      "duration": 2.927,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 2.927
+        }
+      ],
+      "scriptSha256": "5318cfd859027716212a854d132d43bc498677ba18c5a9d02cabb197d7b9f03a",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "deadline. The application deadline is Friday.",
+          "start": 0.0,
+          "end": 2.927,
+          "batch": "female-03",
+          "sourceStartFrame": 1559880,
+          "sourceEndFrame": 1630128,
+          "sourceCharacterStart": 1138,
+          "sourceCharacterEnd": 1183
+        }
+      ],
+      "sha256": "af86cd1c3b39c98b98f69d778484322f082620d12631cb632080320a7a53a606"
+    },
+    {
+      "id": 66,
+      "text": "invoice. Please send the invoice to our finance team.",
+      "kind": "vocabulary",
+      "questionIds": [],
+      "src": "assets/audio/heygen-extra/vocabulary-b4ef406f2fee1fcd.wav",
+      "duration": 3.327,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 3.327
+        }
+      ],
+      "scriptSha256": "b4ef406f2fee1fcd252ed6c044a524c21ae5842d38d28c07ca9af3181112abdd",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "invoice. Please send the invoice to our finance team.",
+          "start": 0.0,
+          "end": 3.327,
+          "batch": "female-03",
+          "sourceStartFrame": 1631544,
+          "sourceEndFrame": 1711392,
+          "sourceCharacterStart": 1185,
+          "sourceCharacterEnd": 1238
+        }
+      ],
+      "sha256": "7c39d4b6c7d03245ed6c18326e769f9b8511c31819643b516b440080d6bca244"
+    },
+    {
+      "id": 67,
+      "text": "postpone. We need to postpone the workshop until Monday.",
+      "kind": "vocabulary",
+      "questionIds": [],
+      "src": "assets/audio/heygen-extra/vocabulary-2b5080e2759dcee0.wav",
+      "duration": 3.34,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 3.34
+        }
+      ],
+      "scriptSha256": "2b5080e2759dcee095ac73dbf2d72352cb61bfad8b33e2ddd693ccfb2a70fbd1",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "postpone. We need to postpone the workshop until Monday.",
+          "start": 0.0,
+          "end": 3.34,
+          "batch": "female-03",
+          "sourceStartFrame": 1714848,
+          "sourceEndFrame": 1795008,
+          "sourceCharacterStart": 1240,
+          "sourceCharacterEnd": 1296
+        }
+      ],
+      "sha256": "7fc4a8313ca192dcdc906e11d0cfb8cadb28358df3bfbb4147dd15f3db4d051d"
+    },
+    {
+      "id": 68,
+      "text": "venue. The venue is a short walk from the station.",
+      "kind": "vocabulary",
+      "questionIds": [],
+      "src": "assets/audio/heygen-extra/vocabulary-382d1281f5104252.wav",
+      "duration": 2.927,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 2.927
+        }
+      ],
+      "scriptSha256": "382d1281f51042529a001221a142245e8026a0661dd3b69623341f699fe91eef",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "venue. The venue is a short walk from the station.",
+          "start": 0.0,
+          "end": 2.927,
+          "batch": "female-03",
+          "sourceStartFrame": 1799856,
+          "sourceEndFrame": 1870104,
+          "sourceCharacterStart": 1298,
+          "sourceCharacterEnd": 1348
+        }
+      ],
+      "sha256": "10338dc1aa0f17811fb1110c8db9d8d5b5827ca0f0866de77922c6b7101137ca"
+    },
+    {
+      "id": 69,
+      "text": "reimburse. The company will reimburse your travel expenses.",
+      "kind": "vocabulary",
+      "questionIds": [],
+      "src": "assets/audio/heygen-extra/vocabulary-fc9d28b9786f910a.wav",
+      "duration": 3.482,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 3.482
+        }
+      ],
+      "scriptSha256": "fc9d28b9786f910adf0dd2b2ea5f0be4af52e28a7df100e4a6df3bc40811016c",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "reimburse. The company will reimburse your travel expenses.",
+          "start": 0.0,
+          "end": 3.482,
+          "batch": "female-03",
+          "sourceStartFrame": 1875624,
+          "sourceEndFrame": 1959192,
+          "sourceCharacterStart": 1350,
+          "sourceCharacterEnd": 1409
+        }
+      ],
+      "sha256": "2bdbf5c4c3184dbae5ab399c8dd7ac047dd8f585bbe02cb156397e5670a2a905"
+    },
+    {
+      "id": 70,
+      "text": "itinerary. Your itinerary includes two nights in Singapore.",
+      "kind": "vocabulary",
+      "questionIds": [],
+      "src": "assets/audio/heygen-extra/vocabulary-4b16329f50b21ee9.wav",
+      "duration": 3.911,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 3.911
+        }
+      ],
+      "scriptSha256": "4b16329f50b21ee9e243c747c0f24538c34c25ae3e8ec54f03e61b89ebd5fd89",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "itinerary. Your itinerary includes two nights in Singapore.",
+          "start": 0.0,
+          "end": 3.911,
+          "batch": "female-03",
+          "sourceStartFrame": 1962672,
+          "sourceEndFrame": 2056536,
+          "sourceCharacterStart": 1411,
+          "sourceCharacterEnd": 1470
+        }
+      ],
+      "sha256": "7f6dcb1a7e06986d940ab51c714850e33544cae02bea4134fe2817c447231b58"
+    },
+    {
+      "id": 71,
+      "text": "vacancy. The hotel has no vacancies this weekend.",
+      "kind": "vocabulary",
+      "questionIds": [],
+      "src": "assets/audio/heygen-extra/vocabulary-212a81ff52e30e49.wav",
+      "duration": 3.368,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 3.368
+        }
+      ],
+      "scriptSha256": "212a81ff52e30e49a0261bfa17d2ad9ddf77a406f698e61484706a85a260ffff",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "vacancy. The hotel has no vacancies this weekend.",
+          "start": 0.0,
+          "end": 3.368,
+          "batch": "female-03",
+          "sourceStartFrame": 2059320,
+          "sourceEndFrame": 2140152,
+          "sourceCharacterStart": 1472,
+          "sourceCharacterEnd": 1521
+        }
+      ],
+      "sha256": "b2249b432105fdf909e0bffb5669ff4bc0286d16ab597da1db398f2da2f78282"
+    },
+    {
+      "id": 72,
+      "text": "procurement. Contact procurement to order new equipment.",
+      "kind": "vocabulary",
+      "questionIds": [],
+      "src": "assets/audio/heygen-extra/vocabulary-295b0238e2532f71.wav",
+      "duration": 3.454,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 3.454
+        }
+      ],
+      "scriptSha256": "295b0238e2532f710a0e0ba30cfb90a7448ef973ab37268c31ccb5d3e530d5db",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "procurement. Contact procurement to order new equipment.",
+          "start": 0.0,
+          "end": 3.454,
+          "batch": "female-03",
+          "sourceStartFrame": 2146344,
+          "sourceEndFrame": 2229240,
+          "sourceCharacterStart": 1523,
+          "sourceCharacterEnd": 1579
+        }
+      ],
+      "sha256": "2198ab680d502f35a2e2ba363ebaa394746e4f553ed203f7a08aaf7731022825"
+    },
+    {
+      "id": 73,
+      "text": "eligible. All full-time employees are eligible for the benefit.",
+      "kind": "vocabulary",
+      "questionIds": [],
+      "src": "assets/audio/heygen-extra/vocabulary-312515b161bed164.wav",
+      "duration": 3.958,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 3.958
+        }
+      ],
+      "scriptSha256": "312515b161bed164b2206e40fe425247569a17073c4548c417e41f9e1cb4499e",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "eligible. All full-time employees are eligible for the benefit.",
+          "start": 0.0,
+          "end": 3.958,
+          "batch": "female-03",
+          "sourceStartFrame": 2233392,
+          "sourceEndFrame": 2328384,
+          "sourceCharacterStart": 1581,
+          "sourceCharacterEnd": 1644
+        }
+      ],
+      "sha256": "c50587db15b5ea36b56f5d7cc51271cdcb214c07192c86a8a71df25590dea48c"
+    },
+    {
+      "id": 74,
+      "text": "complimentary. Complimentary breakfast is included in your stay.",
+      "kind": "vocabulary",
+      "questionIds": [],
+      "src": "assets/audio/heygen-extra/vocabulary-052dc0d036f5085b.wav",
+      "duration": 4.094,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 4.094
+        }
+      ],
+      "scriptSha256": "052dc0d036f5085bd35b1e10e1c4ef1adf5db1189684ae2565fab10a37fb9a30",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "complimentary. Complimentary breakfast is included in your stay.",
+          "start": 0.0,
+          "end": 4.094,
+          "batch": "female-03",
+          "sourceStartFrame": 2334192,
+          "sourceEndFrame": 2432448,
+          "sourceCharacterStart": 1646,
+          "sourceCharacterEnd": 1710
+        }
+      ],
+      "sha256": "e3b20a29fb5c4b9370528fd944f3d7e982340c869e3036328c33f40821977b4a"
+    },
+    {
+      "id": 75,
+      "text": "implement. We will implement the new policy next month.",
+      "kind": "vocabulary",
+      "questionIds": [],
+      "src": "assets/audio/heygen-extra/vocabulary-1aaa10570cf3a3aa.wav",
+      "duration": 3.141,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 3.141
+        }
+      ],
+      "scriptSha256": "1aaa10570cf3a3aaea285b2c32cf8c5d06ea2dcac61b6b99c804a590e1158aac",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "implement. We will implement the new policy next month.",
+          "start": 0.0,
+          "end": 3.141,
+          "batch": "female-03",
+          "sourceStartFrame": 2436600,
+          "sourceEndFrame": 2511984,
+          "sourceCharacterStart": 1712,
+          "sourceCharacterEnd": 1767
+        }
+      ],
+      "sha256": "afb68e3052c7acdb0cec81912af047fd9b2e65bca84b476da3575ff62946b729"
+    },
+    {
+      "id": 76,
+      "text": "retain. Please retain your receipt for your records.",
+      "kind": "vocabulary",
+      "questionIds": [],
+      "src": "assets/audio/heygen-extra/vocabulary-17c9f8fb17930e5b.wav",
+      "duration": 2.971,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 2.971
+        }
+      ],
+      "scriptSha256": "17c9f8fb17930e5b7c4015fe3026eee9e47edd941ff276fcaad76291324aeb12",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "retain. Please retain your receipt for your records.",
+          "start": 0.0,
+          "end": 2.971,
+          "batch": "female-03",
+          "sourceStartFrame": 2515440,
+          "sourceEndFrame": 2586744,
+          "sourceCharacterStart": 1769,
+          "sourceCharacterEnd": 1821
+        }
+      ],
+      "sha256": "451295948f47e875c382113c807c20f5904080b532e320ffb5c6b9d1e326322f"
+    },
+    {
+      "id": 77,
+      "text": "inventory. The store checks its inventory every month.",
+      "kind": "vocabulary",
+      "questionIds": [],
+      "src": "assets/audio/heygen-extra/vocabulary-ed50e045cdf009a6.wav",
+      "duration": 3.415,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 3.415
+        }
+      ],
+      "scriptSha256": "ed50e045cdf009a6b78f8ec82b42ff2b2dd133e86960716a636dffa9f40a635f",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "inventory. The store checks its inventory every month.",
+          "start": 0.0,
+          "end": 3.415,
+          "batch": "female-03",
+          "sourceStartFrame": 2592240,
+          "sourceEndFrame": 2674200,
+          "sourceCharacterStart": 1823,
+          "sourceCharacterEnd": 1877
+        }
+      ],
+      "sha256": "287b620fd2cc2abca5f8d2868f25d7fb3514a66eedadedf41ff0f349ae8d2d67"
+    },
+    {
+      "id": 78,
+      "text": "tentative. We have set a tentative date for the launch.",
+      "kind": "vocabulary",
+      "questionIds": [],
+      "src": "assets/audio/heygen-extra/vocabulary-f585c6e96c23daed.wav",
+      "duration": 2.999,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 2.999
+        }
+      ],
+      "scriptSha256": "f585c6e96c23daedea03f62956fe5d9776e60e8c0a59d0e83c22669495a0df2c",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "tentative. We have set a tentative date for the launch.",
+          "start": 0.0,
+          "end": 2.999,
+          "batch": "female-03",
+          "sourceStartFrame": 2678520,
+          "sourceEndFrame": 2750496,
+          "sourceCharacterStart": 1879,
+          "sourceCharacterEnd": 1934
+        }
+      ],
+      "sha256": "5bb20ca601e8b8e5fe3cbc5d74a013c11d4e9cf99a84933171576dd2f93e11e9"
+    },
+    {
+      "id": 79,
+      "text": "accommodate. The hall can accommodate fifty guests.",
+      "kind": "vocabulary",
+      "questionIds": [],
+      "src": "assets/audio/heygen-extra/vocabulary-7cd8118b4d25d19d.wav",
+      "duration": 3.027,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 3.027
+        }
+      ],
+      "scriptSha256": "7cd8118b4d25d19d241b341b505de47eebdcaf91deda4186222c3986d0fdbf2e",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "accommodate. The hall can accommodate fifty guests.",
+          "start": 0.0,
+          "end": 3.027,
+          "batch": "female-03",
+          "sourceStartFrame": 2757384,
+          "sourceEndFrame": 2830032,
+          "sourceCharacterStart": 1936,
+          "sourceCharacterEnd": 1987
+        }
+      ],
+      "sha256": "c5cde0ed545748cd1d4c40d0b74ff8611a95df59d3b3d291948d42e2ba6262c2"
+    },
+    {
+      "id": 80,
+      "text": "overdue. Payment for the invoice is now overdue.",
+      "kind": "vocabulary",
+      "questionIds": [],
+      "src": "assets/audio/heygen-extra/vocabulary-fb7d114bf06cc282.wav",
+      "duration": 3.169,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 3.169
+        }
+      ],
+      "scriptSha256": "fb7d114bf06cc2822c251a38bd94f3410f4aaa1bd2b4298f23a205ce0aa8fcbf",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "overdue. Payment for the invoice is now overdue.",
+          "start": 0.0,
+          "end": 3.169,
+          "batch": "female-03",
+          "sourceStartFrame": 2834184,
+          "sourceEndFrame": 2910240,
+          "sourceCharacterStart": 1989,
+          "sourceCharacterEnd": 2037
+        }
+      ],
+      "sha256": "c85f62df8146826125c7a64719092e499b6d2445ace6db622aa1741aa834a972"
+    },
+    {
+      "id": 81,
+      "text": "renovate. The branch will close temporarily while we renovate.",
+      "kind": "vocabulary",
+      "questionIds": [],
+      "src": "assets/audio/heygen-extra/vocabulary-1ee1b395f40a1b92.wav",
+      "duration": 3.468,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 3.468
+        }
+      ],
+      "scriptSha256": "1ee1b395f40a1b92bf3bd1c708ae9f0cdc972e68c450fc91a0c2f6f807518289",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "renovate. The branch will close temporarily while we renovate.",
+          "start": 0.0,
+          "end": 3.468,
+          "batch": "female-03",
+          "sourceStartFrame": 2913024,
+          "sourceEndFrame": 2996256,
+          "sourceCharacterStart": 2039,
+          "sourceCharacterEnd": 2101
+        }
+      ],
+      "sha256": "3480854d1616231ff19e701945d53427bd8c37deacbc6fff46b75be2b15a0098"
+    },
+    {
+      "id": 82,
+      "text": "applicant. Each applicant should provide two references.",
+      "kind": "vocabulary",
+      "questionIds": [],
+      "src": "assets/audio/heygen-extra/vocabulary-196d8af5be882708.wav",
+      "duration": 3.383,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 3.383
+        }
+      ],
+      "scriptSha256": "196d8af5be8827085c0b0eb14d5c8150b3d3cd7f7a48acaa1aee5adf2222667d",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "applicant. Each applicant should provide two references.",
+          "start": 0.0,
+          "end": 3.383,
+          "batch": "female-03",
+          "sourceStartFrame": 3001104,
+          "sourceEndFrame": 3082296,
+          "sourceCharacterStart": 2103,
+          "sourceCharacterEnd": 2159
+        }
+      ],
+      "sha256": "6511ee1518850d2d306f7758b033eb185b5513c88f9e5c24adada2dc317d1c82"
+    },
+    {
+      "id": 83,
+      "text": "discrepancy. We found a discrepancy between the invoice and the order.",
+      "kind": "vocabulary",
+      "questionIds": [],
+      "src": "assets/audio/heygen-extra/vocabulary-458b1e9648a024a0.wav",
+      "duration": 3.952,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 3.952
+        }
+      ],
+      "scriptSha256": "458b1e9648a024a044a6dd21a13ac0679b1b182ec5af93ee8438b7bdb5aebf6b",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "discrepancy. We found a discrepancy between the invoice and the order.",
+          "start": 0.0,
+          "end": 3.952,
+          "batch": "female-03",
+          "sourceStartFrame": 3088488,
+          "sourceEndFrame": 3183336,
+          "sourceCharacterStart": 2161,
+          "sourceCharacterEnd": 2231
+        }
+      ],
+      "sha256": "56c5c21ca57c334e5092d6c9394beeb12d49a96f49138923b6b818bfa834c24e"
+    },
+    {
+      "id": 84,
+      "text": "promptly. Please respond promptly to customer inquiries.",
+      "kind": "vocabulary",
+      "questionIds": [],
+      "src": "assets/audio/heygen-extra/vocabulary-87e71ff48a9220f0.wav",
+      "duration": 3.468,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 3.468
+        }
+      ],
+      "scriptSha256": "87e71ff48a9220f0b9fc3183f5a52c8488cc5d6284a8ca4212347208fb30d822",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "promptly. Please respond promptly to customer inquiries.",
+          "start": 0.0,
+          "end": 3.468,
+          "batch": "female-03",
+          "sourceStartFrame": 3188856,
+          "sourceEndFrame": 3272088,
+          "sourceCharacterStart": 2233,
+          "sourceCharacterEnd": 2289
+        }
+      ],
+      "sha256": "0d441ae36127fef22680454d40a458e808a0cf6d281510e3dfe497fe71c182a1"
+    },
+    {
+      "id": 85,
+      "text": "quarterly. The quarterly sales report is ready.",
+      "kind": "vocabulary",
+      "questionIds": [],
+      "src": "assets/audio/heygen-extra/vocabulary-9f506762b7c547de.wav",
+      "duration": 2.615,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 2.615
+        }
+      ],
+      "scriptSha256": "9f506762b7c547dedf48d44fd10efc712ac1ce63b41ca03138c2cf4e1fbccadf",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "quarterly. The quarterly sales report is ready.",
+          "start": 0.0,
+          "end": 2.615,
+          "batch": "female-03",
+          "sourceStartFrame": 3283056,
+          "sourceEndFrame": 3345816,
+          "sourceCharacterStart": 2291,
+          "sourceCharacterEnd": 2338
+        }
+      ],
+      "sha256": "54c746edc906ce65d10b842a87d59e79b177c365062b05fe399379b34d2b1509"
+    },
+    {
+      "id": 86,
+      "text": "feasible. We need to find a feasible solution.",
+      "kind": "vocabulary",
+      "questionIds": [],
+      "src": "assets/audio/heygen-extra/vocabulary-8e940ae075a0c323.wav",
+      "duration": 2.697,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 2.697
+        }
+      ],
+      "scriptSha256": "8e940ae075a0c3231efe7dcac79ada16cef14126f518a9f967f70b6e57ab28de",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "feasible. We need to find a feasible solution.",
+          "start": 0.0,
+          "end": 2.697,
+          "batch": "female-03",
+          "sourceStartFrame": 3350640,
+          "sourceEndFrame": 3415368,
+          "sourceCharacterStart": 2340,
+          "sourceCharacterEnd": 2386
+        }
+      ],
+      "sha256": "19ea80bec19ebd92d3960ca3497b5e648c28056c63fced0c7791099d98168a68"
+    },
+    {
+      "id": 87,
+      "text": "commute. My daily commute takes forty minutes.",
+      "kind": "vocabulary",
+      "questionIds": [],
+      "src": "assets/audio/heygen-extra/vocabulary-9edcbe87f89cecac.wav",
+      "duration": 2.842,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 2.842
+        }
+      ],
+      "scriptSha256": "9edcbe87f89cecac3c270fcd0566dcbfcd111a21cede7c04d6d035bce79f1007",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "commute. My daily commute takes forty minutes.",
+          "start": 0.0,
+          "end": 2.842,
+          "batch": "female-03",
+          "sourceStartFrame": 3421560,
+          "sourceEndFrame": 3489768,
+          "sourceCharacterStart": 2388,
+          "sourceCharacterEnd": 2434
+        }
+      ],
+      "sha256": "29178212b03814178850c4d36a58f7ae74f0eb6a88782a5b2dc0e4c54001cd6d"
+    },
+    {
+      "id": 88,
+      "text": "Hello. I will read the female speaker’s lines in your practice conversations.",
+      "kind": "preview-female",
+      "questionIds": [],
+      "src": "assets/audio/heygen-extra/preview-female-3eee0c50713434c1.wav",
+      "duration": 4.393,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 4.393
+        }
+      ],
+      "scriptSha256": "3eee0c50713434c17179a2cfb6d1825d44450ed596fae4a18706883886c243e7",
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "Hello. I will read the female speaker’s lines in your practice conversations.",
+          "start": 0.0,
+          "end": 4.393,
+          "batch": "female-03",
+          "sourceStartFrame": 3495288,
+          "sourceEndFrame": 3600720,
+          "sourceCharacterStart": 2436,
+          "sourceCharacterEnd": 2513
+        }
+      ],
+      "sha256": "553e549b61983566d6478855480d5749089334d82f27f0c604a28c5691c49125"
+    },
+    {
+      "id": 89,
+      "text": "Hello. I will read the male speaker’s lines in your practice conversations.",
+      "kind": "preview-male",
+      "questionIds": [],
+      "src": "assets/audio/heygen-extra/preview-male-2eb378992f63c205.wav",
+      "duration": 4.843791666666666,
+      "turns": [
+        {
+          "role": "male",
+          "start": 0.0,
+          "end": 4.843791666666666
+        }
+      ],
+      "scriptSha256": "2eb378992f63c2058bb65990063af15855ca094edf8e2c0176a7694c5ea1eac8",
+      "sourceTurns": [
+        {
+          "role": "male",
+          "text": "Hello. I will read the male speaker’s lines in your practice conversations.",
+          "start": 0.0,
+          "end": 4.843791666666666,
+          "batch": "male-01",
+          "sourceStartFrame": 5992056,
+          "sourceEndFrame": 6108307,
+          "sourceCharacterStart": 3368,
+          "sourceCharacterEnd": 3443
+        }
+      ],
+      "sha256": "4054a3056adb9ec4ca4f0a2bf30f792513ea651ad48c756cadf91b5f0fb78c2f"
+    }
+  ],
+  "processing": {
+    "speed": 1,
+    "pitch": 1,
+    "betweenTurnsSeconds": 0.18,
+    "method": "Exact character timing, rounded to nearest source sample; bounded padding"
+  },
+  "review": {
+    "exactSubmittedTextVerified": true,
+    "wavFormatAndDurationVerified": true,
+    "silentTurnsRejected": true,
+    "fullHumanListeningReview": false
+  }
+}
