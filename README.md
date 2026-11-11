@@ -1,13 +1,54 @@
 # TOEIC Path
 
-Independent TOEIC Listening & Reading practice companion. Buildless HTML, CSS and JavaScript; serve `dist/` with any static web server. Study history is stored in localStorage, with JSON export and import in Study preferences.
+Website luyện TOEIC Listening & Reading với 246 câu hỏi, 10 đề riêng biệt, lộ trình 4/8/12 tuần, sổ lỗi sai và thẻ từ vựng Anh–Việt. Tiến độ lưu trong trình duyệt; có thể xuất và nhập bản sao JSON trong Study preferences.
 
-Includes flexible 4/8/12-week study plans, 246 original questions across all seven parts, learning sessions, timed mixed and reading mini-tests, explanations, a mistake notebook, 24 English/Vietnamese vocabulary cards, and real practice history. The practice library has 10 themed tests of 20 questions with no overlap between those tests. Every themed test includes all seven parts and supports timed or learning mode. Custom sessions support 10, 20, 30, or 50 questions, listening/reading/mixed focus, and timed/learning mode. Random sessions prioritize untried questions, then least recently practiced questions within the chosen parts. Timed tests include a question navigator. Test completion and best practice accuracy are derived from session history. Original question IDs and the storage key are retained for existing progress and backups.
+## Cấu trúc thư mục
 
-There are no fabricated scores or history records. Browser speech synthesis supplies listening audio. Part 1 scenes use illustrations. These mini-tests are not full-length official exams. Official resources are linked within the app.
+```text
+toeic-path/
+├── src/                         # Mã nguồn: chỉnh sửa tại đây
+│   ├── index.html               # Khung trang và thứ tự tải script
+│   ├── styles/
+│   │   ├── main.css             # Giao diện chung và responsive
+│   │   └── library.css          # Giao diện thư viện đề thi
+│   ├── js/
+│   │   ├── app.js               # Điều hướng, bài thi, chấm điểm, lưu tiến độ
+│   │   └── practice-library.js  # Thư viện đề và chọn câu hỏi luyện tập
+│   └── data/
+│       ├── questions.js         # Ngân hàng gốc, từ vựng và thông tin 7 phần
+│       └── practice-sets.js     # 10 đề bổ sung và dữ liệu minh họa
+├── scripts/
+│   ├── build.mjs                # Tạo dist từ src
+│   └── serve.mjs                # Server phát triển hoặc xem bản build
+├── tests/
+│   └── practice.test.cjs        # Kiểm tra đường dẫn, dữ liệu và chức năng
+├── dist/                        # Sinh tự động; không sửa trực tiếp, không đưa vào Git
+├── .openai/hosting.json          # Cấu hình website hiện có
+├── .gitignore
+├── package.json
+└── README.md
+```
 
-The site requires no backend, API key, account integration, or build dependencies. Google Fonts is optional; system sans-serif fonts are used when unavailable.
+Các file nén triển khai và ảnh chụp nằm trong `../artifacts/deployments/` và `../artifacts/previews/`, tách khỏi mã nguồn website.
 
-Run `node checks.cjs` for question-bank integrity, disjoint sets, balanced and fresh-first selection, custom sessions, timed expiry, scoring, notebook clearing, storage, and legacy history retention. Syntax-check the four JavaScript files with `node --check`. Browser QA also covers the library, learning flow, timed navigation/submission, custom builder, and progress persistence.
+## Chạy và kiểm tra
 
-Hosting identity: `.openai/hosting.json`. Deployment helpers live in the installed Sites plugin; keep credentials out of files and pass them through stdin.
+Yêu cầu Node.js 20 trở lên. Không cần cài dependency.
+
+```bash
+npm run dev         # Phục vụ src tại http://127.0.0.1:4174
+npm test            # Kiểm tra mã nguồn, dữ liệu và đường dẫn asset
+npm run build       # Tạo lại dist từ src
+npm run test:build  # Kiểm tra bản build dùng để triển khai
+npm run preview     # Phục vụ dist tại http://127.0.0.1:4174
+```
+
+Sau khi sửa file trong `src`, tải lại trang khi chạy `dev`. Chạy lại `build` trước khi dùng `preview` hoặc triển khai. Có thể đổi cổng bằng biến môi trường `PORT`.
+
+## Dữ liệu và triển khai
+
+Giữ nguyên ID câu hỏi và khóa localStorage để bảo toàn tiến độ, sổ lỗi sai và các bản sao trước đây. Mỗi đề mới có 20 câu thuộc đủ 7 phần và không trùng nhau giữa 10 đề. Bài luyện tùy chọn có 10/20/30/50 câu, ưu tiên câu chưa trả lời rồi đến câu luyện lâu nhất.
+
+`.openai/hosting.json` giữ nguyên project ID và thư mục tĩnh `dist`. Công cụ triển khai phải chạy `npm run build` trước khi đóng gói. Source, scripts và tests được quản lý trong Git; `dist` là sản phẩm build.
+
+Âm thanh dùng speech synthesis của trình duyệt; Part 1 dùng hình minh họa. Đây là bài luyện độc lập, không phải đề TOEIC chính thức đầy đủ và không quy đổi phần trăm thành điểm TOEIC. Google Fonts là tùy chọn, có font hệ thống thay thế.

@@ -1,11 +1,22 @@
 const fs=require('node:fs');
 const vm=require('node:vm');
 const assert=require('node:assert/strict');
+const path=require('node:path');
+const root=path.resolve(__dirname,'..',process.argv.includes('--built')?'dist':'src');
+const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
+const scriptFiles=[...html.matchAll(/<script\b[^>]*\bsrc="([^"]+)"/g)].map(match=>match[1]);
+assert.deepEqual(scriptFiles,['data/questions.js','data/practice-sets.js','js/practice-library.js','js/app.js'],'Script paths and load order must be preserved.');
+for(const match of html.matchAll(/(?:src|href)="([^"#]+)"/g)){
+  if (/^(?:https?:|data:)/.test(match[1])) continue;
+  const asset=path.resolve(root,match[1]);
+  assert.ok(!path.relative(root,asset).startsWith('..'),'Assets must stay inside the site root.');
+  assert.ok(fs.existsSync(asset),'Missing linked asset: '+match[1]);
+}
 const nodes={};let timer;
 const element=()=>({innerHTML:'',textContent:'',style:{},classList:{remove(){}},insertAdjacentHTML(_,html){this.innerHTML+=html}});
 const localData=new Map();
 const context=vm.createContext({console,document:{querySelector:s=>nodes[s]??=element(),addEventListener(){}},window:{addEventListener(){},scrollTo(){}},localStorage:{getItem:key=>localData.get(key)||null,setItem:(key,value)=>localData.set(key,value)},location:{hash:''},history:{},setInterval:fn=>{timer=fn;return 1},runTimer:()=>timer(),clearInterval(){},setTimeout(){},confirm:()=>true,Date,Math,Set,Map,JSON,assert});
-for(const file of ['questions.js','more-questions.js','practice-library.js','app.js'])vm.runInContext(fs.readFileSync('dist/'+file,'utf8'),context,{filename:file});
+for(const file of scriptFiles)vm.runInContext(fs.readFileSync(path.join(root,file),'utf8'),context,{filename:file});
 vm.runInContext(`
 assert.equal(BANK.length,246);assert.equal(PRACTICE_SETS.length,10);
 const fingerprints=new Set();
