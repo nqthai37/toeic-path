@@ -95,6 +95,10 @@ python scripts/assemble-heygen-remaining.py --input <thu-muc-ban-goc-con-lai>
 
 Giữ tốc độ/pitch nguồn khi ghép, thêm 0.18 giây giữa các lượt. Đã đối chiếu text đầu vào với mốc ký tự, kiểm tra WAV, hash, thời lượng và đoạn không im lặng. Chưa có vòng nghe thủ công toàn bộ 102 bản thu; kiểm tra dữ liệu không thay thế đánh giá nghe về phát âm.
 
+## Kế hoạch React Native + Supabase
+
+Xem [kế hoạch migration](docs/REACT_NATIVE_SUPABASE_PLAN.md): Expo/React Native/TypeScript, Supabase Auth/Postgres/Storage, RLS, chấm bài phía server, đồng bộ offline và nhập tiến độ từ web. Dự kiến MVP 2–4 tuần cho một lập trình viên, điều chỉnh sau PoC và chưa gồm xét duyệt app store. Hiện mới lập kế hoạch, chưa tạo app native hay project Supabase.
+
 ## Lịch sử chức năng
 
 Xem [kế hoạch và các mốc commit](docs/FEATURE_HISTORY.md). Các commit được tổ chức lại từ những bản source đã có; source ứng dụng ở commit cuối giữ nguyên so với bản đang triển khai.
