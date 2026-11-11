@@ -15,7 +15,9 @@ for(const match of html.matchAll(/(?:src|href)="([^"#]+)"/g)){
 const nodes={};let timer;
 const element=()=>({innerHTML:'',textContent:'',style:{},classList:{remove(){}},insertAdjacentHTML(_,html){this.innerHTML+=html}});
 const localData=new Map();
-const context=vm.createContext({console,document:{querySelector:s=>nodes[s]??=element(),addEventListener(){}},window:{addEventListener(){},scrollTo(){}},localStorage:{getItem:key=>localData.get(key)||null,setItem:(key,value)=>localData.set(key,value)},location:{hash:''},history:{},setInterval:fn=>{timer=fn;return 1},runTimer:()=>timer(),clearInterval(){},setTimeout(){},confirm:()=>true,Date,Math,Set,Map,JSON,assert});
+const clickListeners=[];
+const viewport={scrollX:0,scrollY:0,addEventListener(){},scrollTo(x,y){this.scrollX=typeof x==='object'?(x.left??this.scrollX):x;this.scrollY=typeof x==='object'?(x.top??this.scrollY):y}};
+const context=vm.createContext({console,document:{querySelector:s=>nodes[s]??=element(),querySelectorAll:()=>[],addEventListener(type,listener){if(type==='click')clickListeners.push(listener)}},window:viewport,dispatchClick(dataset){const button={dataset};for(const listener of clickListeners)listener({target:{closest:selector=>selector.startsWith('a[')?null:button},preventDefault(){}})},localStorage:{getItem:key=>localData.get(key)||null,setItem:(key,value)=>localData.set(key,value)},location:{hash:''},history:{},setInterval:fn=>{timer=fn;return 1},runTimer:()=>timer(),clearInterval(){},setTimeout(){},confirm:()=>true,Date,Math,Set,Map,JSON,assert});
 for(const file of scriptFiles)vm.runInContext(fs.readFileSync(path.join(root,file),'utf8'),context,{filename:file});
 vm.runInContext(`
 assert.equal(BANK.length,246);assert.equal(PRACTICE_SETS.length,10);
@@ -29,6 +31,7 @@ for(const view of [dashboard,plan,practice,tests,vocab,review,progress,settings]
 for(const count of [10,14,20,30,50])for(let i=0;i<10;i++){const selected=balanced(count);assert.equal(selected.length,count);assert.equal(new Set(selected.map(q=>q.id)).size,count);assert.equal(new Set(selected.map(q=>q.part)).size,7)}
 state=fresh();state.history.push({date:new Date().toISOString(),name:'Old progress',answers:[{id:1,chosen:1,correct:true}],seconds:30});assert.equal(freshFirst(BANK).at(-1).id,1);
 start('part',2);assert.equal(quiz.questions.length,8);quiz=null;
+start('part',7);window.scrollTo(0,480);dispatchClick({answer:'0'});assert.equal(window.scrollY,480,'Selecting an answer must preserve scroll');dispatchClick({action:'check'});assert.equal(window.scrollY,480,'Checking an answer must preserve scroll');assert.equal(quiz.checked,true);assert.ok(document.querySelector('#main').innerHTML.includes('class="explanation"'));dispatchClick({action:'next-q'});assert.equal(window.scrollY,0,'The next question should still start at the top');quiz=null;
 testMode='timed';start('set',1);assert.equal(quiz.questions.length,20);assert.equal(quiz.limit,1200);quiz.questions.forEach(q=>quiz.answers[q.id]=q.answer);finishQuiz();assert.equal(state.history.at(-1).setId,1);assert.equal(accuracy(state.history.at(-1).answers),100);assert.ok(tests().includes('Best: 100%'));
 testMode='learning';start('set',2);assert.equal(quiz.limit,0);finishQuiz();assert.equal(state.mistakes.length,20);
 start('review');quiz.questions.forEach(q=>quiz.answers[q.id]=q.answer);finishQuiz();assert.equal(state.mistakes.length,0);
