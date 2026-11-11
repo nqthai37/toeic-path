@@ -12,16 +12,32 @@ function tests(){
 }
 function freshFirst(pool){const lastSeen=new Map();state.history.forEach((h,i)=>h.answers.forEach(a=>{if(a.chosen!==null)lastSeen.set(a.id,i+1)}));return shuffle(pool).sort((a,b)=>(lastSeen.get(a.id)||0)-(lastSeen.get(b.id)||0))}
 function selectQuestions(pool,count){return freshFirst(pool).slice(0,count).sort((a,b)=>a.part-b.part||a.id-b.id)}
-function renderQuiz({preserveScroll=false}={}){
- const position=preserveScroll?{left:window.scrollX,top:window.scrollY}:null;
- const expandedDetails=preserveScroll?[...document.querySelectorAll('#main details')].map(detail=>detail.open):[];
- renderQuizContent({preserveScroll});
+function renderQuiz(){
+ renderQuizContent();
  if(quiz?.limit){$('#main .quiz-card').insertAdjacentHTML('beforeend',`<div class="question-navigator"><div class="eyebrow">JUMP TO A QUESTION</div><p class="note">Filled circles are answered. You can change answers before submitting.</p><div class="question-buttons">${quiz.questions.map((q,i)=>`<button class="question-dot ${quiz.answers[q.id]!==undefined?'answered':''} ${quiz.index===i?'current':''}" data-question-index="${i}" aria-label="Question ${i+1}${quiz.answers[q.id]!==undefined?', answered':''}" ${quiz.index===i?'aria-current="step"':''}>${i+1}</button>`).join('')}</div></div>`)}
- if(preserveScroll){
-  // Keep expanded transcripts and restore the viewport after the answer is updated.
-  document.querySelectorAll('#main details').forEach((detail,i)=>{detail.open=expandedDetails[i]||false});
-  window.scrollTo({...position,behavior:'instant'});
- }
+}
+function selectQuizAnswer(index){
+ if(!quiz||quiz.checked)return;
+ const question=quiz.questions[quiz.index];
+ if(!Number.isInteger(index)||index<0||index>=question.options.length)return;
+ quiz.answers[question.id]=index;
+ document.querySelectorAll('.answers .answer').forEach((answer,i)=>{answer.classList.toggle('selected',i===index);answer.setAttribute('aria-pressed',String(i===index))});
+ const check=document.querySelector('[data-action="check"]');if(check)check.disabled=false;
+ const dot=document.querySelector(`[data-question-index="${quiz.index}"]`);if(dot){dot.classList.add('answered');dot.setAttribute('aria-label',`Question ${quiz.index+1}, answered`)}
+}
+function checkQuizAnswer(){
+ if(!quiz||quiz.checked||quiz.limit)return;
+ const question=quiz.questions[quiz.index],selected=quiz.answers[question.id];
+ if(selected===undefined)return;
+ quiz.checked=true;
+ document.querySelectorAll('.answers .answer').forEach((answer,i)=>{answer.disabled=true;answer.classList.toggle('correct',i===question.answer);answer.classList.toggle('wrong',i===selected&&i!==question.answer)});
+ // Keep the clicked button and all content above it in place. Reveal feedback
+ // below the controls instead of replacing the page or inserting above them.
+ const check=document.querySelector('[data-action="check"]');
+ if(check){check.dataset.action='next-q';check.textContent=quiz.index===quiz.questions.length-1?'See my results':'Next question →'}
+ const skip=document.querySelector('[data-action="skip-q"]');if(skip){skip.disabled=true;skip.textContent='Checked ✓'}
+ const explanation=document.querySelector('.quiz-card .explanation');
+ if(explanation){explanation.innerHTML=`<b>${selected===question.answer?'Well done.':'Keep learning.'} The answer is ${String.fromCharCode(65+question.answer)}.</b><br>${escapeHTML(question.explanation)}`;explanation.hidden=false}
 }
 function balanced(count){const chosen=[];for(let p=1;p<=7;p++)chosen.push(...freshFirst(BANK.filter(q=>q.part===p)).slice(0,Math.min(2,Math.floor(count/7))));const ids=new Set(chosen.map(q=>q.id));return chosen.concat(freshFirst(BANK.filter(q=>!ids.has(q.id))).slice(0,count-chosen.length)).sort((a,b)=>a.part-b.part||a.id-b.id)}
 document.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;if(b.dataset.testMode){testMode=b.dataset.testMode;const position=window.scrollY;render();window.scrollTo(0,position)}if(b.dataset.questionIndex!==undefined&&quiz&&!quiz.checked){quiz.index=Number(b.dataset.questionIndex);stopAudio();renderQuiz()}});
