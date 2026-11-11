@@ -12,6 +12,7 @@ toeic-path/
 │   │   ├── main.css             # Giao diện chung và responsive
 │   │   └── library.css          # Giao diện thư viện đề thi
 │   ├── js/
+│   │   ├── audio.js             # Giọng nữ/nam, tách lượt thoại, tốc độ và lưu lựa chọn
 │   │   ├── app.js               # Điều hướng, bài thi, chấm điểm, lưu tiến độ
 │   │   └── practice-library.js  # Thư viện đề và chọn câu hỏi luyện tập
 │   └── data/
@@ -21,6 +22,7 @@ toeic-path/
 │   ├── build.mjs                # Tạo dist từ src
 │   └── serve.mjs                # Server phát triển hoặc xem bản build
 ├── tests/
+│   ├── audio.test.cjs           # Giọng đọc, thứ tự hội thoại và hủy phát
 │   └── practice.test.cjs        # Kiểm tra đường dẫn, dữ liệu và chức năng
 ├── dist/                        # Sinh tự động; không sửa trực tiếp, không đưa vào Git
 ├── .openai/hosting.json          # Cấu hình website hiện có
@@ -52,3 +54,5 @@ Giữ nguyên ID câu hỏi và khóa localStorage để bảo toàn tiến đ�
 `.openai/hosting.json` giữ nguyên project ID và thư mục tĩnh `dist`. Công cụ triển khai phải chạy `npm run build` trước khi đóng gói. Source, scripts và tests được quản lý trong Git; `dist` là sản phẩm build.
 
 Âm thanh dùng speech synthesis của trình duyệt; Part 1 dùng hình minh họa. Đây là bài luyện độc lập, không phải đề TOEIC chính thức đầy đủ và không quy đổi phần trăm thành điểm TOEIC. Google Fonts là tùy chọn, có font hệ thống thay thế.
+
+Trong bài nghe, mở **Voice settings · female & male** để chọn và nghe thử hai giọng tiếng Anh, hoặc đổi tốc độ. Hội thoại tách thành từng lượt: Woman/Assistant dùng giọng nữ, Man/Customer dùng giọng nam, không đọc nhãn vai. Giọng nữ cũng dùng mặc định cho thông báo và từ vựng. Lựa chọn được lưu riêng trên thiết bị. Danh sách giọng phụ thuộc trình duyệt/hệ điều hành; khi chỉ có một giọng tiếng Anh, trang hiển thị thông báo và vẫn phát bằng giọng đó. Không cần API key hay dịch vụ âm thanh trả phí.
