@@ -75,6 +75,16 @@ Website trên Pages không có cổng đăng nhập ChatGPT của Sites. Tiến 
 
 Tài liệu: https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages
 
+## Giọng HeyGen cho Part 3
+
+Nhánh `fix-voice` bổ sung 13 hội thoại Part 3 tạo sẵn với **Faye (nữ)** và **Dmitri (nam)** của HeyGen, phủ đủ 36 câu hỏi Part 3. File WAV nằm trong `src/assets/audio/heygen-part3/`; các câu hỏi dùng chung hội thoại dùng chung file. Website không gọi API HeyGen lúc người dùng nghe và không chứa API key.
+
+Trong **Voice settings · female & male**, chọn **HeyGen · Faye & Dmitri** hoặc **Device voices**. Tốc độ đọc có thể chỉnh; Stop dừng file đang phát. Các phần nghe khác và từ vựng tiếp tục dùng giọng thiết bị. Nếu file không tải được, trang thông báo lỗi để người dùng chọn giọng thiết bị, không âm thầm đổi giọng.
+
+`src/data/heygen-part3.js` chứa đường dẫn, thời lượng và các lượt thoại. `docs/heygen-part3-provenance.json` ghi voice ID, tham số, thời lượng đo từ file và ánh xạ cắt/ghép theo mốc ký tự thực của HeyGen. Có thể ghép lại từ bản gốc và metadata đã lưu bằng `python scripts/assemble-heygen-part3.py --input <thư-mục-bản-gốc>`; lệnh này không gọi HeyGen hay dùng thêm quota. Giữ nguyên tốc độ/pitch nguồn khi ghép, thêm 0.18 giây giữa các lượt.
+
+Đã đối chiếu chính xác text đầu vào với mốc ký tự, kiểm tra WAV, thời lượng và đoạn không im lặng. Metadata ghi rõ chưa có vòng nghe thủ công toàn bộ 13 hội thoại; việc khớp mốc ký tự không thay thế đánh giá nghe về phát âm.
+
 ## Lịch sử chức năng
 
 Xem [kế hoạch và các mốc commit](docs/FEATURE_HISTORY.md). Các commit được tổ chức lại từ những bản source đã có; source ứng dụng ở commit cuối giữ nguyên so với bản đang triển khai.

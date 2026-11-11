@@ -1,0 +1,1145 @@
+{
+  "scope": "13 original Part 3 conversations",
+  "tracks": {
+    "female": {
+      "voice": {
+        "id": "44c2584dd48f46b7bce9b66c8bf086e0",
+        "name": "Faye"
+      },
+      "language": "en",
+      "requestedModel": "server-default",
+      "returnedModel": null,
+      "duration": 108.92620833333334,
+      "originalFile": "female-original.pcm",
+      "sha256": "5fc12a47de8658e8413689dc811b841b02aefdb59b43a593feb7a33e3ea5bd2f",
+      "format": {
+        "encoding": "pcm_s16le",
+        "sampleRate": 24000,
+        "channels": 1
+      },
+      "timing": "HeyGen original_characters, exact submitted text verified"
+    },
+    "male": {
+      "voice": {
+        "id": "6d140b3078404b9893f3279d53f13f74",
+        "name": "Dmitri"
+      },
+      "language": "en",
+      "requestedModel": "server-default",
+      "returnedModel": null,
+      "duration": 105.84641666666667,
+      "originalFile": "male-original.pcm",
+      "sha256": "68bb0580c4ea9d78efcc9c6d3821d1a4de46138784cbfd7248db801f4b97f30d",
+      "format": {
+        "encoding": "pcm_s16le",
+        "sampleRate": 24000,
+        "channels": 1
+      },
+      "timing": "HeyGen original_characters, exact submitted text verified"
+    }
+  },
+  "recordings": [
+    {
+      "id": 1,
+      "text": "Woman: I booked the meeting room for ten, but the projector is not working. Man: I can ask the technician to take a look. Woman: Thanks. If it cannot be fixed, we can move to room six. Man: I will let you know before nine thirty.",
+      "questionIds": [
+        11,
+        12
+      ],
+      "src": "assets/audio/heygen-part3/conversation-01.wav",
+      "duration": 10.999,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 3.326
+        },
+        {
+          "role": "male",
+          "start": 3.506,
+          "end": 5.353
+        },
+        {
+          "role": "female",
+          "start": 5.533,
+          "end": 8.873
+        },
+        {
+          "role": "male",
+          "start": 9.053,
+          "end": 10.999
+        }
+      ],
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "I booked the meeting room for ten, but the projector is not working.",
+          "start": 0.0,
+          "end": 3.326,
+          "sourceStart": 0.153,
+          "sourceEnd": 3.479,
+          "sourceCharacterStart": 0,
+          "sourceCharacterEnd": 68
+        },
+        {
+          "role": "male",
+          "text": "I can ask the technician to take a look.",
+          "start": 3.506,
+          "end": 5.353,
+          "sourceStart": 0.153,
+          "sourceEnd": 2.0,
+          "sourceCharacterStart": 0,
+          "sourceCharacterEnd": 40
+        },
+        {
+          "role": "female",
+          "text": "Thanks. If it cannot be fixed, we can move to room six.",
+          "start": 5.533,
+          "end": 8.873,
+          "sourceStart": 3.737,
+          "sourceEnd": 7.077,
+          "sourceCharacterStart": 70,
+          "sourceCharacterEnd": 125
+        },
+        {
+          "role": "male",
+          "text": "I will let you know before nine thirty.",
+          "start": 9.053,
+          "end": 10.999,
+          "sourceStart": 2.116,
+          "sourceEnd": 4.062,
+          "sourceCharacterStart": 42,
+          "sourceCharacterEnd": 81
+        }
+      ],
+      "sha256": "e046e1fed1a52eedfdacdc1402ec809880b76907606985dde353a9748f581a17"
+    },
+    {
+      "id": 2,
+      "text": "Man: Hello. I ordered twenty office chairs last week, but only fifteen arrived. Woman: I am sorry. The remaining five are at our warehouse. We can deliver them on Thursday at no extra charge. Man: Thursday works, as long as they arrive before noon.",
+      "questionIds": [
+        13,
+        14
+      ],
+      "src": "assets/audio/heygen-part3/conversation-02.wav",
+      "duration": 13.063,
+      "turns": [
+        {
+          "role": "male",
+          "start": 0.0,
+          "end": 4.279
+        },
+        {
+          "role": "female",
+          "start": 4.459,
+          "end": 10.24
+        },
+        {
+          "role": "male",
+          "start": 10.42,
+          "end": 13.063
+        }
+      ],
+      "sourceTurns": [
+        {
+          "role": "male",
+          "text": "Hello. I ordered twenty office chairs last week, but only fifteen arrived.",
+          "start": 0.0,
+          "end": 4.279,
+          "sourceStart": 4.292,
+          "sourceEnd": 8.571,
+          "sourceCharacterStart": 83,
+          "sourceCharacterEnd": 157
+        },
+        {
+          "role": "female",
+          "text": "I am sorry. The remaining five are at our warehouse. We can deliver them on Thursday at no extra charge.",
+          "start": 4.459,
+          "end": 10.24,
+          "sourceStart": 7.279,
+          "sourceEnd": 13.06,
+          "sourceCharacterStart": 127,
+          "sourceCharacterEnd": 231
+        },
+        {
+          "role": "male",
+          "text": "Thursday works, as long as they arrive before noon.",
+          "start": 10.42,
+          "end": 13.063,
+          "sourceStart": 8.772,
+          "sourceEnd": 11.415,
+          "sourceCharacterStart": 159,
+          "sourceCharacterEnd": 210
+        }
+      ],
+      "sha256": "b305c242c7c2c7727c2c9ce4330b6a7790f698cc3aa4548e413453e22cb59e2a"
+    },
+    {
+      "id": 3,
+      "text": "Woman: Have you tried the new cafe across from the station? Man: Not yet. Does it have vegetarian options? Woman: Yes, and it is offering a discount this week. Shall we go there for lunch? Man: Good idea. I finish my client call at twelve fifteen.",
+      "questionIds": [
+        15,
+        16
+      ],
+      "src": "assets/audio/heygen-part3/conversation-03.wav",
+      "duration": 12.038916666666667,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 2.245
+        },
+        {
+          "role": "male",
+          "start": 2.425,
+          "end": 4.715
+        },
+        {
+          "role": "female",
+          "start": 4.895,
+          "end": 8.717958333333334
+        },
+        {
+          "role": "male",
+          "start": 8.897958333333333,
+          "end": 12.038916666666667
+        }
+      ],
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "Have you tried the new cafe across from the station?",
+          "start": 0.0,
+          "end": 2.245,
+          "sourceStart": 13.279,
+          "sourceEnd": 15.524,
+          "sourceCharacterStart": 233,
+          "sourceCharacterEnd": 285
+        },
+        {
+          "role": "male",
+          "text": "Not yet. Does it have vegetarian options?",
+          "start": 2.425,
+          "end": 4.715,
+          "sourceStart": 11.588,
+          "sourceEnd": 13.878,
+          "sourceCharacterStart": 212,
+          "sourceCharacterEnd": 253
+        },
+        {
+          "role": "female",
+          "text": "Yes, and it is offering a discount this week. Shall we go there for lunch?",
+          "start": 4.895,
+          "end": 8.717958333333334,
+          "sourceStart": 15.754,
+          "sourceEnd": 19.576958333333334,
+          "sourceCharacterStart": 287,
+          "sourceCharacterEnd": 361
+        },
+        {
+          "role": "male",
+          "text": "Good idea. I finish my client call at twelve fifteen.",
+          "start": 8.897958333333333,
+          "end": 12.038916666666667,
+          "sourceStart": 14.25,
+          "sourceEnd": 17.390958333333334,
+          "sourceCharacterStart": 255,
+          "sourceCharacterEnd": 308
+        }
+      ],
+      "sha256": "0155b116320fbfc3d50e2d4da239f6426eb4fa092e29787ca6ea55803a889f63"
+    },
+    {
+      "id": 4,
+      "text": "Woman: We are almost out of printer paper. Should I order our usual ten boxes? Man: Make it fifteen this time. The training team needs extra copies next month. Woman: The supplier offers free delivery for orders of twelve boxes or more. Man: Great. Please place the order before lunch so it arrives tomorrow.",
+      "questionIds": [
+        51,
+        52,
+        53
+      ],
+      "src": "assets/audio/heygen-part3/conversation-04.wav",
+      "duration": 15.550958333333334,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 3.9879583333333333
+        },
+        {
+          "role": "male",
+          "start": 4.167958333333333,
+          "end": 8.062958333333333
+        },
+        {
+          "role": "female",
+          "start": 8.242958333333334,
+          "end": 12.208958333333333
+        },
+        {
+          "role": "male",
+          "start": 12.388958333333333,
+          "end": 15.550958333333334
+        }
+      ],
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "We are almost out of printer paper. Should I order our usual ten boxes?",
+          "start": 0.0,
+          "end": 3.9879583333333333,
+          "sourceStart": 19.722,
+          "sourceEnd": 23.709958333333333,
+          "sourceCharacterStart": 363,
+          "sourceCharacterEnd": 434
+        },
+        {
+          "role": "male",
+          "text": "Make it fifteen this time. The training team needs extra copies next month.",
+          "start": 4.167958333333333,
+          "end": 8.062958333333333,
+          "sourceStart": 17.535,
+          "sourceEnd": 21.43,
+          "sourceCharacterStart": 310,
+          "sourceCharacterEnd": 385
+        },
+        {
+          "role": "female",
+          "text": "The supplier offers free delivery for orders of twelve boxes or more.",
+          "start": 8.242958333333334,
+          "end": 12.208958333333333,
+          "sourceStart": 24.012,
+          "sourceEnd": 27.978,
+          "sourceCharacterStart": 436,
+          "sourceCharacterEnd": 505
+        },
+        {
+          "role": "male",
+          "text": "Great. Please place the order before lunch so it arrives tomorrow.",
+          "start": 12.388958333333333,
+          "end": 15.550958333333334,
+          "sourceStart": 21.631,
+          "sourceEnd": 24.793,
+          "sourceCharacterStart": 387,
+          "sourceCharacterEnd": 453
+        }
+      ],
+      "sha256": "c6de865d9fd3238410c2d0583c034a4ee9fa555924d04aba098b6ee0ee62153f"
+    },
+    {
+      "id": 5,
+      "text": "Man: My flight lands at six, but the conference dinner begins at seven. Will I have time to check in at the hotel? Woman: The airport shuttle takes forty minutes. You should go straight to the restaurant. I can ask the hotel to hold your room. Man: Thank you. Can I leave my suitcase at the restaurant? Woman: Yes, they have a cloakroom near the entrance.",
+      "questionIds": [
+        71,
+        72,
+        73
+      ],
+      "src": "assets/audio/heygen-part3/conversation-05.wav",
+      "duration": 17.431958333333334,
+      "turns": [
+        {
+          "role": "male",
+          "start": 0.0,
+          "end": 5.757
+        },
+        {
+          "role": "female",
+          "start": 5.937,
+          "end": 11.955958333333333
+        },
+        {
+          "role": "male",
+          "start": 12.135958333333333,
+          "end": 14.949958333333333
+        },
+        {
+          "role": "female",
+          "start": 15.129958333333333,
+          "end": 17.431958333333334
+        }
+      ],
+      "sourceTurns": [
+        {
+          "role": "male",
+          "text": "My flight lands at six, but the conference dinner begins at seven. Will I have time to check in at the hotel?",
+          "start": 0.0,
+          "end": 5.757,
+          "sourceStart": 25.064,
+          "sourceEnd": 30.821,
+          "sourceCharacterStart": 455,
+          "sourceCharacterEnd": 564
+        },
+        {
+          "role": "female",
+          "text": "The airport shuttle takes forty minutes. You should go straight to the restaurant. I can ask the hotel to hold your room.",
+          "start": 5.937,
+          "end": 11.955958333333333,
+          "sourceStart": 28.236,
+          "sourceEnd": 34.254958333333335,
+          "sourceCharacterStart": 507,
+          "sourceCharacterEnd": 628
+        },
+        {
+          "role": "male",
+          "text": "Thank you. Can I leave my suitcase at the restaurant?",
+          "start": 12.135958333333333,
+          "end": 14.949958333333333,
+          "sourceStart": 30.994,
+          "sourceEnd": 33.808,
+          "sourceCharacterStart": 566,
+          "sourceCharacterEnd": 619
+        },
+        {
+          "role": "female",
+          "text": "Yes, they have a cloakroom near the entrance.",
+          "start": 15.129958333333333,
+          "end": 17.431958333333334,
+          "sourceStart": 34.524,
+          "sourceEnd": 36.826,
+          "sourceCharacterStart": 630,
+          "sourceCharacterEnd": 675
+        }
+      ],
+      "sha256": "0f1740ef404182a52317fcd1a86d908d9f28fda98d36700ec5e699a7a230736e"
+    },
+    {
+      "id": 6,
+      "text": "Customer: I bought these headphones yesterday, but the left side has no sound. Assistant: I am sorry about that. Would you like a refund or a replacement? Customer: A replacement, please. I need them for a trip tomorrow. Assistant: We have the same model in black, but the blue version will not arrive until Friday. Customer: Black is fine. Here is my receipt.",
+      "questionIds": [
+        91,
+        92,
+        93
+      ],
+      "src": "assets/audio/heygen-part3/conversation-06.wav",
+      "duration": 17.432,
+      "turns": [
+        {
+          "role": "male",
+          "start": 0.0,
+          "end": 3.4860416666666665
+        },
+        {
+          "role": "female",
+          "start": 3.6660416666666666,
+          "end": 7.290041666666666
+        },
+        {
+          "role": "male",
+          "start": 7.470041666666667,
+          "end": 10.426
+        },
+        {
+          "role": "female",
+          "start": 10.606,
+          "end": 14.993
+        },
+        {
+          "role": "male",
+          "start": 15.173,
+          "end": 17.432
+        }
+      ],
+      "sourceTurns": [
+        {
+          "role": "male",
+          "text": "I bought these headphones yesterday, but the left side has no sound.",
+          "start": 0.0,
+          "end": 3.4860416666666665,
+          "sourceStart": 33.980958333333334,
+          "sourceEnd": 37.467,
+          "sourceCharacterStart": 621,
+          "sourceCharacterEnd": 689
+        },
+        {
+          "role": "female",
+          "text": "I am sorry about that. Would you like a refund or a replacement?",
+          "start": 3.6660416666666666,
+          "end": 7.290041666666666,
+          "sourceStart": 36.998958333333334,
+          "sourceEnd": 40.62295833333334,
+          "sourceCharacterStart": 677,
+          "sourceCharacterEnd": 741
+        },
+        {
+          "role": "male",
+          "text": "A replacement, please. I need them for a trip tomorrow.",
+          "start": 7.470041666666667,
+          "end": 10.426,
+          "sourceStart": 37.704,
+          "sourceEnd": 40.659958333333336,
+          "sourceCharacterStart": 691,
+          "sourceCharacterEnd": 746
+        },
+        {
+          "role": "female",
+          "text": "We have the same model in black, but the blue version will not arrive until Friday.",
+          "start": 10.606,
+          "end": 14.993,
+          "sourceStart": 40.881,
+          "sourceEnd": 45.268,
+          "sourceCharacterStart": 743,
+          "sourceCharacterEnd": 826
+        },
+        {
+          "role": "male",
+          "text": "Black is fine. Here is my receipt.",
+          "start": 15.173,
+          "end": 17.432,
+          "sourceStart": 40.775958333333335,
+          "sourceEnd": 43.034958333333336,
+          "sourceCharacterStart": 748,
+          "sourceCharacterEnd": 782
+        }
+      ],
+      "sha256": "b2459778898db1bb4dae16f67eb5af81fb363702f5841e27340dd47c44798ee3"
+    },
+    {
+      "id": 7,
+      "text": "Woman: We have forty-eight registrations, but room two seats only forty. Man: Room five holds sixty, and it is free that afternoon. Woman: Perfect. Does it have microphones? Man: Yes, but we need to request them from the events team by Wednesday. Woman: I will email them now and update the room number on the invitations.",
+      "questionIds": [
+        111,
+        112,
+        113
+      ],
+      "src": "assets/audio/heygen-part3/conversation-07.wav",
+      "duration": 16.827083333333334,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 3.8950416666666667
+        },
+        {
+          "role": "male",
+          "start": 4.0750416666666665,
+          "end": 7.4290416666666665
+        },
+        {
+          "role": "female",
+          "start": 7.609041666666666,
+          "end": 9.769041666666666
+        },
+        {
+          "role": "male",
+          "start": 9.949041666666666,
+          "end": 13.435083333333333
+        },
+        {
+          "role": "female",
+          "start": 13.615083333333333,
+          "end": 16.827083333333334
+        }
+      ],
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "We have forty-eight registrations, but room two seats only forty.",
+          "start": 0.0,
+          "end": 3.8950416666666667,
+          "sourceStart": 45.428958333333334,
+          "sourceEnd": 49.324,
+          "sourceCharacterStart": 828,
+          "sourceCharacterEnd": 893
+        },
+        {
+          "role": "male",
+          "text": "Room five holds sixty, and it is free that afternoon.",
+          "start": 4.0750416666666665,
+          "end": 7.4290416666666665,
+          "sourceStart": 43.208,
+          "sourceEnd": 46.562,
+          "sourceCharacterStart": 784,
+          "sourceCharacterEnd": 837
+        },
+        {
+          "role": "female",
+          "text": "Perfect. Does it have microphones?",
+          "start": 7.609041666666666,
+          "end": 9.769041666666666,
+          "sourceStart": 49.525,
+          "sourceEnd": 51.685,
+          "sourceCharacterStart": 895,
+          "sourceCharacterEnd": 929
+        },
+        {
+          "role": "male",
+          "text": "Yes, but we need to request them from the events team by Wednesday.",
+          "start": 9.949041666666666,
+          "end": 13.435083333333333,
+          "sourceStart": 47.047958333333334,
+          "sourceEnd": 50.534,
+          "sourceCharacterStart": 839,
+          "sourceCharacterEnd": 906
+        },
+        {
+          "role": "female",
+          "text": "I will email them now and update the room number on the invitations.",
+          "start": 13.615083333333333,
+          "end": 16.827083333333334,
+          "sourceStart": 52.0,
+          "sourceEnd": 55.212,
+          "sourceCharacterStart": 931,
+          "sourceCharacterEnd": 999
+        }
+      ],
+      "sha256": "2a903646fa13dcd6eb95deedba8269392fca68f1cf409f52db2e50ed9e12ad80"
+    },
+    {
+      "id": 8,
+      "text": "Man: The interview with Ms. Sato is set for Thursday at eleven. Woman: I have a client visit then. Could we move it to one thirty? Man: She said she is available after lunch. I will call her to confirm. Woman: Thanks. Please also send her the updated job description. We have added responsibility for the monthly newsletter.",
+      "questionIds": [
+        131,
+        132,
+        133
+      ],
+      "src": "assets/audio/heygen-part3/conversation-08.wav",
+      "duration": 16.565,
+      "turns": [
+        {
+          "role": "male",
+          "start": 0.0,
+          "end": 3.113
+        },
+        {
+          "role": "female",
+          "start": 3.293,
+          "end": 6.566
+        },
+        {
+          "role": "male",
+          "start": 6.746,
+          "end": 10.257
+        },
+        {
+          "role": "female",
+          "start": 10.437,
+          "end": 16.565
+        }
+      ],
+      "sourceTurns": [
+        {
+          "role": "male",
+          "text": "The interview with Ms. Sato is set for Thursday at eleven.",
+          "start": 0.0,
+          "end": 3.113,
+          "sourceStart": 50.685,
+          "sourceEnd": 53.798,
+          "sourceCharacterStart": 908,
+          "sourceCharacterEnd": 966
+        },
+        {
+          "role": "female",
+          "text": "I have a client visit then. Could we move it to one thirty?",
+          "start": 3.293,
+          "end": 6.566,
+          "sourceStart": 55.499,
+          "sourceEnd": 58.772,
+          "sourceCharacterStart": 1001,
+          "sourceCharacterEnd": 1060
+        },
+        {
+          "role": "male",
+          "text": "She said she is available after lunch. I will call her to confirm.",
+          "start": 6.746,
+          "end": 10.257,
+          "sourceStart": 54.056,
+          "sourceEnd": 57.567,
+          "sourceCharacterStart": 968,
+          "sourceCharacterEnd": 1034
+        },
+        {
+          "role": "female",
+          "text": "Thanks. Please also send her the updated job description. We have added responsibility for the monthly newsletter.",
+          "start": 10.437,
+          "end": 16.565,
+          "sourceStart": 59.01,
+          "sourceEnd": 65.138,
+          "sourceCharacterStart": 1062,
+          "sourceCharacterEnd": 1176
+        }
+      ],
+      "sha256": "c8d5f27e068870947f375b9176edd71e46cb18569ebd0c07f88f80a61f89a0aa"
+    },
+    {
+      "id": 9,
+      "text": "Woman: The glass containers arrived, but two cartons are damaged. Man: Did you take photos before unpacking them? Woman: Yes. I also noted the damage on the delivery form. Man: Good. Send the photos and form to the supplier. They said they can send replacements within three working days. Woman: I will do that before I update the inventory.",
+      "questionIds": [
+        151,
+        152,
+        153
+      ],
+      "src": "assets/audio/heygen-part3/conversation-09.wav",
+      "duration": 17.260958333333335,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 3.169958333333333
+        },
+        {
+          "role": "male",
+          "start": 3.3499583333333334,
+          "end": 5.3529583333333335
+        },
+        {
+          "role": "female",
+          "start": 5.532958333333333,
+          "end": 8.550958333333334
+        },
+        {
+          "role": "male",
+          "start": 8.730958333333334,
+          "end": 14.721958333333333
+        },
+        {
+          "role": "female",
+          "start": 14.901958333333333,
+          "end": 17.260958333333335
+        }
+      ],
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "The glass containers arrived, but two cartons are damaged.",
+          "start": 0.0,
+          "end": 3.169958333333333,
+          "sourceStart": 65.367,
+          "sourceEnd": 68.53695833333333,
+          "sourceCharacterStart": 1178,
+          "sourceCharacterEnd": 1236
+        },
+        {
+          "role": "male",
+          "text": "Did you take photos before unpacking them?",
+          "start": 3.3499583333333334,
+          "end": 5.3529583333333335,
+          "sourceStart": 57.768,
+          "sourceEnd": 59.771,
+          "sourceCharacterStart": 1036,
+          "sourceCharacterEnd": 1078
+        },
+        {
+          "role": "female",
+          "text": "Yes. I also noted the damage on the delivery form.",
+          "start": 5.532958333333333,
+          "end": 8.550958333333334,
+          "sourceStart": 68.738,
+          "sourceEnd": 71.756,
+          "sourceCharacterStart": 1238,
+          "sourceCharacterEnd": 1288
+        },
+        {
+          "role": "male",
+          "text": "Good. Send the photos and form to the supplier. They said they can send replacements within three working days.",
+          "start": 8.730958333333334,
+          "end": 14.721958333333333,
+          "sourceStart": 59.944,
+          "sourceEnd": 65.935,
+          "sourceCharacterStart": 1080,
+          "sourceCharacterEnd": 1191
+        },
+        {
+          "role": "female",
+          "text": "I will do that before I update the inventory.",
+          "start": 14.901958333333333,
+          "end": 17.260958333333335,
+          "sourceStart": 71.995,
+          "sourceEnd": 74.354,
+          "sourceCharacterStart": 1290,
+          "sourceCharacterEnd": 1335
+        }
+      ],
+      "sha256": "eb951f1c6805ec23df584c70818055b072a87c121d6cccebb830b3213b8eb9ae"
+    },
+    {
+      "id": 10,
+      "text": "Woman: My reimbursement is lower than the amount I claimed. Man: Let me check. Your hotel and train expenses were approved, but the taxi receipt is missing. Woman: I uploaded it separately this morning. Man: That was after yesterday’s processing deadline. We will include the taxi fare in next Friday’s payment. Woman: All right. I will keep the original receipt until then.",
+      "questionIds": [
+        171,
+        172,
+        173
+      ],
+      "src": "assets/audio/heygen-part3/conversation-10.wav",
+      "duration": 18.860125,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 2.5860416666666666
+        },
+        {
+          "role": "male",
+          "start": 2.7660416666666667,
+          "end": 8.083041666666666
+        },
+        {
+          "role": "female",
+          "start": 8.263041666666666,
+          "end": 10.025083333333333
+        },
+        {
+          "role": "male",
+          "start": 10.205083333333333,
+          "end": 15.582125
+        },
+        {
+          "role": "female",
+          "start": 15.762125,
+          "end": 18.860125
+        }
+      ],
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "My reimbursement is lower than the amount I claimed.",
+          "start": 0.0,
+          "end": 2.5860416666666666,
+          "sourceStart": 74.64095833333333,
+          "sourceEnd": 77.227,
+          "sourceCharacterStart": 1337,
+          "sourceCharacterEnd": 1389
+        },
+        {
+          "role": "male",
+          "text": "Let me check. Your hotel and train expenses were approved, but the taxi receipt is missing.",
+          "start": 2.7660416666666667,
+          "end": 8.083041666666666,
+          "sourceStart": 66.108,
+          "sourceEnd": 71.425,
+          "sourceCharacterStart": 1193,
+          "sourceCharacterEnd": 1284
+        },
+        {
+          "role": "female",
+          "text": "I uploaded it separately this morning.",
+          "start": 8.263041666666666,
+          "end": 10.025083333333333,
+          "sourceStart": 77.37095833333333,
+          "sourceEnd": 79.133,
+          "sourceCharacterStart": 1391,
+          "sourceCharacterEnd": 1429
+        },
+        {
+          "role": "male",
+          "text": "That was after yesterday’s processing deadline. We will include the taxi fare in next Friday’s payment.",
+          "start": 10.205083333333333,
+          "end": 15.582125,
+          "sourceStart": 71.73995833333333,
+          "sourceEnd": 77.117,
+          "sourceCharacterStart": 1286,
+          "sourceCharacterEnd": 1389
+        },
+        {
+          "role": "female",
+          "text": "All right. I will keep the original receipt until then.",
+          "start": 15.762125,
+          "end": 18.860125,
+          "sourceStart": 79.334,
+          "sourceEnd": 82.432,
+          "sourceCharacterStart": 1431,
+          "sourceCharacterEnd": 1486
+        }
+      ],
+      "sha256": "c6cbda3d7fbe254c80dc6a2d9e283e2ee6555cc514465f54adf35d5c05b27ef8"
+    },
+    {
+      "id": 11,
+      "text": "Man: The booking app keeps closing when I try to add a room. Woman: Which version are you using? Man: Version four point one. Woman: That issue was fixed in four point two. Please update the app first. If it still happens, send me a screenshot of the error message. Man: Will I lose my existing bookings? Woman: No, they are saved on the server.",
+      "questionIds": [
+        191,
+        192,
+        193
+      ],
+      "src": "assets/audio/heygen-part3/conversation-11.wav",
+      "duration": 17.278083333333335,
+      "turns": [
+        {
+          "role": "male",
+          "start": 0.0,
+          "end": 2.487041666666667
+        },
+        {
+          "role": "female",
+          "start": 2.6670416666666665,
+          "end": 4.065083333333333
+        },
+        {
+          "role": "male",
+          "start": 4.2450833333333335,
+          "end": 5.779083333333333
+        },
+        {
+          "role": "female",
+          "start": 5.959083333333333,
+          "end": 13.367083333333333
+        },
+        {
+          "role": "male",
+          "start": 13.547083333333333,
+          "end": 15.166083333333333
+        },
+        {
+          "role": "female",
+          "start": 15.346083333333333,
+          "end": 17.278083333333335
+        }
+      ],
+      "sourceTurns": [
+        {
+          "role": "male",
+          "text": "The booking app keeps closing when I try to add a room.",
+          "start": 0.0,
+          "end": 2.487041666666667,
+          "sourceStart": 77.34695833333333,
+          "sourceEnd": 79.834,
+          "sourceCharacterStart": 1391,
+          "sourceCharacterEnd": 1446
+        },
+        {
+          "role": "female",
+          "text": "Which version are you using?",
+          "start": 2.6670416666666665,
+          "end": 4.065083333333333,
+          "sourceStart": 82.66195833333333,
+          "sourceEnd": 84.06,
+          "sourceCharacterStart": 1488,
+          "sourceCharacterEnd": 1516
+        },
+        {
+          "role": "male",
+          "text": "Version four point one.",
+          "start": 4.2450833333333335,
+          "end": 5.779083333333333,
+          "sourceStart": 80.035,
+          "sourceEnd": 81.569,
+          "sourceCharacterStart": 1448,
+          "sourceCharacterEnd": 1471
+        },
+        {
+          "role": "female",
+          "text": "That issue was fixed in four point two. Please update the app first. If it still happens, send me a screenshot of the error message.",
+          "start": 5.959083333333333,
+          "end": 13.367083333333333,
+          "sourceStart": 84.303,
+          "sourceEnd": 91.711,
+          "sourceCharacterStart": 1518,
+          "sourceCharacterEnd": 1650
+        },
+        {
+          "role": "male",
+          "text": "Will I lose my existing bookings?",
+          "start": 13.547083333333333,
+          "end": 15.166083333333333,
+          "sourceStart": 81.827,
+          "sourceEnd": 83.446,
+          "sourceCharacterStart": 1473,
+          "sourceCharacterEnd": 1506
+        },
+        {
+          "role": "female",
+          "text": "No, they are saved on the server.",
+          "start": 15.346083333333333,
+          "end": 17.278083333333335,
+          "sourceStart": 92.026,
+          "sourceEnd": 93.958,
+          "sourceCharacterStart": 1652,
+          "sourceCharacterEnd": 1685
+        }
+      ],
+      "sha256": "d2d5c7c726fd84f1e53cffe990e0f347e09b2a999d1960f528615f66a77ee2fb"
+    },
+    {
+      "id": 12,
+      "text": "Woman: Our floor is too warm again. Have you heard from Facilities? Man: A technician checked the air conditioner this morning. It needs a replacement part that arrives on Tuesday. Woman: We have a client presentation on Monday. Man: Room eight on the ground floor has working air conditioning. I can reserve it for you. Woman: Please do. We need it from ten to noon.",
+      "questionIds": [
+        211,
+        212,
+        213
+      ],
+      "src": "assets/audio/heygen-part3/conversation-12.wav",
+      "duration": 17.834,
+      "turns": [
+        {
+          "role": "female",
+          "start": 0.0,
+          "end": 3.246
+        },
+        {
+          "role": "male",
+          "start": 3.426,
+          "end": 8.697
+        },
+        {
+          "role": "female",
+          "start": 8.877,
+          "end": 10.823
+        },
+        {
+          "role": "male",
+          "start": 11.003,
+          "end": 15.281
+        },
+        {
+          "role": "female",
+          "start": 15.461,
+          "end": 17.834
+        }
+      ],
+      "sourceTurns": [
+        {
+          "role": "female",
+          "text": "Our floor is too warm again. Have you heard from Facilities?",
+          "start": 0.0,
+          "end": 3.246,
+          "sourceStart": 94.074,
+          "sourceEnd": 97.32,
+          "sourceCharacterStart": 1687,
+          "sourceCharacterEnd": 1747
+        },
+        {
+          "role": "male",
+          "text": "A technician checked the air conditioner this morning. It needs a replacement part that arrives on Tuesday.",
+          "start": 3.426,
+          "end": 8.697,
+          "sourceStart": 83.619,
+          "sourceEnd": 88.89,
+          "sourceCharacterStart": 1508,
+          "sourceCharacterEnd": 1615
+        },
+        {
+          "role": "female",
+          "text": "We have a client presentation on Monday.",
+          "start": 8.877,
+          "end": 10.823,
+          "sourceStart": 97.675,
+          "sourceEnd": 99.621,
+          "sourceCharacterStart": 1749,
+          "sourceCharacterEnd": 1789
+        },
+        {
+          "role": "male",
+          "text": "Room eight on the ground floor has working air conditioning. I can reserve it for you.",
+          "start": 11.003,
+          "end": 15.281,
+          "sourceStart": 89.063,
+          "sourceEnd": 93.341,
+          "sourceCharacterStart": 1617,
+          "sourceCharacterEnd": 1703
+        },
+        {
+          "role": "female",
+          "text": "Please do. We need it from ten to noon.",
+          "start": 15.461,
+          "end": 17.834,
+          "sourceStart": 99.68,
+          "sourceEnd": 102.053,
+          "sourceCharacterStart": 1791,
+          "sourceCharacterEnd": 1830
+        }
+      ],
+      "sha256": "3b3b224ebda410622f76ec7648906e6611b6d255705600c1e2df4c5d76952906"
+    },
+    {
+      "id": 13,
+      "text": "Man: The brochure is ready, but I noticed the old support number is still on the back page. Woman: Thank you for catching that. Have we sent the file to the printer? Man: Not yet. They need it by four to deliver the brochures on Friday. Woman: I will correct the number now. Could you check the website address as well? Man: Certainly. I will send the final file after your correction.",
+      "questionIds": [
+        231,
+        232,
+        233
+      ],
+      "src": "assets/audio/heygen-part3/conversation-13.wav",
+      "duration": 18.724,
+      "turns": [
+        {
+          "role": "male",
+          "start": 0.0,
+          "end": 4.413
+        },
+        {
+          "role": "female",
+          "start": 4.593,
+          "end": 7.421
+        },
+        {
+          "role": "male",
+          "start": 7.601,
+          "end": 11.454
+        },
+        {
+          "role": "female",
+          "start": 11.634,
+          "end": 15.213
+        },
+        {
+          "role": "male",
+          "start": 15.393,
+          "end": 18.724
+        }
+      ],
+      "sourceTurns": [
+        {
+          "role": "male",
+          "text": "The brochure is ready, but I noticed the old support number is still on the back page.",
+          "start": 0.0,
+          "end": 4.413,
+          "sourceStart": 93.628,
+          "sourceEnd": 98.041,
+          "sourceCharacterStart": 1705,
+          "sourceCharacterEnd": 1791
+        },
+        {
+          "role": "female",
+          "text": "Thank you for catching that. Have we sent the file to the printer?",
+          "start": 4.593,
+          "end": 7.421,
+          "sourceStart": 102.198,
+          "sourceEnd": 105.026,
+          "sourceCharacterStart": 1832,
+          "sourceCharacterEnd": 1898
+        },
+        {
+          "role": "male",
+          "text": "Not yet. They need it by four to deliver the brochures on Friday.",
+          "start": 7.601,
+          "end": 11.454,
+          "sourceStart": 98.341,
+          "sourceEnd": 102.194,
+          "sourceCharacterStart": 1793,
+          "sourceCharacterEnd": 1858
+        },
+        {
+          "role": "female",
+          "text": "I will correct the number now. Could you check the website address as well?",
+          "start": 11.634,
+          "end": 15.213,
+          "sourceStart": 105.227,
+          "sourceEnd": 108.806,
+          "sourceCharacterStart": 1900,
+          "sourceCharacterEnd": 1975
+        },
+        {
+          "role": "male",
+          "text": "Certainly. I will send the final file after your correction.",
+          "start": 15.393,
+          "end": 18.724,
+          "sourceStart": 102.395,
+          "sourceEnd": 105.726,
+          "sourceCharacterStart": 1860,
+          "sourceCharacterEnd": 1920
+        }
+      ],
+      "sha256": "4e3c8451a490299ebb3fcba8131bd35ef607a6cfb070294cbaf8a0c3c5135b37"
+    }
+  ],
+  "processing": {
+    "speed": 1,
+    "pitch": 1,
+    "betweenTurnsSeconds": 0.18,
+    "method": "Sample-accurate cuts from returned character timing; no guessed timestamps"
+  },
+  "review": {
+    "exactSubmittedTextVerified": true,
+    "wavFormatAndDurationVerified": true,
+    "silentTurnsRejected": true,
+    "fullHumanListeningReview": false
+  }
+}
