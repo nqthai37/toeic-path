@@ -7,8 +7,8 @@
     "dev": "node scripts/serve.mjs",
     "build": "node scripts/build.mjs",
     "preview": "node scripts/serve.mjs --built",
-    "test": "node tests/practice.test.cjs && node tests/audio.test.cjs",
-    "test:build": "node tests/practice.test.cjs --built && node tests/audio.test.cjs --built"
+    "test": "node tests/practice.test.cjs && node tests/audio.test.cjs && node tests/heygen-audio.test.cjs",
+    "test:build": "node tests/practice.test.cjs --built && node tests/audio.test.cjs --built && node tests/heygen-audio.test.cjs --built"
   },
   "engines": { "node": ">=20" }
 }

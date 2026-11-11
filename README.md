@@ -12,12 +12,14 @@ toeic-path/
 │   │   ├── main.css             # Giao diện chung và responsive
 │   │   └── library.css          # Giao diện thư viện đề thi
 │   ├── js/
-│   │   ├── audio.js             # Giọng nữ/nam, tách lượt thoại, tốc độ và lưu lựa chọn
+│   │   ├── audio.js             # Phát file Faye/Dmitri, tốc độ và hủy phát
 │   │   ├── app.js               # Điều hướng, bài thi, chấm điểm, lưu tiến độ
 │   │   └── practice-library.js  # Thư viện đề và chọn câu hỏi luyện tập
 │   └── data/
 │       ├── questions.js         # Ngân hàng gốc, từ vựng và thông tin 7 phần
-│       └── practice-sets.js     # 10 đề bổ sung và dữ liệu minh họa
+│       ├── practice-sets.js     # 10 đề bổ sung và dữ liệu minh họa
+│       ├── heygen-part3.js      # 13 hội thoại Part 3
+│       └── heygen-extra.js      # 89 bản thu còn lại
 ├── scripts/
 │   ├── build.mjs                # Tạo dist từ src
 │   └── serve.mjs                # Server phát triển hoặc xem bản build
@@ -51,9 +53,9 @@ Sau khi sửa file trong `src`, tải lại trang khi chạy `dev`. Chạy lại
 Giữ nguyên ID câu hỏi và khóa localStorage để bảo toàn tiến độ, sổ lỗi sai và các bản sao trước đây. Mỗi đề mới có 20 câu thuộc đủ 7 phần và không trùng nhau giữa 10 đề. Bài luyện tùy chọn có 10/20/30/50 câu, ưu tiên câu chưa trả lời rồi đến câu luyện lâu nhất.
 
 
-Âm thanh dùng speech synthesis của trình duyệt; Part 1 dùng hình minh họa. Đây là bài luyện độc lập, không phải đề TOEIC chính thức đầy đủ và không quy đổi phần trăm thành điểm TOEIC. Google Fonts là tùy chọn, có font hệ thống thay thế.
+Âm thanh dùng file HeyGen tạo sẵn với Faye (nữ) và Dmitri (nam); Part 1 dùng hình minh họa. Đây là bài luyện độc lập, không phải đề TOEIC chính thức đầy đủ và không quy đổi phần trăm thành điểm TOEIC. Google Fonts là tùy chọn, có font hệ thống thay thế.
 
-Trong bài nghe, mở **Voice settings · female & male** để chọn và nghe thử hai giọng tiếng Anh, hoặc đổi tốc độ. Hội thoại tách thành từng lượt: Woman/Assistant dùng giọng nữ, Man/Customer dùng giọng nam, không đọc nhãn vai. Giọng nữ cũng dùng mặc định cho thông báo và từ vựng. Lựa chọn được lưu riêng trên thiết bị. Danh sách giọng phụ thuộc trình duyệt/hệ điều hành; khi chỉ có một giọng tiếng Anh, trang hiển thị thông báo và vẫn phát bằng giọng đó. Không cần API key hay dịch vụ âm thanh trả phí.
+Trong bài nghe, mở **Voice settings · Faye & Dmitri** để nghe thử hai giọng và đổi tốc độ. Lựa chọn tốc độ được lưu trên thiết bị; giữ tốc độ đã lưu từ bản cũ. Website phát file tại chỗ, không cần API key ở trình duyệt và không tự đổi sang giọng hệ điều hành khi file lỗi.
 
 ## Đưa lên GitHub Pages
 
@@ -74,6 +76,28 @@ git push origin main
 Website trên Pages không có cổng đăng nhập ChatGPT của Sites. Tiến độ vẫn lưu riêng trong từng trình duyệt và theo địa chỉ website; dùng Export/Import trong Study preferences để chuyển tiến độ từ địa chỉ Sites sang Pages.
 
 Tài liệu: https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages
+
+## Giọng HeyGen cho toàn bộ nội dung
+
+Nhánh `fix-voice` có **102 bản thu**: 76 đoạn nghe khác nhau cho toàn bộ Part 1–4, 24 mục từ vựng và 2 mẫu giọng. Tái sử dụng 13 hội thoại Part 3 đã có, bổ sung 89 bản thu. Câu hỏi dùng chung đoạn nghe tham chiếu chung file. File nằm trong `src/assets/audio/heygen-part3/` và `src/assets/audio/heygen-extra/`; manifest nằm trong `src/data/heygen-part3.js` và `src/data/heygen-extra.js`.
+
+- Faye đọc Part 1, Part 4, từ vựng và câu hỏi Part 2; Dmitri đọc các lựa chọn trả lời Part 2.
+- Part 3: Woman/Assistant dùng Faye, Man/Customer dùng Dmitri, không đọc nhãn vai.
+- Giữ Play/Stop, nghe thử từng giọng và bốn mức tốc độ. Stop, chuyển câu hoặc phát file mới hủy file cũ; callback cũ không ảnh hưởng file mới.
+- Website không gọi HeyGen khi người dùng nhấn nghe. Nếu file không tải được, trang cho thử lại hoặc đọc transcript.
+
+`docs/heygen-part3-provenance.json` và `docs/heygen-all-voices-provenance.json` ghi voice ID, script, tham số, hash file và ánh xạ cắt/ghép theo mốc ký tự thực của HeyGen. Bản gốc PCM/timing được giữ tại thư mục artifacts cục bộ, không đưa signed URL vào repo. Các script sau chỉ ghép từ bản gốc, không dùng quota:
+
+```bash
+python scripts/assemble-heygen-part3.py --input <thu-muc-ban-goc-part3>
+python scripts/assemble-heygen-remaining.py --input <thu-muc-ban-goc-con-lai>
+```
+
+Giữ tốc độ/pitch nguồn khi ghép, thêm 0.18 giây giữa các lượt. Đã đối chiếu text đầu vào với mốc ký tự, kiểm tra WAV, hash, thời lượng và đoạn không im lặng. Chưa có vòng nghe thủ công toàn bộ 102 bản thu; kiểm tra dữ liệu không thay thế đánh giá nghe về phát âm.
+
+## Kế hoạch React Native + Supabase
+
+Xem [kế hoạch migration](docs/REACT_NATIVE_SUPABASE_PLAN.md): Expo/React Native/TypeScript, Supabase Auth/Postgres/Storage, RLS, chấm bài phía server, đồng bộ offline và nhập tiến độ từ web. Dự kiến MVP 2–4 tuần cho một lập trình viên, điều chỉnh sau PoC và chưa gồm xét duyệt app store. Hiện mới lập kế hoạch, chưa tạo app native hay project Supabase.
 
 ## Lịch sử chức năng
 

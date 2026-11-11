@@ -7,7 +7,7 @@ const built = process.argv.includes('--built');
 const projectRoot = fileURLToPath(new URL('../', import.meta.url));
 const directory = resolve(projectRoot, built ? 'dist' : 'src');
 const port = Number(process.env.PORT || 4174);
-const contentTypes = { '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.svg': 'image/svg+xml', '.json': 'application/json' };
+const contentTypes = { '.wav': 'audio/wav', '.mp3': 'audio/mpeg', '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.svg': 'image/svg+xml', '.json': 'application/json' };
 
 if (built) {
   await readFile(resolve(directory, 'index.html')).catch(() => {
