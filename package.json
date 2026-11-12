@@ -7,8 +7,17 @@
     "dev": "node scripts/serve.mjs",
     "build": "node scripts/build.mjs",
     "preview": "node scripts/serve.mjs --built",
-    "test": "node tests/practice.test.cjs && node tests/audio.test.cjs && node tests/heygen-audio.test.cjs",
-    "test:build": "node tests/practice.test.cjs --built && node tests/audio.test.cjs --built && node tests/heygen-audio.test.cjs --built"
+    "test": "node scripts/backend-seed.cjs --check && node scripts/content-catalog.cjs --check && node tests/domain.test.cjs && node tests/practice.test.cjs && node tests/audio.test.cjs && node tests/heygen-audio.test.cjs && node tests/database.test.mjs",
+    "test:build": "node tests/domain.test.cjs --built && node tests/practice.test.cjs --built && node tests/audio.test.cjs --built && node tests/heygen-audio.test.cjs --built",
+    "content:generate": "node scripts/content-catalog.cjs",
+    "content:check": "node scripts/content-catalog.cjs --check",
+    "backend:seed": "node scripts/backend-seed.cjs",
+    "test:db": "node tests/database.test.mjs"
   },
-  "engines": { "node": ">=20" }
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "0.5.16"
+  }
 }

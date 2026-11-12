@@ -36,9 +36,10 @@ Repository chứa source, scripts và tests; file build và ảnh kiểm tra c�
 
 ## Chạy và kiểm tra
 
-Yêu cầu Node.js 20 trở lên. Không cần cài dependency.
+Yêu cầu Node.js 20 trở lên. Chạy `npm ci` để cài công cụ kiểm thử PostgreSQL cục bộ; frontend vẫn phục vụ file tĩnh.
 
 ```bash
+npm ci
 npm run dev         # Phục vụ src tại http://127.0.0.1:4174
 npm test            # Kiểm tra mã nguồn, dữ liệu và đường dẫn asset
 npm run build       # Tạo lại dist từ src
@@ -102,3 +103,16 @@ Xem [kế hoạch migration](docs/REACT_NATIVE_SUPABASE_PLAN.md): Expo/React Nat
 ## Lịch sử chức năng
 
 Xem [kế hoạch và các mốc commit](docs/FEATURE_HISTORY.md). Các commit được tổ chức lại từ những bản source đã có; source ứng dụng ở commit cuối giữ nguyên so với bản đang triển khai.
+
+## Triển khai kế hoạch hợp nhất
+
+Kế hoạch hiện hành: [UNIFIED_PLAN.md](docs/UNIFIED_PLAN.md); [trạng thái thực hiện và bằng chứng](docs/IMPLEMENTATION_STATUS.md). Kế hoạch này thay ưu tiên mobile trước bằng web trước.
+
+- `src/domain/core.js`: logic thuần, không phụ thuộc DOM/localStorage; chọn nguyên nhóm, tính thời gian chung một lần, chấm điểm, tách lần đầu/làm lại và kiểm tra/merge backup.
+- `src/data/content-bindings.json`: ID nhóm/audio khai báo riêng, không phụ thuộc nguyên văn transcript. `content-metadata.js` được sinh bằng `npm run content:generate`, kiểm tra bằng `npm run content:check`.
+- Có 154 nhóm, 246 content versions, 102 audio IDs. Chỉ 12 nhãn kỹ năng grammar đã đối chiếu câu hỏi/lời giải; các câu khác ghi rõ `format-only`, độ khó chưa hiệu chuẩn (`null`). Thời gian là ước lượng, chưa đo thực nghiệm.
+- Phiên đang làm lưu riêng trên thiết bị; Overview có Resume. Giữ thời hạn timed khi resume, giữ trạng thái đã check và lời giải. Bản web local không chống việc đổi giờ máy; backend dùng thời gian server.
+- Backup JSON v1 được xem số bản ghi trước khi merge, không thay mục tiêu đang dùng, không nhân đôi session và không xóa lịch sử hiện có. Dữ liệu cũ chưa kiểm chứng ghi `legacy_import`, `server_graded=false`.
+- `supabase/migrations/` và `supabase/seed.sql`: nền backend với RLS, snapshot bài, chấm điểm server và kiểm tra revision. Chưa nối frontend với Supabase; xem [hướng dẫn kết nối](supabase/README.md).
+
+`npm test` gồm cả PostgreSQL/PGlite: tài khoản A/B/anonymous, quyền dữ liệu con, đáp án riêng, điểm server, option sai, hết hạn và submit/start lặp. PGlite mô phỏng `auth.uid()` để kiểm tra SQL; không thay thế kiểm thử Auth/API trên project Supabase thật.

@@ -29,7 +29,10 @@ jobs:
         with:
           node-version: '22'
 
-      - name: Test source
+      - name: Install test dependencies
+        run: npm ci
+
+      - name: Validate source and database
         run: npm test
 
       - name: Build static website

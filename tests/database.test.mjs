@@ -1,0 +1,51 @@
+import {PGlite} from '@electric-sql/pglite';
+import {readFile} from 'node:fs/promises';
+import assert from 'node:assert/strict';
+const db=new PGlite();
+try{
+ // Supabase supplies these roles/schema. PGlite tests real PostgreSQL RLS,
+ // while this stub supplies only auth.uid (not the hosted Auth service).
+ await db.exec(`create role anon;create role authenticated;create schema auth;create table auth.users(id uuid primary key);create function auth.uid() returns uuid language sql stable as $$ select nullif(current_setting('request.jwt.claim.sub',true),'')::uuid $$;grant usage on schema auth to authenticated;`);
+ await db.exec(await readFile(new URL('../supabase/migrations/202611120001_learning_foundation.sql',import.meta.url),'utf8'));
+ await db.exec(await readFile(new URL('../supabase/seed.sql',import.meta.url),'utf8'));
+ const A='aaaaaaaa-aaaa-4aaa-aaaa-aaaaaaaaaaaa',B='bbbbbbbb-bbbb-4bbb-bbbb-bbbbbbbbbbbb';
+ await db.query('insert into auth.users values($1),($2)',[A,B]);
+ const as=async user=>{await db.exec('reset role;set role authenticated');await db.query("select set_config('request.jwt.claim.sub',$1,false)",[user])};
+ const call=async(sql,args=[])=>{const result=await db.query(sql,args);return Object.values(result.rows[0])[0]};
+ await as(A);await db.query('insert into public.profiles(user_id,display_name) values($1,$2)',[A,'Learner A']);
+ await assert.rejects(()=>db.query('insert into public.profiles(user_id) values($1)',[B]),/row-level security/);
+ const key='11111111-1111-4111-8111-111111111111';
+ const attempt=await call('select public.start_attempt($1,$2,$3)',[[23,24],key,'learning']);assert.equal(attempt.user_id,A);
+ const same=await call('select public.start_attempt($1,$2,$3)',[[23,24],key,'learning']);assert.equal(attempt.id,same.id);
+ await assert.rejects(()=>call('select public.start_attempt($1,$2,$3)',[[25],key,'learning']),/Idempotency/);
+ await assert.rejects(()=>call('select public.start_attempt($1,$2)',[[11],'22222222-2222-4222-8222-222222222222']),/complete question groups/);
+ await assert.rejects(()=>call('select public.save_answer($1,23,99,0)',[attempt.id]),/Invalid option/);
+ await assert.rejects(()=>call('select public.save_answer($1,25,0,0)',[attempt.id]),/Invalid option/);
+ assert.equal(await call('select public.save_answer($1,23,0,0)',[attempt.id]),1);
+ await assert.rejects(()=>call('select public.save_answer($1,24,2,0)',[attempt.id]),/Stale revision/);
+ await assert.rejects(()=>call('select public.save_answer($1,24,2,null)',[attempt.id]),/Stale revision/);
+ assert.equal(await call('select public.save_answer($1,24,0,1)',[attempt.id]),2);
+ const checked=await call('select public.check_answer($1,24)',[attempt.id]);assert.equal(checked.answer,2);assert.equal(checked.correct,false);
+ await as(B);assert.equal(await call('select count(*)::int from public.attempts'),0);assert.equal(await call('select count(*)::int from public.attempt_questions'),0);assert.equal(await call('select count(*)::int from public.attempt_answers'),0);assert.equal(await call('select count(*)::int from public.profiles'),0);
+ await assert.rejects(()=>call('select public.submit_attempt($1)',[attempt.id]),/unavailable/);
+ await assert.rejects(()=>call('select public.check_answer($1,24)',[attempt.id]),/unavailable/);
+ await assert.rejects(()=>db.query('update public.attempts set user_id=$1 where id=$2',[B,attempt.id]),/permission denied/);
+ await assert.rejects(()=>db.query('select * from private.answer_keys'),/permission denied/);
+ await as(A);const result=await call('select public.submit_attempt($1)',[attempt.id]);assert.equal(result.correct,1);assert.equal(result.total,2);assert.equal(result.accuracy,50);assert.equal(result.server_graded,true);
+ assert.deepEqual(await call('select public.submit_attempt($1)',[attempt.id]),result);
+ await assert.rejects(()=>call('select public.save_answer($1,24,2,3)',[attempt.id]),/closed/);
+ assert.equal(await call('select count(*)::int from public.review_items'),1);
+ await assert.rejects(()=>db.query('update public.attempt_results set correct=2'),/permission denied/);
+ const timed=await call('select public.start_attempt($1,$2,$3)',[[23],'33333333-3333-4333-8333-333333333333','timed']);
+ await assert.rejects(()=>call('select public.check_answer($1,23)',[timed.id]),/Submit the timed/);
+ await db.exec('reset role');await db.query("update public.attempts set expires_at=now()-interval '1 second' where id=$1",[timed.id]);await as(A);
+ await assert.rejects(()=>call('select public.save_answer($1,23,0,0)',[timed.id]),/expired/);
+ const expired=await call('select public.submit_attempt($1)',[timed.id]);assert.equal(expired.correct,0,'Late submit grades only previously accepted answers');
+ const plan=await call("select public.save_study_plan(8,750,20,'2026-11-12',0)");assert.equal(plan.revision,1);
+ await assert.rejects(()=>call("select public.save_study_plan(8,750,20,'2026-11-12',null)"),/Stale revision/);
+ await as(B);assert.equal(await call('select count(*)::int from public.study_plans'),0);assert.equal(await call('select count(*)::int from public.attempt_results'),0);assert.equal(await call('select count(*)::int from public.review_items'),0);
+ await db.exec('reset role;set role anon');await db.query("select set_config('request.jwt.claim.sub','',false)");
+ assert.equal(await call('select count(*)::int from public.questions'),246);
+ await assert.rejects(()=>call('select public.start_attempt($1,$2)',[[23],key]),/permission denied/);
+ console.log('PASS: PostgreSQL migrations/seed, RLS user A/B/anonymous, private keys, ownership, validation, server grading, duplicate submit/start, expiry and revision checks. Hosted Auth/HTTP still require Supabase integration tests.');
+}finally{await db.close()}
