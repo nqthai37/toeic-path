@@ -2,3 +2,5 @@
 /node_modules/
 /outputs/
 *.log
+/.env.local
+/src/vendor/

@@ -1,6 +1,6 @@
 # Backend foundation — M2 đang triển khai
 
-Các file này chưa được áp dụng lên project Supabase. Frontend hiện vẫn lưu trên thiết bị; không có nút đăng nhập giả hoặc thông báo lưu cloud khi chưa kết nối.
+Đã áp dụng schema, seed và đồng bộ tiến độ lên project `znklwghqiielgzbgfqtv` ngày 12/11/2026. Frontend đã nối email Auth/PKCE và backup theo tài khoản. Chỉ báo Saved to cloud sau khi RPC trả revision mới; cần người dùng hoàn thành email login để nghiệm thu end-to-end.
 
 ## Chuẩn bị project
 
@@ -8,9 +8,11 @@ Các file này chưa được áp dụng lên project Supabase. Frontend hiện 
 2. Cung cấp Project URL và **publishable key** (hoặc legacy anon key) cho cấu hình frontend. Không đưa service-role key, database password hay AI key vào frontend/Git.
 3. Trên project mới, chạy theo thứ tự bằng SQL Editor hoặc CLI migrations:
    - `migrations/202611120001_learning_foundation.sql`
+   - `migrations/202611120002_progress_sync.sql`
+   - `migrations/202611120003_account_fence.sql`
    - `seed.sql`
-4. Bật provider email theo nhu cầu và cấu hình Site URL/Redirect URLs cho địa chỉ Pages cùng localhost. Đây là bước cần project thật; chưa xác nhận Auth ở task này.
-5. Nối SDK Auth và repository vào UI, kiểm tra bằng hai tài khoản thật trước khi đánh dấu M2 hoàn thành.
+4. Bật provider email theo nhu cầu và cấu hình Site URL/Redirect URLs cho địa chỉ Pages cùng localhost. Site URL đã đặt về GitHub Pages; allowlist gồm public URL, `http://127.0.0.1:4174/` và `http://localhost:4174/`.
+5. SDK Auth/repository đã nối UI. Kiểm tra email login và hai tài khoản thật trước khi đánh dấu M2 hoàn thành.
 
 Không chạy seed vào dữ liệu production đang có mà chưa đối chiếu schema/backup. Seed hiện phục vụ lần nhập nội dung ban đầu, idempotent với cùng content; chưa phải công cụ nâng version nội dung đang hoạt động.
 
@@ -30,10 +32,10 @@ Sau khi hết hạn, server từ chối đáp án mới. Nộp muộn chỉ ch�
 
 ## Chưa có — không coi M2 hoàn tất
 
-- Auth/SDK frontend, cấu hình project và xác nhận lưu cloud trên UI.
-- Resume qua HTTP và thiết bị thứ hai; UI hiện chỉ resume trên thiết bị.
-- Import cloud có dedupe/payload hash; hiện chỉ merge backup local.
-- Cloud vocabulary/progress events, quản lý tài khoản đầy đủ.
+- Email delivery, callback và lưu cloud bằng tài khoản thật cần nghiệm thu bằng thao tác đăng nhập của người dùng.
+- Backup có cả checkpoint để restore/resume qua cloud; thiết bị thứ hai chưa nghiệm thu thực tế.
+- Import local/guest merge có dedupe rồi lưu snapshot cloud; chưa chuẩn hóa lịch sử import thành các server-graded attempts.
+- Từ vựng/lịch sử/mục tiêu nằm trong backup cloud; các bảng events/vocabulary chuẩn hóa và quản lý tài khoản đầy đủ để sau.
 - Daily plan items/revisions, AI coach/quota/retention; thuộc các mốc sau.
 
 Frontend tĩnh cũ có đáp án trong ngân hàng public. Việc schema backend giữ answer key riêng **không** biến bản demo local thành hệ thống chống gian lận. Khi nối timed flow, dùng snapshot/API phía server và không coi điểm do client gửi là đã xác minh.
@@ -49,3 +51,11 @@ npm run test:db
 Test dùng PostgreSQL qua PGlite trong RAM; `auth.users` và `auth.uid()` được stub riêng trong test để mô phỏng claim. Migration thực không tạo hoặc thay đổi schema Auth của Supabase. Đã kiểm tra SQL/RLS bằng hai UUID và role anonymous; Auth, JWT, HTTP, email callback và môi trường Supabase thật vẫn cần integration test.
 
 Tài liệu chính thức: [RLS](https://supabase.com/docs/guides/database/postgres/row-level-security), [database functions](https://supabase.com/docs/guides/database/functions).
+
+## Backup và điểm server
+
+`progress_snapshots` được RLS theo auth.uid(); client không ghi bảng trực tiếp. RPC `save_progress` validate payload, khóa theo tài khoản, kiểm tra revision, bắt buộc `_owner_id` trùng auth.uid() và loại mọi cờ server_graded do client gửi. `_owner_id` chỉ là chốt chống race khi đổi tài khoản, không cấp quyền thay cho JWT.
+
+Backup không biến kết quả browser thành điểm server. Các RPC attempt/answer/submit hiện có tiếp tục giữ answer key riêng và quyền ghi server; tích hợp chúng vào quiz UI là bước tiếp theo của M2.
+
+Đã kiểm tra HTTP bằng public key: 246 questions, 154 question_groups, 10 practice_tests, 102 audio_assets; anonymous đọc progress_snapshots bị từ chối (401/42501). Không đưa service-role key vào ứng dụng.

@@ -113,6 +113,18 @@ Kế hoạch hiện hành: [UNIFIED_PLAN.md](docs/UNIFIED_PLAN.md); [trạng th�
 - Có 154 nhóm, 246 content versions, 102 audio IDs. Chỉ 12 nhãn kỹ năng grammar đã đối chiếu câu hỏi/lời giải; các câu khác ghi rõ `format-only`, độ khó chưa hiệu chuẩn (`null`). Thời gian là ước lượng, chưa đo thực nghiệm.
 - Phiên đang làm lưu riêng trên thiết bị; Overview có Resume. Giữ thời hạn timed khi resume, giữ trạng thái đã check và lời giải. Bản web local không chống việc đổi giờ máy; backend dùng thời gian server.
 - Backup JSON v1 được xem số bản ghi trước khi merge, không thay mục tiêu đang dùng, không nhân đôi session và không xóa lịch sử hiện có. Dữ liệu cũ chưa kiểm chứng ghi `legacy_import`, `server_graded=false`.
-- `supabase/migrations/` và `supabase/seed.sql`: nền backend với RLS, snapshot bài, chấm điểm server và kiểm tra revision. Chưa nối frontend với Supabase; xem [hướng dẫn kết nối](supabase/README.md).
+- `supabase/migrations/` và `supabase/seed.sql`: nền backend với RLS, snapshot bài, chấm điểm server và kiểm tra revision. Đã nối Auth email/PKCE và backup tiến độ theo tài khoản; xem [hướng dẫn kết nối](supabase/README.md).
 
 `npm test` gồm cả PostgreSQL/PGlite: tài khoản A/B/anonymous, quyền dữ liệu con, đáp án riêng, điểm server, option sai, hết hạn và submit/start lặp. PGlite mô phỏng `auth.uid()` để kiểm tra SQL; không thay thế kiểm thử Auth/API trên project Supabase thật.
+
+## Kết nối Supabase trên web tĩnh
+
+Website vẫn chạy trên GitHub Pages. Dùng `@supabase/supabase-js`, không dùng helper Next.js, `@supabase/ssr` hay middleware server vì hosting hiện tại phục vụ file tĩnh. SDK tự quản lý refresh phiên trong trình duyệt.
+
+`src/config.js` chứa Project URL và publishable key công khai. `.env.local` (ignored) có thể cung cấp `NEXT_PUBLIC_SUPABASE_URL` / `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`; bước vendor/build đọc hai giá trị này và chỉ chấp nhận publishable key. `scripts/vendor.mjs` đóng gói SDK từ lockfile, không phụ thuộc CDN lúc chạy. Thư mục `src/vendor/` sinh tự động, không đưa vào Git; `npm test`, `npm run dev`, `npm run build` chuẩn bị SDK.
+
+Trong Study preferences, nhập email và mở link trong cùng trình duyệt để hoàn thành PKCE. Dữ liệu khách và từng tài khoản dùng khóa local khác nhau; không tự upload lịch sử khách. Có thể chọn nhập lịch sử khách sau đăng nhập.
+
+`progress_snapshots` là backup kết quả **luyện tập client**, không phải điểm server đã xác minh. Backup giữ mục tiêu, lịch sử, sổ lỗi, từ vựng và phiên đang làm. Luồng chấm bài qua RPC server đã có riêng; chưa thay luồng quiz local bằng luồng đó. Không gán `server_graded=true` cho backup.
+
+Mỗi lần lưu dùng revision và account guard. Mất mạng/HTTP lỗi không báo đã lưu cloud; dữ liệu local giữ nguyên. Khi xung đột, UI yêu cầu tải bản cloud, giữ bản local trước đó tại khóa `<account>-before-reload`. Không ghi đè âm thầm giữa hai thiết bị.

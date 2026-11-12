@@ -1,11 +1,11 @@
 // Browser adapter: checkpoints contain IDs, never serialized question objects.
-const QUIZ_CHECKPOINT_KEY='toeic-path-session-v1';
+let QUIZ_CHECKPOINT_KEY='toeic-path-session-v1';
 function newAttemptId(){return 'local-'+Date.now().toString(36)+'-'+Math.random().toString(36).slice(2)}
 function persistQuiz(){
  if(!quiz)return;
- try{localStorage.setItem(QUIZ_CHECKPOINT_KEY,JSON.stringify({version:1,contentVersion:CONTENT_METADATA.content_version,id:quiz.id,kind:quiz.kind,setId:quiz.setId,name:quiz.name,questionIds:quiz.questions.map(q=>q.id),index:quiz.index,answers:quiz.answers,checked:quiz.checked,start:quiz.start,limit:quiz.limit,deadline:quiz.deadline}))}catch{toast('Your current session could not be saved on this device.')}
+ try{localStorage.setItem(QUIZ_CHECKPOINT_KEY,JSON.stringify({version:1,contentVersion:CONTENT_METADATA.content_version,id:quiz.id,kind:quiz.kind,setId:quiz.setId,name:quiz.name,questionIds:quiz.questions.map(q=>q.id),index:quiz.index,answers:quiz.answers,checked:quiz.checked,start:quiz.start,limit:quiz.limit,deadline:quiz.deadline}));queueCloudProgress()}catch{toast('Your current session could not be saved on this device.')}
 }
-function clearQuizCheckpoint(){try{localStorage.removeItem(QUIZ_CHECKPOINT_KEY)}catch{}}
+function clearQuizCheckpoint(){try{localStorage.removeItem(QUIZ_CHECKPOINT_KEY);queueCloudProgress()}catch{}}
 function readQuizCheckpoint(){
  try{
   const saved=JSON.parse(localStorage.getItem(QUIZ_CHECKPOINT_KEY)||'null');

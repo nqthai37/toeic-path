@@ -23,8 +23,11 @@ Cập nhật 12/11/2026. Kế hoạch gốc của người dùng được lưu n
 
 - Có migration, seed đầy đủ và RPC cho một lát cắt học → lưu answer → check/submit → kết quả/review.
 - Có test PostgreSQL/PGlite về RLS A/B/anon, không tự sửa score/time, không đọc private key, invalid answer, deadline, idempotency và revision (kể cả NULL revision).
-- Người dùng đang tạo project Supabase; chưa có URL/public key trong workspace. Chưa áp dụng schema lên cloud, chưa nối Auth/API frontend.
-- Auth, cloud import, vocabulary/progress và resume hai thiết bị còn phải làm; xem `supabase/README.md`.
+- Đã nhận URL/public key, áp dụng schema/seed lên project `znklwghqiielgzbgfqtv`, bật callback đúng public URL và localhost.
+- Đã nối email Auth/PKCE, SDK bundle, account-scoped local cache và backup cloud có revision/account guard.
+- Kiểm tra HTTP project thật xác nhận số lượng nội dung; anonymous không đọc được progress_snapshots. Email login/callback cần người dùng thực hiện; chưa ghi đã nghiệm thu luồng này.
+- Backup có mục tiêu/lịch sử/sổ lỗi/từ vựng/checkpoint; guest import có preview và dedupe. Backup luôn client_practice/server_graded=false.
+- Tích hợp grading RPC vào quiz UI, chuẩn hóa progress/import/events và nghiệm thu hai thiết bị vẫn còn; xem `supabase/README.md`.
 
 ## M3–M6 — Chưa triển khai
 

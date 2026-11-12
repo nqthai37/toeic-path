@@ -5,7 +5,7 @@ const path=require('node:path');
 const root=path.resolve(__dirname,'..',process.argv.includes('--built')?'dist':'src');
 const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
 const scriptFiles=[...html.matchAll(/<script\b[^>]*\bsrc="([^"]+)"/g)].map(match=>match[1]);
-assert.deepEqual(scriptFiles,['data/questions.js','data/practice-sets.js','data/heygen-part3.js','data/heygen-extra.js','data/content-metadata.js','domain/core.js','js/session.js','js/audio.js','js/practice-library.js','js/app.js'],'Script paths and load order must be preserved.');
+assert.deepEqual(scriptFiles,['data/questions.js','data/practice-sets.js','data/heygen-part3.js','data/heygen-extra.js','data/content-metadata.js','domain/core.js','js/session.js','config.js','vendor/supabase.js','js/cloud-repository.js','js/cloud.js','js/audio.js','js/practice-library.js','js/app.js'],'Script paths and load order must be preserved.');
 for(const match of html.matchAll(/(?:src|href)="([^"#]+)"/g)){
   if (/^(?:https?:|data:)/.test(match[1])) continue;
   const asset=path.resolve(root,match[1]);
@@ -18,7 +18,7 @@ const localData=new Map();
 const clickListeners=[];
 const viewport={scrollX:0,scrollY:0,addEventListener(){},scrollTo(x,y){this.scrollX=typeof x==='object'?(x.left??this.scrollX):x;this.scrollY=typeof x==='object'?(x.top??this.scrollY):y}};
 const context=vm.createContext({console,document:{querySelector:s=>nodes[s]??=element(),querySelectorAll:()=>[],addEventListener(type,listener){if(type==='click')clickListeners.push(listener)}},window:viewport,dispatchClick(dataset){const button={dataset};for(const listener of clickListeners)listener({target:{closest:selector=>selector.startsWith('a[')||selector.startsWith('[data-preview-voice]')||selector.startsWith('[data-preview-heygen]')?null:button},preventDefault(){}})},localStorage:{getItem:key=>localData.get(key)||null,setItem:(key,value)=>localData.set(key,value),removeItem:key=>localData.delete(key)},location:{hash:''},history:{},setInterval:fn=>{timer=fn;return 1},runTimer:()=>timer(),clearInterval(){},setTimeout(){},confirm:()=>true,Date,Math,Set,Map,JSON,assert});
-for(const file of scriptFiles)vm.runInContext(fs.readFileSync(path.join(root,file),'utf8'),context,{filename:file});
+for(const file of scriptFiles.filter(file=>file!=='vendor/supabase.js'))vm.runInContext(fs.readFileSync(path.join(root,file),'utf8'),context,{filename:file});
 vm.runInContext(`
 assert.equal(BANK.length,246);assert.equal(PRACTICE_SETS.length,10);
 const fingerprints=new Set();
