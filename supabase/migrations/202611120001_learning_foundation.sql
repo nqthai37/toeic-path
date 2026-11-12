@@ -70,6 +70,8 @@ create table public.review_items (
  due_at timestamptz not null default now(), updated_at timestamptz not null default now(), primary key(user_id,question_id)
 );
 
+alter table private.answer_keys enable row level security;
+alter table private.attempt_keys enable row level security;
 alter table public.profiles enable row level security;
 alter table public.study_plans enable row level security;
 alter table public.attempts enable row level security;

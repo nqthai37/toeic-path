@@ -8,6 +8,8 @@ try{
  await db.exec(`create role anon;create role authenticated;create schema auth;create table auth.users(id uuid primary key);create function auth.uid() returns uuid language sql stable as $$ select nullif(current_setting('request.jwt.claim.sub',true),'')::uuid $$;grant usage on schema auth to authenticated;`);
  await db.exec(await readFile(new URL('../supabase/migrations/202611120001_learning_foundation.sql',import.meta.url),'utf8'));
  await db.exec(await readFile(new URL('../supabase/seed.sql',import.meta.url),'utf8'));
+ await db.exec(await readFile(new URL('../supabase/migrations/202611120002_progress_sync.sql',import.meta.url),'utf8'));
+ await db.exec(await readFile(new URL('../supabase/migrations/202611120003_account_fence.sql',import.meta.url),'utf8'));
  const A='aaaaaaaa-aaaa-4aaa-aaaa-aaaaaaaaaaaa',B='bbbbbbbb-bbbb-4bbb-bbbb-bbbbbbbbbbbb';
  await db.query('insert into auth.users values($1),($2)',[A,B]);
  const as=async user=>{await db.exec('reset role;set role authenticated');await db.query("select set_config('request.jwt.claim.sub',$1,false)",[user])};
@@ -44,6 +46,17 @@ try{
  const plan=await call("select public.save_study_plan(8,750,20,'2026-11-12',0)");assert.equal(plan.revision,1);
  await assert.rejects(()=>call("select public.save_study_plan(8,750,20,'2026-11-12',null)"),/Stale revision/);
  await as(B);assert.equal(await call('select count(*)::int from public.study_plans'),0);assert.equal(await call('select count(*)::int from public.attempt_results'),0);assert.equal(await call('select count(*)::int from public.review_items'),0);
+ await as(A);
+ const progress={_owner_id:A,weeks:8,target:750,minutes:20,start:'2026-11-12T00:00:00Z',history:[{date:'2026-11-12',name:'Client session',seconds:20,server_graded:true,answers:[{id:23,chosen:0,correct:true}]}],known:[0],mistakes:[24],vocabDays:['2026-11-12']};
+ assert.equal((await call('select public.save_progress($1,null,0)',[progress])).revision,1);
+ assert.equal((await call('select state from public.progress_snapshots')).history[0].server_graded,false);
+ await assert.rejects(()=>call('select public.save_progress($1,null,0)',[progress]),/Stale revision/);
+ await assert.rejects(()=>call('select public.save_progress($1,null,null)',[progress]),/Invalid progress/);
+ await assert.rejects(()=>call('select public.save_progress($1,null,1)',[{...progress,weeks:undefined}]),/Invalid preferences/);
+ await assert.rejects(()=>db.query('update public.progress_snapshots set revision=0'),/permission denied/);
+ await as(B);assert.equal(await call('select count(*)::int from public.progress_snapshots'),0);await assert.rejects(()=>call('select public.save_progress($1,null,0)',[progress]),/Account changed/);
+ assert.equal((await call('select public.save_progress($1,null,0)',[{...progress,_owner_id:B,known:[1]}])).revision,1);
+ await as(A);assert.deepEqual((await call('select state from public.progress_snapshots')).known,[0]);
  await db.exec('reset role;set role anon');await db.query("select set_config('request.jwt.claim.sub','',false)");
  assert.equal(await call('select count(*)::int from public.questions'),246);
  await assert.rejects(()=>call('select public.start_attempt($1,$2)',[[23],key]),/permission denied/);
