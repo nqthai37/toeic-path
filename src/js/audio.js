@@ -4,6 +4,7 @@ const VOICE_PREVIEWS={female:'Hello. I will read the female speaker’s lines in
 let voicePreferences={rate:.92};
 try{const saved=JSON.parse(localStorage.getItem(VOICE_STORAGE_KEY)||'{}');if([.85,.92,1,1.1].includes(saved.rate))voicePreferences.rate=saved.rate}catch{}
 const heygenRecordings=new Map([...HEYGEN_PART3_AUDIO.recordings,...HEYGEN_EXTRA_AUDIO.recordings].map(record=>[record.text,record]));
+const heygenAssets=new Map((typeof CONTENT_METADATA==='undefined'?[]:CONTENT_METADATA.audio).map(asset=>[asset.id,asset]));
 let recordedAudio=null,recordedGeneration=0;
 function audioStatus(text){document.querySelectorAll('[data-audio-status]').forEach(status=>{status.textContent=text})}
 function audioSourceLabel(){return 'HeyGen · Faye & Dmitri'}
@@ -18,7 +19,7 @@ function stopAudio(){
 }
 async function speak(text){
  stopAudio();
- const record=heygenRecordings.get(text);
+ const record=typeof text==='object'&&text?heygenAssets.get(text.audio_asset_id):heygenAssets.get(text)||heygenRecordings.get(text);
  if(!record){audioStatus('Recording unavailable');toast('This recording is unavailable. Please use the transcript.');return}
  const generation=recordedGeneration,player=new Audio(record.src);recordedAudio=player;
  player.preload='auto';player.playbackRate=voicePreferences.rate;player.preservesPitch=true;

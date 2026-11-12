@@ -13,7 +13,7 @@ class FakeAudio{
  load(){}
 }
 const context=vm.createContext({Audio:FakeAudio,document:{querySelectorAll:selector=>selector==='[data-audio-status]'?[status]:[],addEventListener(type,fn){events[type]=fn}},localStorage:{getItem:key=>storage.get(key)||null,setItem:(key,value)=>storage.set(key,value)},toast:text=>notices.push(text)});
-for(const file of ['data/heygen-part3.js','data/heygen-extra.js','js/audio.js'])vm.runInContext(fs.readFileSync(path.join(root,file),'utf8'),context);
+for(const file of ['data/questions.js','data/practice-sets.js','data/heygen-part3.js','data/heygen-extra.js','data/content-metadata.js','js/audio.js'])vm.runInContext(fs.readFileSync(path.join(root,file),'utf8'),context);
 const run=code=>vm.runInContext(code,context);
 (async()=>{
  await run('speak(HEYGEN_PART3_AUDIO.recordings[0].text)');
@@ -29,6 +29,7 @@ const run=code=>vm.runInContext(code,context);
  events.change({target:{matches:()=>true,value:'999'}});assert.equal(run('voicePreferences.rate'),1.1);
  await run('speak(HEYGEN_EXTRA_AUDIO.recordings[0].text)');assert.equal(players.at(-1).playbackRate,1.1);players.at(-1).onended();assert.equal(status.textContent,'Playback complete · HeyGen');
  for(const role of ['female','male']){events.click({target:{closest:()=>({dataset:{previewVoice:role}})}});assert.equal(players.at(-1).src,run(`heygenRecordings.get(VOICE_PREVIEWS.${role}).src`))}
+ await run('speak({...BANK[0],audio:"An edited written transcript"})');assert.equal(players.at(-1).src,run('heygenAssets.get(BANK[0].audio_asset_id).src'));
  const count=players.length;await run('speak("Unknown recording")');assert.equal(players.length,count);assert.match(notices.at(-1),/unavailable/);
  FakeAudio.nextPlay=()=>Promise.reject(Error('network'));await run('speak(HEYGEN_EXTRA_AUDIO.recordings[0].text)');assert.match(status.textContent,/unavailable/);assert.match(notices.at(-1),/Try Play audio again/);assert.equal(players.at(-1).paused,true);
  let rejectOld;FakeAudio.nextPlay=()=>new Promise((_,reject)=>{rejectOld=reject});const pending=run('speak(HEYGEN_EXTRA_AUDIO.recordings[0].text)');
