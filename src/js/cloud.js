@@ -4,7 +4,7 @@ function cloudMessage(){return ({local:'Saved on this device',loading:'Loading y
 function setCloudStatus(status){ToeicCloud.status=status;document.querySelectorAll('[data-cloud-status]').forEach(node=>{node.textContent=cloudMessage()});document.querySelectorAll('[data-cloud-indicator]').forEach(node=>{node.textContent=ToeicCloud.user?cloudMessage():'Progress saved on this device'})}
 function cloudSettings(){
  const user=ToeicCloud.user;
- return `<section class="panel cloud-panel" style="margin-bottom:24px"><div class="eyebrow">YOUR ACCOUNT</div><h3>${user?'Keep learning across devices':'Save your progress across devices'}</h3><p class="sub" data-cloud-status aria-live="polite">${cloudMessage()}</p>${user?`<p>Signed in as <b>${escapeHTML(user.email||'Learner')}</b></p><div class="settings-actions"><button type="button" class="secondary" data-cloud-action="retry">Sync now</button><button type="button" class="secondary" data-cloud-action="reload">Load latest cloud progress</button><button type="button" class="text-btn" data-cloud-action="guest-import">Import this device’s guest history</button><button type="button" class="text-btn" data-cloud-action="sign-out">Sign out</button></div><p class="note">Your practice history is backed up to your account. Practice scores remain practice results. When signing out, guest progress stays separate.</p>`:`<form id="cloud-auth-form"><label>Email address<input name="email" type="email" autocomplete="email" maxlength="254" placeholder="you@example.com" required></label><button class="primary" type="submit" ${ToeicCloud.emailPending?'disabled':''}>${ToeicCloud.emailPending?'Sending…':'Email me a sign-in link'}</button></form><p class="note">Open the email link in this browser to sign in. Your guest progress stays on this device; you can import it after signing in.</p>`}</section>`;
+ return `<section class="panel cloud-panel" style="margin-bottom:24px"><div class="eyebrow">YOUR ACCOUNT</div><h3>${user?'Keep learning across devices':'Save your progress across devices'}</h3><p class="sub" data-cloud-status aria-live="polite">${cloudMessage()}</p>${user?`<p>Signed in as <b>${escapeHTML(user.email||'Learner')}</b></p><div class="settings-actions"><button type="button" class="secondary" data-cloud-action="retry">Sync now</button><button type="button" class="secondary" data-cloud-action="reload">Load latest cloud progress</button><button type="button" class="text-btn" data-cloud-action="guest-import">Import this device’s guest history</button><button type="button" class="text-btn" data-cloud-action="sign-out">Sign out</button></div><p class="note">Use the status above to confirm that your latest progress is backed up. Practice scores remain practice results. When signing out, guest progress stays separate.</p>`:`<form id="cloud-auth-form"><label>Email address<input name="email" type="email" autocomplete="email" maxlength="254" placeholder="you@example.com" required></label><button class="primary" type="submit" ${ToeicCloud.emailPending?'disabled':''}>${ToeicCloud.emailPending?'Sending…':'Email me a sign-in link'}</button></form><p class="note">Open the email link in this browser to sign in. Your guest progress stays on this device; you can import it after signing in.</p>`}</section>`;
 }
 function accountMetaKey(){return storageKey+'-sync'}
 function readSyncMeta(){try{return JSON.parse(localStorage.getItem(accountMetaKey())||'{}')}catch{return {}}}
@@ -19,6 +19,18 @@ function queueCloudProgress(){
 function cleanCloudState(raw){
  const safe=ToeicDomain.validateBackup({app:'toeic-path',version:1,state:raw},BANK,VOCAB.length);
  safe.history.forEach((history,index)=>{const original=raw.history[index];if(typeof original.attemptId==='string')history.attemptId=original.attemptId;if(typeof original.content_version==='string')history.content_version=original.content_version;history.source='client_practice';history.server_graded=false});return safe;
+}
+function sameCloudProgress(payload,remote){
+ try{
+  const normalize=raw=>{
+   const value=cleanCloudState(raw),start=new Date(value.start);
+   value.start=[start.getFullYear(),start.getMonth(),start.getDate()].join('-');
+   value.known.sort((a,b)=>a-b);value.mistakes.sort((a,b)=>a-b);value.vocabDays.sort();
+   return value;
+  };
+  const canonical=value=>JSON.stringify((function sort(item){return Array.isArray(item)?item.map(sort):item&&typeof item==='object'?Object.fromEntries(Object.entries(item).sort(([a],[b])=>a.localeCompare(b)).map(([key,value])=>[key,sort(value)])):item})(value));
+  return canonical(normalize(payload.state))===canonical(normalize(remote.state))&&canonical(payload.session||null)===canonical(remote.session||null);
+ }catch{return false}
 }
 function updateAccountView(){
  document.querySelectorAll('[data-account-panel]').forEach(node=>{node.innerHTML=cloudSettings()});setCloudStatus(ToeicCloud.status);
@@ -46,15 +58,16 @@ async function switchCloudAccount(user,{force=false}={}){
    localStorage.setItem(storageKey,JSON.stringify(state));
    if(remote?.session)localStorage.setItem(QUIZ_CHECKPOINT_KEY,JSON.stringify(remote.session));else localStorage.removeItem(QUIZ_CHECKPOINT_KEY);
   }
-  ToeicCloud.sync=createProgressSync({repository:ToeicCloud.repository,userId:user.id,revision:dirty?(meta.revision||0):revision,
+  const identical=dirty&&remote&&sameCloudProgress({state,session:checkpointValue()},remote);
+  ToeicCloud.sync=createProgressSync({repository:ToeicCloud.repository,userId:user.id,sameProgress:sameCloudProgress,revision:dirty&&!identical?(meta.revision||0):revision,
    onStatus:status=>{if(epoch===ToeicCloud.epoch&&!(ToeicCloud.status==='conflict'&&status==='pending'))setCloudStatus(status)},
    onCommit:(revision,dirty)=>{if(epoch===ToeicCloud.epoch)writeSyncMeta(revision,dirty)}});
   ToeicCloud.ready=true;
-  if(dirty){
+  if(dirty&&!identical){
    ToeicCloud.sync.enqueue(state,checkpointValue());
    if((meta.revision||0)!==revision)setCloudStatus('conflict');else await ToeicCloud.sync.flush();
-  }else{writeSyncMeta(revision,false);setCloudStatus(remote?'saved':'pending')}
-  updateAccountView();if(!remote&&!dirty)queueCloudProgress();
+  }else{writeSyncMeta(revision,false);setCloudStatus(remote?'saved':'local')}
+  updateAccountView();
  }catch{if(epoch===ToeicCloud.epoch){ToeicCloud.ready=false;setCloudStatus('error');updateAccountView()}}
 }
 async function initCloud(){

@@ -10,7 +10,7 @@ function createCloudRepository(client){
   save:(state,session,revision,ownerId)=>unwrap(client.rpc('save_progress',{p_state:{...state,_owner_id:ownerId},p_session:session,p_revision:revision})),
  };
 }
-function createProgressSync({repository,revision=0,userId=null,onStatus=()=>{},onCommit=()=>{}}){
+function createProgressSync({repository,revision=0,userId=null,sameProgress=null,onStatus=()=>{},onCommit=()=>{}}){
  let pending=null,running=null,closed=false;
  const controller={
   get revision(){return revision},get pending(){return !!pending},
@@ -27,7 +27,21 @@ function createProgressSync({repository,revision=0,userId=null,onStatus=()=>{},o
       if(!Number.isInteger(result?.revision)||result.revision<=revision)throw Error('Invalid save acknowledgement');
       revision=result.revision;if(pending===payload)pending=null;
       onCommit(revision,!!pending);onStatus(pending?'pending':'saved');
-     }catch(error){if(!closed)onStatus(/Stale revision/i.test(error.message||'')?'conflict':'error');return false}
+     }catch(error){
+      const conflict=/Stale revision/i.test(error.message||'');
+      if(conflict&&sameProgress&&userId&&!closed){
+       try{
+        const remote=await repository.load(userId);if(closed)return false;
+        // An email callback can open a second tab. Acknowledging an identical
+        // snapshot is safe; genuinely different data still requires review.
+        if(remote&&Number.isInteger(remote.revision)&&remote.revision>revision&&sameProgress(payload,remote)){
+         revision=remote.revision;if(pending===payload)pending=null;
+         onCommit(revision,!!pending);onStatus(pending?'pending':'saved');continue;
+        }
+       }catch{}
+      }
+      if(!closed)onStatus(conflict?'conflict':'error');return false;
+     }
     }
     return !closed;
    })().finally(()=>{running=null});return running;
