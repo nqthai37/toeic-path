@@ -1,6 +1,6 @@
 # Trạng thái thực hiện kế hoạch hợp nhất
 
-Cập nhật 12/11/2026. Kế hoạch gốc của người dùng được lưu nguyên văn trong `UNIFIED_PLAN.md`. File này ghi việc thực sự đã làm, không coi checklist kế hoạch là chức năng đã có.
+Cập nhật 13/11/2026. Kế hoạch gốc của người dùng được lưu nguyên văn trong `UNIFIED_PLAN.md`. File này ghi việc thực sự đã làm, không coi checklist kế hoạch là chức năng đã có.
 
 ## M0 — Bản nền public
 
@@ -25,7 +25,7 @@ Cập nhật 12/11/2026. Kế hoạch gốc của người dùng được lưu n
 - Có test PostgreSQL/PGlite về RLS A/B/anon, không tự sửa score/time, không đọc private key, invalid answer, deadline, idempotency và revision (kể cả NULL revision).
 - Đã nhận URL/public key, áp dụng schema/seed lên project `znklwghqiielgzbgfqtv`, bật callback đúng public URL và localhost.
 - Đã nối email Auth/PKCE, SDK bundle, account-scoped local cache và backup cloud có revision/account guard.
-- Kiểm tra HTTP project thật xác nhận số lượng nội dung; anonymous không đọc được progress_snapshots. Email login/callback cần người dùng thực hiện; chưa ghi đã nghiệm thu luồng này.
+- Kiểm tra HTTP project thật xác nhận số lượng nội dung; anonymous không đọc được progress_snapshots. Người dùng đã hoàn thành email login; ngày 13/11 đã quan sát tài khoản thật tải backup và hiển thị Saved to cloud sau reload.
 - Backup có mục tiêu/lịch sử/sổ lỗi/từ vựng/checkpoint; guest import có preview và dedupe. Backup luôn client_practice/server_graded=false.
 - Tích hợp grading RPC vào quiz UI, chuẩn hóa progress/import/events và nghiệm thu hai thiết bị vẫn còn; xem `supabase/README.md`.
 
@@ -36,3 +36,12 @@ Chưa có daily adaptive plan trên sản phẩm, AI coach, nghiệm thu portfol
 ## Lệnh kiểm tra
 
 `npm test` kiểm tra catalog/seed không stale, domain, các chức năng web, audio và PostgreSQL. `npm run build` + `npm run test:build` kiểm tra output tĩnh. CI cài dependency bằng lockfile rồi chạy các kiểm tra này; frontend không tải PGlite.
+
+## Kiểm chứng kết nối ngày 13/11/2026
+
+- Code triển khai `654a1ea`; GitHub Pages run `43184503083` thành công.
+- Email login/callback do người dùng thực hiện; phiên được khôi phục sau khi mở/tải lại trang.
+- Quan sát Saved to cloud cùng mục tiêu 8 tuần / 750 / 45 phút và ngày bắt đầu 12/11 được tải lại từ tài khoản.
+- Đã sửa xung đột giả khi email callback mở tab thứ hai: chỉ tự xác nhận khi hai snapshot tương đương; dữ liệu thực sự khác nhau vẫn cần người dùng xử lý.
+- Có test snapshot giống nhau, thứ tự key JSON, thay đổi khi đang load/offline và chống ghi dữ liệu sang tài khoản khác.
+- Đây là nghiệm thu một tài khoản thật trên cùng trình duyệt. Hai tài khoản/thiết bị thật, việc tích hợp server grading vào quiz UI và AI coach vẫn chưa nghiệm thu.

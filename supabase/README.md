@@ -1,6 +1,6 @@
 # Backend foundation — M2 đang triển khai
 
-Đã áp dụng schema, seed và đồng bộ tiến độ lên project `znklwghqiielgzbgfqtv` ngày 12/11/2026. Frontend đã nối email Auth/PKCE và backup theo tài khoản. Chỉ báo Saved to cloud sau khi RPC trả revision mới; cần người dùng hoàn thành email login để nghiệm thu end-to-end.
+Đã áp dụng schema, seed và đồng bộ tiến độ lên project `znklwghqiielgzbgfqtv` ngày 12/11/2026. Frontend đã nối email Auth/PKCE và backup theo tài khoản. Chỉ báo Saved to cloud sau khi RPC trả revision mới; người dùng đã hoàn thành email login, và đã quan sát Saved to cloud sau reload ngày 13/11/2026.
 
 ## Chuẩn bị project
 
@@ -32,7 +32,7 @@ Sau khi hết hạn, server từ chối đáp án mới. Nộp muộn chỉ ch�
 
 ## Chưa có — không coi M2 hoàn tất
 
-- Email delivery, callback và lưu cloud bằng tài khoản thật cần nghiệm thu bằng thao tác đăng nhập của người dùng.
+- Đã nghiệm thu email login/callback và tải backup với một tài khoản thật; hai tài khoản/thiết bị thật vẫn cần nghiệm thu thêm.
 - Backup có cả checkpoint để restore/resume qua cloud; thiết bị thứ hai chưa nghiệm thu thực tế.
 - Import local/guest merge có dedupe rồi lưu snapshot cloud; chưa chuẩn hóa lịch sử import thành các server-graded attempts.
 - Từ vựng/lịch sử/mục tiêu nằm trong backup cloud; các bảng events/vocabulary chuẩn hóa và quản lý tài khoản đầy đủ để sau.
