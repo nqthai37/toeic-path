@@ -52,4 +52,12 @@ Chưa có AI coach, nghiệm thu portfolio với người dùng thật hoặc ap
 - Quan sát Saved to cloud cùng mục tiêu 8 tuần / 750 / 45 phút và ngày bắt đầu 12/11 được tải lại từ tài khoản.
 - Đã sửa xung đột giả khi email callback mở tab thứ hai: chỉ tự xác nhận khi hai snapshot tương đương; dữ liệu thực sự khác nhau vẫn cần người dùng xử lý.
 - Có test snapshot giống nhau, thứ tự key JSON, thay đổi khi đang load/offline và chống ghi dữ liệu sang tài khoản khác.
-- Đây là nghiệm thu một tài khoản thật trên cùng trình duyệt. Hai tài khoản/thiết bị thật, việc tích hợp server grading vào quiz UI và AI coach vẫn chưa nghiệm thu.
+- Đây là nghiệm thu một tài khoản thật trên cùng trình duyệt. Hai tài khoản/thiết bị thật, AI coach vẫn chưa nghiệm thu; luồng server grading tiếp tục được kiểm tra bên dưới.
+
+## Luồng practice ngày 13/11/2026
+
+- Migration 004 chạy thành công trên Supabase Dashboard. CI/source/build kiểm tra queue, RPC, RLS, không lộ key trong snapshot mở, grading, resume, deadline và plan theo hồ sơ.
+- Public Pages: đã chọn/check câu Part 5, thấy Answers saved to your account, reload → Resume khôi phục lựa chọn và lời giải. Vị trí cuộn sau phản hồi giữ nguyên.
+- Đã nộp một phiên QA Part 5: 1 đáp án đúng, 7 bỏ trống. Phiên này nằm trong lịch sử tài khoản thử nghiệm, không phải bằng chứng năng lực người học. Không tự xóa dữ liệu tài khoản.
+- Sửa đồng bộ nền làm mất màn hình kết quả; thêm Review results cho lịch sử đã xác minh và test không nhân đôi kết quả khi mở lại.
+- Asset URLs có hash nội dung khi build, tránh trình duyệt dùng lẫn mã nguồn cũ và mới sau deploy.
