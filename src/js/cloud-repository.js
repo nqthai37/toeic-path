@@ -8,6 +8,17 @@ function createCloudRepository(client){
   signOut:()=>unwrap(client.auth.signOut({scope:'local'})),
   load:userId=>unwrap(client.from('progress_snapshots').select('state,session,revision,updated_at').eq('user_id',userId).maybeSingle()),
   save:(state,session,revision,ownerId)=>unwrap(client.rpc('save_progress',{p_state:{...state,_owner_id:ownerId},p_session:session,p_revision:revision})),
+  beginPractice:({ids,key,mode,testId,kind,ownerId})=>unwrap(client.rpc('begin_practice',{p_ids:ids,p_key:key,p_mode:mode,p_test_id:testId,p_kind:kind,p_owner:ownerId})),
+  savePracticeAnswer:(id,question,choice,revision)=>unwrap(client.rpc('save_practice_answer',{p_attempt:id,p_question:question,p_option:choice,p_revision:revision})),
+  gradePracticeAnswer:(id,question)=>unwrap(client.rpc('grade_practice_answer',{p_attempt:id,p_question:question})),
+  practiceSnapshot:id=>unwrap(client.rpc('practice_snapshot',{p_attempt:id})),
+  completePractice:id=>unwrap(client.rpc('complete_practice',{p_attempt:id})),
+  openPractices:()=>unwrap(client.rpc('open_practices')),
+  reviewItems:()=>unwrap(client.from('review_items').select('question_id')),
+  async practiceHistory(){
+   const items=[];for(let offset=0;offset<5000;offset+=100){const page=await unwrap(client.rpc('practice_history',{p_offset:offset}));items.push(...page);if(page.length<100)return items}
+   throw Error('Practice history is too large to load in one session');
+  },
  };
 }
 function createProgressSync({repository,revision=0,userId=null,sameProgress=null,onStatus=()=>{},onCommit=()=>{}}){

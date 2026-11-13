@@ -17,16 +17,17 @@ function renderQuiz(){
  if(quiz?.limit){$('#main .quiz-card').insertAdjacentHTML('beforeend',`<div class="question-navigator"><div class="eyebrow">JUMP TO A QUESTION</div><p class="note">Filled circles are answered. You can change answers before submitting.</p><div class="question-buttons">${quiz.questions.map((q,i)=>`<button class="question-dot ${quiz.answers[q.id]!==undefined?'answered':''} ${quiz.index===i?'current':''}" data-question-index="${i}" aria-label="Question ${i+1}${quiz.answers[q.id]!==undefined?', answered':''}" ${quiz.index===i?'aria-current="step"':''}>${i+1}</button>`).join('')}</div></div>`)}
 }
 function selectQuizAnswer(index){
- if(!quiz||quiz.checked)return;
+ if(!quiz||quiz.checked||quiz.checking)return;
  const question=quiz.questions[quiz.index];
  if(!Number.isInteger(index)||index<0||index>=question.options.length)return;
- quiz.answers[question.id]=index;persistQuiz();
+ quiz.answers[question.id]=index;persistQuiz();queueRemoteAnswer(question.id,index);
  document.querySelectorAll('.answers .answer').forEach((answer,i)=>{answer.classList.toggle('selected',i===index);answer.setAttribute('aria-pressed',String(i===index))});
  const check=document.querySelector('[data-action="check"]');if(check)check.disabled=false;
  const dot=document.querySelector(`[data-question-index="${quiz.index}"]`);if(dot){dot.classList.add('answered');dot.setAttribute('aria-label',`Question ${quiz.index+1}, answered`)}
 }
 function checkQuizAnswer(){
  if(!quiz||quiz.checked||quiz.limit)return;
+ if(quiz.remote)return checkRemoteAnswer();
  const question=quiz.questions[quiz.index],selected=quiz.answers[question.id];
  if(selected===undefined)return;
  quiz.checked=true;persistQuiz();showQuizFeedback();
@@ -37,11 +38,11 @@ function showQuizFeedback(){
  // Keep the clicked button and all content above it in place. Reveal feedback
  // below the controls instead of replacing the page or inserting above them.
  const check=document.querySelector('[data-action="check"]');
- if(check){check.dataset.action='next-q';check.textContent=quiz.index===quiz.questions.length-1?'See my results':'Next question →'}
+ if(check){check.disabled=false;check.dataset.action='next-q';check.textContent=quiz.index===quiz.questions.length-1?'See my results':'Next question →'}
  const skip=document.querySelector('[data-action="skip-q"]');if(skip){skip.disabled=true;skip.textContent='Checked ✓'}
  const explanation=document.querySelector('.quiz-card .explanation');
  if(explanation){explanation.innerHTML=`<b>${selected===question.answer?'Well done.':'Keep learning.'} The answer is ${String.fromCharCode(65+question.answer)}.</b><br>${escapeHTML(question.explanation)}`;explanation.hidden=false}
 }
 function balanced(count){return ToeicDomain.selectQuestions(BANK,count,state.history,{balanced:true})}
-document.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;if(b.dataset.testMode){testMode=b.dataset.testMode;const position=window.scrollY;render();window.scrollTo(0,position)}if(b.dataset.questionIndex!==undefined&&quiz&&!quiz.checked){quiz.index=Number(b.dataset.questionIndex);stopAudio();renderQuiz()}});
+document.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;if(b.dataset.testMode){testMode=b.dataset.testMode;const position=window.scrollY;render();window.scrollTo(0,position)}if(b.dataset.questionIndex!==undefined&&quiz&&!quiz.checked&&!quiz.checking){quiz.index=Number(b.dataset.questionIndex);stopAudio();renderQuiz()}});
 document.addEventListener('submit',e=>{if(e.target.id!=='custom-test-form')return;e.preventDefault();const form=new FormData(e.target);start('custom',5,{scope:form.get('scope'),count:Number(form.get('count')),mode:form.get('mode')})});

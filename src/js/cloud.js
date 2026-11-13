@@ -41,7 +41,7 @@ async function switchCloudAccount(user,{force=false}={}){
  if(!force&&ToeicCloud.user?.id===user?.id&&ToeicCloud.ready)return;
  const epoch=++ToeicCloud.epoch;clearTimeout(ToeicCloud.timer);ToeicCloud.sync?.close();ToeicCloud.sync=null;ToeicCloud.ready=false;
  if(quiz){persistQuiz();quiz=null;clearInterval(clock);stopAudio()}
- ToeicCloud.user=user||null;
+ ToeicCloud.user=user||null;ToeicCloud.openPractices=[];
  storageKey=user?'toeic-path-user-'+user.id:'toeic-path-v1';
  QUIZ_CHECKPOINT_KEY=user?storageKey+'-session':'toeic-path-session-v1';
  let cached=null;try{cached=JSON.parse(localStorage.getItem(storageKey)||'null')}catch{}
@@ -67,7 +67,7 @@ async function switchCloudAccount(user,{force=false}={}){
    ToeicCloud.sync.enqueue(state,checkpointValue());
    if((meta.revision||0)!==revision)setCloudStatus('conflict');else await ToeicCloud.sync.flush();
   }else{writeSyncMeta(revision,false);setCloudStatus(remote?'saved':'local')}
-  updateAccountView();
+  updateAccountView();if(typeof refreshPracticeOverview==='function')refreshPracticeOverview().catch(()=>{});
  }catch{if(epoch===ToeicCloud.epoch){ToeicCloud.ready=false;setCloudStatus('error');updateAccountView()}}
 }
 async function initCloud(){
