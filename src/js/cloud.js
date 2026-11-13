@@ -39,6 +39,7 @@ function updateAccountView(){
 }
 async function switchCloudAccount(user,{force=false}={}){
  if(!force&&ToeicCloud.user?.id===user?.id&&ToeicCloud.ready)return;
+ if(typeof practiceResultsVisible!=='undefined')practiceResultsVisible=false;
  const epoch=++ToeicCloud.epoch;clearTimeout(ToeicCloud.timer);ToeicCloud.sync?.close();ToeicCloud.sync=null;ToeicCloud.ready=false;
  if(quiz){persistQuiz();quiz=null;clearInterval(clock);stopAudio()}
  ToeicCloud.user=user||null;ToeicCloud.openPractices=[];
