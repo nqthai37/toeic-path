@@ -10,6 +10,7 @@ try{
  await db.exec(await readFile(new URL('../supabase/seed.sql',import.meta.url),'utf8'));
  await db.exec(await readFile(new URL('../supabase/migrations/202611120002_progress_sync.sql',import.meta.url),'utf8'));
  await db.exec(await readFile(new URL('../supabase/migrations/202611120003_account_fence.sql',import.meta.url),'utf8'));
+ await db.exec(await readFile(new URL('../supabase/migrations/202611130004_practice_flow.sql',import.meta.url),'utf8'));
  const A='aaaaaaaa-aaaa-4aaa-aaaa-aaaaaaaaaaaa',B='bbbbbbbb-bbbb-4bbb-bbbb-bbbbbbbbbbbb';
  await db.query('insert into auth.users values($1),($2)',[A,B]);
  const as=async user=>{await db.exec('reset role;set role authenticated');await db.query("select set_config('request.jwt.claim.sub',$1,false)",[user])};
@@ -57,6 +58,16 @@ try{
  await as(B);assert.equal(await call('select count(*)::int from public.progress_snapshots'),0);await assert.rejects(()=>call('select public.save_progress($1,null,0)',[progress]),/Account changed/);
  assert.equal((await call('select public.save_progress($1,null,0)',[{...progress,_owner_id:B,known:[1]}])).revision,1);
  await as(A);assert.deepEqual((await call('select state from public.progress_snapshots')).known,[0]);
+ await as(A);
+ const practice=await call('select public.begin_practice($1,$2,$3,null,$4,$5)',[[23,24],'44444444-4444-4444-8444-444444444444','learning','custom',A]);assert.equal(practice.feedback.length,0);assert.equal(practice.questions[0].snapshot.answer,undefined);assert.equal(practice.questions[0].snapshot.explanation,undefined);
+ const practiceId=practice.attempt.id;await call('select public.save_practice_answer($1,23,0,0)',[practiceId]);
+ assert.equal((await call('select public.practice_snapshot($1)',[practiceId])).feedback.length,0,'Choosing alone must not reveal feedback');
+ await call('select public.grade_practice_answer($1,23)',[practiceId]);const resumed=await call('select public.practice_snapshot($1)',[practiceId]);assert.deepEqual(resumed.checked,[23]);assert.equal(resumed.feedback[0].correct,true);
+ await assert.rejects(()=>call('select public.begin_practice($1,$2,$3,null,$4,$5)',[[23],'55555555-5555-4555-8555-555555555555','learning','part',B]),/Account changed/);
+ await as(B);await assert.rejects(()=>call('select public.practice_snapshot($1)',[practiceId]),/unavailable/);assert.equal((await call('select public.practice_history(0)')).length,0);
+ await as(A);const completed=await call('select public.complete_practice($1)',[practiceId]);assert.equal(completed.feedback.length,2);assert.equal(completed.result.server_graded,true);assert.equal(completed.result.accuracy,50);assert.deepEqual((await call('select public.complete_practice($1)',[practiceId])).result,completed.result);
+ const verified=await call('select public.practice_history(0)');assert.ok(verified.some(h=>h.attemptId===practiceId&&h.server_graded&&h.answers[0].correct));
+ const sprint=await call('select public.begin_practice($1,$2,$3,null,$4,$5)',[[23],'66666666-6666-4666-8666-666666666666','timed','reading',A]);assert.equal((Date.parse(sprint.attempt.expires_at)-Date.parse(sprint.attempt.started_at))/1000,720);await assert.rejects(()=>call('select public.grade_practice_answer($1,23)',[sprint.attempt.id]),/learning/);
  await db.exec('reset role;set role anon');await db.query("select set_config('request.jwt.claim.sub','',false)");
  assert.equal(await call('select count(*)::int from public.questions'),246);
  await assert.rejects(()=>call('select public.start_attempt($1,$2)',[[23],key]),/permission denied/);
