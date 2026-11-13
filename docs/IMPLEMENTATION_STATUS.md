@@ -27,11 +27,19 @@ Cập nhật 13/11/2026. Kế hoạch gốc của người dùng được lưu n
 - Đã nối email Auth/PKCE, SDK bundle, account-scoped local cache và backup cloud có revision/account guard.
 - Kiểm tra HTTP project thật xác nhận số lượng nội dung; anonymous không đọc được progress_snapshots. Người dùng đã hoàn thành email login; ngày 13/11 đã quan sát tài khoản thật tải backup và hiển thị Saved to cloud sau reload.
 - Backup có mục tiêu/lịch sử/sổ lỗi/từ vựng/checkpoint; guest import có preview và dedupe. Backup luôn client_practice/server_graded=false.
-- Tích hợp grading RPC vào quiz UI, chuẩn hóa progress/import/events và nghiệm thu hai thiết bị vẫn còn; xem `supabase/README.md`.
+- Đã nối quiz đăng nhập vào begin/save/check/submit/snapshot/history RPC; queue theo revision, khôi phục feedback đã check, deadline dựa giờ server và kết quả lấy từ server. Guest vẫn local. Migration 004 đã áp dụng lên project thật.
+- Chuẩn hóa progress/import/events và nghiệm thu hai thiết bị vẫn còn; xem `supabase/README.md`.
 
-## M3–M6 — Chưa triển khai
+## M3 — Daily practice theo quy tắc
 
-Chưa có daily adaptive plan trên sản phẩm, AI coach, nghiệm thu portfolio với người dùng thật hoặc app React Native. Theo kế hoạch, hoàn thiện luồng M2 trước khi mở rộng các mốc này.
+- Đã có planner thuần domain và thẻ trên Dashboard/Study plan: ngân sách trừ thời gian đã học hôm nay, giữ nguyên nhóm, tính audio/passage chung một lần và tối đa 50 câu.
+- Cold start dùng baseline cân bằng; khi đủ mẫu, xen kẽ lỗi từ ngày trước, phần có ít nhất 5 câu trả lời lần đầu và tài liệu mới. Không dùng lần làm lại để nâng độ tin cậy.
+- Cùng ngày/dữ liệu tạo cùng gợi ý; hồ sơ khác nhau nhận bài khác nhau. Có lý do và trạng thái hết thời gian/hết nội dung.
+- Chưa lưu audit daily-plan revisions vào bảng riêng hoặc cho AI đổi lịch; đây là bước M3 đầu tiên.
+
+## M4–M6 — Chưa triển khai
+
+Chưa có AI coach, nghiệm thu portfolio với người dùng thật hoặc app React Native.
 
 ## Lệnh kiểm tra
 

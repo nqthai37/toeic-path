@@ -5,7 +5,7 @@ const path=require('node:path');
 const root=path.resolve(__dirname,'..',process.argv.includes('--built')?'dist':'src');
 const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
 const scriptFiles=[...html.matchAll(/<script\b[^>]*\bsrc="([^"]+)"/g)].map(match=>match[1]);
-assert.deepEqual(scriptFiles,['data/questions.js','data/practice-sets.js','data/heygen-part3.js','data/heygen-extra.js','data/content-metadata.js','domain/core.js','js/session.js','config.js','vendor/supabase.js','js/cloud-repository.js','js/cloud.js','js/audio.js','js/practice-library.js','js/app.js'],'Script paths and load order must be preserved.');
+assert.deepEqual(scriptFiles,['data/questions.js','data/practice-sets.js','data/heygen-part3.js','data/heygen-extra.js','data/content-metadata.js','domain/core.js','domain/answer-queue.js','domain/daily-plan.js','js/session.js','config.js','vendor/supabase.js','js/cloud-repository.js','js/cloud.js','js/server-practice.js','js/daily-practice.js','js/audio.js','js/practice-library.js','js/app.js'],'Script paths and load order must be preserved.');
 for(const match of html.matchAll(/(?:src|href)="([^"#]+)"/g)){
   if (/^(?:https?:|data:)/.test(match[1])) continue;
   const asset=path.resolve(root,match[1]);

@@ -36,9 +36,9 @@ Sau khi hết hạn, server từ chối đáp án mới. Nộp muộn chỉ ch�
 - Backup có cả checkpoint để restore/resume qua cloud; thiết bị thứ hai chưa nghiệm thu thực tế.
 - Import local/guest merge có dedupe rồi lưu snapshot cloud; chưa chuẩn hóa lịch sử import thành các server-graded attempts.
 - Từ vựng/lịch sử/mục tiêu nằm trong backup cloud; các bảng events/vocabulary chuẩn hóa và quản lý tài khoản đầy đủ để sau.
-- Daily plan items/revisions, AI coach/quota/retention; thuộc các mốc sau.
+- Daily plan đã tính từ lịch sử đồng bộ trên client; bảng audit items/revisions, AI coach/quota/retention còn ở các bước sau.
 
-Frontend tĩnh cũ có đáp án trong ngân hàng public. Việc schema backend giữ answer key riêng **không** biến bản demo local thành hệ thống chống gian lận. Khi nối timed flow, dùng snapshot/API phía server và không coi điểm do client gửi là đã xác minh.
+Frontend tĩnh cũ có đáp án trong ngân hàng public. Việc schema backend giữ answer key riêng **không** biến bản demo local thành hệ thống chống gian lận. Timed flow đăng nhập hiện dùng snapshot/API phía server và không coi điểm do client gửi là đã xác minh.
 
 ## Kiểm thử
 
@@ -56,6 +56,6 @@ Tài liệu chính thức: [RLS](https://supabase.com/docs/guides/database/postg
 
 `progress_snapshots` được RLS theo auth.uid(); client không ghi bảng trực tiếp. RPC `save_progress` validate payload, khóa theo tài khoản, kiểm tra revision, bắt buộc `_owner_id` trùng auth.uid() và loại mọi cờ server_graded do client gửi. `_owner_id` chỉ là chốt chống race khi đổi tài khoản, không cấp quyền thay cho JWT.
 
-Backup không biến kết quả browser thành điểm server. Các RPC attempt/answer/submit hiện có tiếp tục giữ answer key riêng và quyền ghi server; tích hợp chúng vào quiz UI là bước tiếp theo của M2.
+Backup không biến kết quả browser thành điểm server. Các RPC attempt/answer/submit hiện có tiếp tục giữ answer key riêng và quyền ghi server; quiz đăng nhập hiện đã gọi wrapper practice RPC từ migration 202611130004. Snapshot mở không trả answer key; chỉ feedback đã check hoặc kết quả sau submit mới có lời giải. History được lấy lại từ server, không tin cờ trong backup.
 
 Đã kiểm tra HTTP bằng public key: 246 questions, 154 question_groups, 10 practice_tests, 102 audio_assets; anonymous đọc progress_snapshots bị từ chối (401/42501). Không đưa service-role key vào ứng dụng.
