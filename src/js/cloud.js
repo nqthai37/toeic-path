@@ -35,7 +35,7 @@ function sameCloudProgress(payload,remote){
 function updateAccountView(){
  document.querySelectorAll('[data-account-panel]').forEach(node=>{node.innerHTML=cloudSettings()});setCloudStatus(ToeicCloud.status);
  // A login/account change explicitly changes the data being shown.
- if(!quiz)render();
+ if(!quiz&&(typeof practiceResultsVisible==='undefined'||!practiceResultsVisible))render();
 }
 async function switchCloudAccount(user,{force=false}={}){
  if(!force&&ToeicCloud.user?.id===user?.id&&ToeicCloud.ready)return;

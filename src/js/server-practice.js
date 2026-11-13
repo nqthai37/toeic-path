@@ -1,4 +1,5 @@
 let practiceStartSerial=0;
+let practiceResultsVisible=false;
 function cancelPendingPractice(){practiceStartSerial++}
 function remainingQuizSeconds(current){
  if(!current.limit)return 0;
@@ -112,7 +113,7 @@ async function refreshPracticeOverview(){
  for(const history of verified)byId.set(history.attemptId,{...history,server_graded:true,source:'server_practice'});
  const serverIds=new Set(verified.flatMap(h=>h.answers.map(a=>a.id)));state.mistakes=[...new Set([...state.mistakes.filter(id=>!serverIds.has(id)),...review.map(item=>item.question_id)])];
  state.history=[...byId.values()].sort((a,b)=>Date.parse(a.date)-Date.parse(b.date));
- localStorage.setItem(storageKey,JSON.stringify(state));if(!quiz&&['dashboard','progress','tests'].includes(page))render();
+ localStorage.setItem(storageKey,JSON.stringify(state));if(!quiz&&!practiceResultsVisible&&['dashboard','progress','tests'].includes(page))render();
 }
 document.addEventListener('click',event=>{
  const button=event.target.closest('[data-resume-cloud]');if(button?.dataset.resumeCloud)resumeServerPractice(button.dataset.resumeCloud);
