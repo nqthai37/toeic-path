@@ -4,11 +4,12 @@ const assert=require('node:assert/strict');
 const path=require('node:path');
 const root=path.resolve(__dirname,'..',process.argv.includes('--built')?'dist':'src');
 const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
-const scriptFiles=[...html.matchAll(/<script\b[^>]*\bsrc="([^"]+)"/g)].map(match=>match[1]);
+const scriptFiles=[...html.matchAll(/<script\b[^>]*\bsrc="([^"]+)"/g)].map(match=>match[1].split('?')[0]);
 assert.deepEqual(scriptFiles,['data/questions.js','data/practice-sets.js','data/heygen-part3.js','data/heygen-extra.js','data/content-metadata.js','domain/core.js','domain/answer-queue.js','domain/daily-plan.js','js/session.js','config.js','vendor/supabase.js','js/cloud-repository.js','js/cloud.js','js/server-practice.js','js/daily-practice.js','js/audio.js','js/practice-library.js','js/app.js'],'Script paths and load order must be preserved.');
+if(process.argv.includes('--built'))for(const match of html.matchAll(/(?:src|href)="([^"]+\.(?:js|css))\?v=([a-f0-9]{12})"/g))assert.equal(match[2],require('node:crypto').createHash('sha256').update(fs.readFileSync(path.join(root,match[1]))).digest('hex').slice(0,12),'Published asset versions must match content');
 for(const match of html.matchAll(/(?:src|href)="([^"#]+)"/g)){
   if (/^(?:https?:|data:)/.test(match[1])) continue;
-  const asset=path.resolve(root,match[1]);
+  const asset=path.resolve(root,match[1].split('?')[0]);
   assert.ok(!path.relative(root,asset).startsWith('..'),'Assets must stay inside the site root.');
   assert.ok(fs.existsSync(asset),'Missing linked asset: '+match[1]);
 }

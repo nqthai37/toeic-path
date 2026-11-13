@@ -9,7 +9,7 @@ const root=path.resolve(__dirname,'..',process.argv.includes('--built')?'dist':'
  class ClockDate extends Date{constructor(...args){super(...(args.length?args:[wall]))}static now(){return wall}}
  const node=()=>({innerHTML:'',textContent:'',style:{},dataset:{},hidden:true,classList:{remove(){},add(){},toggle(){}},setAttribute(){},insertAdjacentHTML(_,html){this.innerHTML+=html}});
  const c=vm.createContext({console,Date:ClockDate,performance:{now:()=>monotonic},crypto:{randomUUID:()=> '11111111-1111-4111-8111-111111111111'},localStorage:{getItem:k=>storage.get(k)||null,setItem:(k,v)=>storage.set(k,v),removeItem:k=>storage.delete(k)},document:{querySelector:s=>nodes[s]??=node(),querySelectorAll:s=>s==='[data-practice-status]'?[nodes.status??=node()]:[],addEventListener(type,fn){(events[type]??=[]).push(fn)}},window:{scrollY:0,addEventListener(){},scrollTo(x,y){this.scrollY=typeof x==='object'?(x.top||0):y}},location:{hash:'',origin:'http://localhost',pathname:'/'},history:{},setTimeout:()=>1,clearTimeout(){},setInterval:fn=>{timer=fn;return 1},clearInterval(){},confirm:()=>true,Math,JSON,Map,Set,Promise});
- const files=[...fs.readFileSync(path.join(root,'index.html'),'utf8').matchAll(/<script\b[^>]*src="([^"]+)"/g)].map(m=>m[1]);
+ const files=[...fs.readFileSync(path.join(root,'index.html'),'utf8').matchAll(/<script\b[^>]*src="([^"]+)"/g)].map(m=>m[1].split('?')[0]);
  for(const file of files.filter(f=>f!=='vendor/supabase.js'))vm.runInContext(fs.readFileSync(path.join(root,file),'utf8'),c,{filename:file});
  const run=code=>vm.runInContext(code,c),bank=JSON.parse(run('JSON.stringify(BANK)')),keys=new Map(bank.map(q=>[q.id,q]));
  let ids=[],answers={},checked=[],revision=0,mode='learning',status='open',saveCalls=0,loseAck=false;
